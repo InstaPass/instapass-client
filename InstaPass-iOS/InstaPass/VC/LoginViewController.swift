@@ -1,5 +1,5 @@
 //
-//  MeViewController.swift
+//  LoginViewController.swift
 //  InstaPass
 //
 //  Created by 法好 on 2020/4/24.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MeViewController: UIViewController, UITextFieldDelegate {
+class LoginViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var passWordTextField: UITextField!
@@ -33,7 +33,12 @@ class MeViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func loginButtonTapped(_ sender: UIButton) {
-        
+        self.dismiss(animated: true)
     }
+    
+    @IBAction func closeButtonTapped(_ sender: UIBarButtonItem) {
+        self.dismiss(animated: true)
+    }
+    
 }
 

@@ -11,11 +11,15 @@
 		8A5F2BF024530381003E636C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5F2BEF24530381003E636C /* AppDelegate.swift */; };
 		8A5F2BF224530381003E636C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5F2BF124530381003E636C /* SceneDelegate.swift */; };
 		8A5F2BF424530381003E636C /* QRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5F2BF324530381003E636C /* QRCodeViewController.swift */; };
-		8A5F2BF624530381003E636C /* MeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5F2BF524530381003E636C /* MeViewController.swift */; };
+		8A5F2BF624530381003E636C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5F2BF524530381003E636C /* LoginViewController.swift */; };
 		8A5F2BF924530381003E636C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A5F2BF724530381003E636C /* Main.storyboard */; };
 		8A5F2BFB24530383003E636C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A5F2BFA24530383003E636C /* Assets.xcassets */; };
 		8A5F2BFE24530383003E636C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A5F2BFC24530383003E636C /* LaunchScreen.storyboard */; };
 		8A5F2C0924530383003E636C /* InstaPassTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5F2C0824530383003E636C /* InstaPassTests.swift */; };
+		8A9F444324546A8E0005FD01 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9F444224546A8E0005FD01 /* HistoryViewController.swift */; };
+		8A9F444624546B0C0005FD01 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9F444524546B0C0005FD01 /* UserViewController.swift */; };
+		8A9F4448245470BE0005FD01 /* UserTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9F4447245470BE0005FD01 /* UserTableViewController.swift */; };
+		8A9F444A2454719E0005FD01 /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9F44492454719E0005FD01 /* HistoryTableViewController.swift */; };
 		8AC1A7342453D26D0066CD8D /* LoginHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC1A7332453D26D0066CD8D /* LoginHelper.swift */; };
 		8AC1A7362453D30F0066CD8D /* Enumerates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC1A7352453D30F0066CD8D /* Enumerates.swift */; };
 		93BBFA7D6545AE7C53A682C4 /* Pods_InstaPass.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C2B2E328B8B9FD4B94E8BA1 /* Pods_InstaPass.framework */; };
@@ -40,7 +44,7 @@
 		8A5F2BEF24530381003E636C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8A5F2BF124530381003E636C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		8A5F2BF324530381003E636C /* QRCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeViewController.swift; sourceTree = "<group>"; };
-		8A5F2BF524530381003E636C /* MeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeViewController.swift; sourceTree = "<group>"; };
+		8A5F2BF524530381003E636C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		8A5F2BF824530381003E636C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8A5F2BFA24530383003E636C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8A5F2BFD24530383003E636C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -48,6 +52,10 @@
 		8A5F2C0424530383003E636C /* InstaPassTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstaPassTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A5F2C0824530383003E636C /* InstaPassTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstaPassTests.swift; sourceTree = "<group>"; };
 		8A5F2C0A24530383003E636C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8A9F444224546A8E0005FD01 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		8A9F444524546B0C0005FD01 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		8A9F4447245470BE0005FD01 /* UserTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewController.swift; sourceTree = "<group>"; };
+		8A9F44492454719E0005FD01 /* HistoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewController.swift; sourceTree = "<group>"; };
 		8AC1A7332453D26D0066CD8D /* LoginHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginHelper.swift; sourceTree = "<group>"; };
 		8AC1A7352453D30F0066CD8D /* Enumerates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enumerates.swift; sourceTree = "<group>"; };
 		C5EB5B0ABF00E7016FE695D4 /* Pods-InstaPass.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaPass.debug.xcconfig"; path = "Target Support Files/Pods-InstaPass/Pods-InstaPass.debug.xcconfig"; sourceTree = "<group>"; };
@@ -83,6 +91,37 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8A240D0A245462D8007ACEF4 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				8A5F2BF324530381003E636C /* QRCodeViewController.swift */,
+				8A5F2BF524530381003E636C /* LoginViewController.swift */,
+				8A9F444224546A8E0005FD01 /* HistoryViewController.swift */,
+				8A9F44492454719E0005FD01 /* HistoryTableViewController.swift */,
+				8A9F444524546B0C0005FD01 /* UserViewController.swift */,
+				8A9F4447245470BE0005FD01 /* UserTableViewController.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		8A240D0B245462E0007ACEF4 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				8AC1A7332453D26D0066CD8D /* LoginHelper.swift */,
+				8AC1A7352453D30F0066CD8D /* Enumerates.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		8A240D0C245462EF007ACEF4 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				8A5F2BEF24530381003E636C /* AppDelegate.swift */,
+				8A5F2BF124530381003E636C /* SceneDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
 		8A5F2BE324530381003E636C = {
 			isa = PBXGroup;
 			children = (
@@ -106,12 +145,9 @@
 		8A5F2BEE24530381003E636C /* InstaPass */ = {
 			isa = PBXGroup;
 			children = (
-				8A5F2BEF24530381003E636C /* AppDelegate.swift */,
-				8A5F2BF124530381003E636C /* SceneDelegate.swift */,
-				8A5F2BF324530381003E636C /* QRCodeViewController.swift */,
-				8A5F2BF524530381003E636C /* MeViewController.swift */,
-				8AC1A7332453D26D0066CD8D /* LoginHelper.swift */,
-				8AC1A7352453D30F0066CD8D /* Enumerates.swift */,
+				8A240D0C245462EF007ACEF4 /* Delegate */,
+				8A240D0B245462E0007ACEF4 /* Helper */,
+				8A240D0A245462D8007ACEF4 /* VC */,
 				8A5F2BF724530381003E636C /* Main.storyboard */,
 				8A5F2BFA24530383003E636C /* Assets.xcassets */,
 				8A5F2BFC24530383003E636C /* LaunchScreen.storyboard */,
@@ -309,10 +345,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				8AC1A7362453D30F0066CD8D /* Enumerates.swift in Sources */,
-				8A5F2BF624530381003E636C /* MeViewController.swift in Sources */,
+				8A9F4448245470BE0005FD01 /* UserTableViewController.swift in Sources */,
+				8A9F444624546B0C0005FD01 /* UserViewController.swift in Sources */,
+				8A5F2BF624530381003E636C /* LoginViewController.swift in Sources */,
+				8A9F444A2454719E0005FD01 /* HistoryTableViewController.swift in Sources */,
 				8A5F2BF424530381003E636C /* QRCodeViewController.swift in Sources */,
 				8A5F2BF024530381003E636C /* AppDelegate.swift in Sources */,
 				8A5F2BF224530381003E636C /* SceneDelegate.swift in Sources */,
+				8A9F444324546A8E0005FD01 /* HistoryViewController.swift in Sources */,
 				8AC1A7342453D26D0066CD8D /* LoginHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
