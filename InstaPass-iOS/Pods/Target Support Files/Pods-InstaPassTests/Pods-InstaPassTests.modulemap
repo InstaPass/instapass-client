@@ -1,0 +1,6 @@
+framework module Pods_InstaPassTests {
+  umbrella header "Pods-InstaPassTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

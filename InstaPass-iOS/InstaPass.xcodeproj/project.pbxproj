@@ -3,18 +3,22 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E1F39C4BBA9FED36FDDDC5D /* Pods_InstaPassTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66EF274B1621B26EF58B5436 /* Pods_InstaPassTests.framework */; };
 		8A5F2BF024530381003E636C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5F2BEF24530381003E636C /* AppDelegate.swift */; };
 		8A5F2BF224530381003E636C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5F2BF124530381003E636C /* SceneDelegate.swift */; };
-		8A5F2BF424530381003E636C /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5F2BF324530381003E636C /* FirstViewController.swift */; };
-		8A5F2BF624530381003E636C /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5F2BF524530381003E636C /* SecondViewController.swift */; };
+		8A5F2BF424530381003E636C /* QRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5F2BF324530381003E636C /* QRCodeViewController.swift */; };
+		8A5F2BF624530381003E636C /* MeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5F2BF524530381003E636C /* MeViewController.swift */; };
 		8A5F2BF924530381003E636C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A5F2BF724530381003E636C /* Main.storyboard */; };
 		8A5F2BFB24530383003E636C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A5F2BFA24530383003E636C /* Assets.xcassets */; };
 		8A5F2BFE24530383003E636C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A5F2BFC24530383003E636C /* LaunchScreen.storyboard */; };
 		8A5F2C0924530383003E636C /* InstaPassTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5F2C0824530383003E636C /* InstaPassTests.swift */; };
+		8AC1A7342453D26D0066CD8D /* LoginHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC1A7332453D26D0066CD8D /* LoginHelper.swift */; };
+		8AC1A7362453D30F0066CD8D /* Enumerates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC1A7352453D30F0066CD8D /* Enumerates.swift */; };
+		93BBFA7D6545AE7C53A682C4 /* Pods_InstaPass.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C2B2E328B8B9FD4B94E8BA1 /* Pods_InstaPass.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,11 +32,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C2B2E328B8B9FD4B94E8BA1 /* Pods_InstaPass.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstaPass.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A80E8F5C9620A139773479F /* Pods-InstaPassTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaPassTests.debug.xcconfig"; path = "Target Support Files/Pods-InstaPassTests/Pods-InstaPassTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3AD6F5DA28D0F688E5F82D8D /* Pods-InstaPassTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaPassTests.release.xcconfig"; path = "Target Support Files/Pods-InstaPassTests/Pods-InstaPassTests.release.xcconfig"; sourceTree = "<group>"; };
+		66EF274B1621B26EF58B5436 /* Pods_InstaPassTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstaPassTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A5F2BEC24530381003E636C /* InstaPass (Client).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "InstaPass (Client).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A5F2BEF24530381003E636C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8A5F2BF124530381003E636C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8A5F2BF324530381003E636C /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		8A5F2BF524530381003E636C /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		8A5F2BF324530381003E636C /* QRCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeViewController.swift; sourceTree = "<group>"; };
+		8A5F2BF524530381003E636C /* MeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeViewController.swift; sourceTree = "<group>"; };
 		8A5F2BF824530381003E636C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8A5F2BFA24530383003E636C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8A5F2BFD24530383003E636C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -40,6 +48,10 @@
 		8A5F2C0424530383003E636C /* InstaPassTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstaPassTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A5F2C0824530383003E636C /* InstaPassTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstaPassTests.swift; sourceTree = "<group>"; };
 		8A5F2C0A24530383003E636C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8AC1A7332453D26D0066CD8D /* LoginHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginHelper.swift; sourceTree = "<group>"; };
+		8AC1A7352453D30F0066CD8D /* Enumerates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enumerates.swift; sourceTree = "<group>"; };
+		C5EB5B0ABF00E7016FE695D4 /* Pods-InstaPass.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaPass.debug.xcconfig"; path = "Target Support Files/Pods-InstaPass/Pods-InstaPass.debug.xcconfig"; sourceTree = "<group>"; };
+		DF2302E6AACFAC0B82C13CFA /* Pods-InstaPass.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaPass.release.xcconfig"; path = "Target Support Files/Pods-InstaPass/Pods-InstaPass.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93BBFA7D6545AE7C53A682C4 /* Pods_InstaPass.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,18 +67,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E1F39C4BBA9FED36FDDDC5D /* Pods_InstaPassTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2FDD58FC73DAB06AAF9DE93C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0C2B2E328B8B9FD4B94E8BA1 /* Pods_InstaPass.framework */,
+				66EF274B1621B26EF58B5436 /* Pods_InstaPassTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8A5F2BE324530381003E636C = {
 			isa = PBXGroup;
 			children = (
 				8A5F2BEE24530381003E636C /* InstaPass */,
 				8A5F2C0724530383003E636C /* InstaPassTests */,
 				8A5F2BED24530381003E636C /* Products */,
+				FE54CBF7B862E10B1247281C /* Pods */,
+				2FDD58FC73DAB06AAF9DE93C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,8 +108,10 @@
 			children = (
 				8A5F2BEF24530381003E636C /* AppDelegate.swift */,
 				8A5F2BF124530381003E636C /* SceneDelegate.swift */,
-				8A5F2BF324530381003E636C /* FirstViewController.swift */,
-				8A5F2BF524530381003E636C /* SecondViewController.swift */,
+				8A5F2BF324530381003E636C /* QRCodeViewController.swift */,
+				8A5F2BF524530381003E636C /* MeViewController.swift */,
+				8AC1A7332453D26D0066CD8D /* LoginHelper.swift */,
+				8AC1A7352453D30F0066CD8D /* Enumerates.swift */,
 				8A5F2BF724530381003E636C /* Main.storyboard */,
 				8A5F2BFA24530383003E636C /* Assets.xcassets */,
 				8A5F2BFC24530383003E636C /* LaunchScreen.storyboard */,
@@ -102,6 +129,17 @@
 			path = InstaPassTests;
 			sourceTree = "<group>";
 		};
+		FE54CBF7B862E10B1247281C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C5EB5B0ABF00E7016FE695D4 /* Pods-InstaPass.debug.xcconfig */,
+				DF2302E6AACFAC0B82C13CFA /* Pods-InstaPass.release.xcconfig */,
+				2A80E8F5C9620A139773479F /* Pods-InstaPassTests.debug.xcconfig */,
+				3AD6F5DA28D0F688E5F82D8D /* Pods-InstaPassTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -109,9 +147,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8A5F2C0D24530383003E636C /* Build configuration list for PBXNativeTarget "InstaPass" */;
 			buildPhases = (
+				7785B86DCFC3D46AC98A8008 /* [CP] Check Pods Manifest.lock */,
 				8A5F2BE824530381003E636C /* Sources */,
 				8A5F2BE924530381003E636C /* Frameworks */,
 				8A5F2BEA24530381003E636C /* Resources */,
+				A834C049CE810EDEDB9DCC42 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -126,6 +166,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8A5F2C1024530383003E636C /* Build configuration list for PBXNativeTarget "InstaPassTests" */;
 			buildPhases = (
+				F6E553BB35B869B5714BCAE2 /* [CP] Check Pods Manifest.lock */,
 				8A5F2C0024530383003E636C /* Sources */,
 				8A5F2C0124530383003E636C /* Frameworks */,
 				8A5F2C0224530383003E636C /* Resources */,
@@ -198,15 +239,81 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7785B86DCFC3D46AC98A8008 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-InstaPass-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A834C049CE810EDEDB9DCC42 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-InstaPass/Pods-InstaPass-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-InstaPass/Pods-InstaPass-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-InstaPass/Pods-InstaPass-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F6E553BB35B869B5714BCAE2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-InstaPassTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8A5F2BE824530381003E636C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A5F2BF624530381003E636C /* SecondViewController.swift in Sources */,
-				8A5F2BF424530381003E636C /* FirstViewController.swift in Sources */,
+				8AC1A7362453D30F0066CD8D /* Enumerates.swift in Sources */,
+				8A5F2BF624530381003E636C /* MeViewController.swift in Sources */,
+				8A5F2BF424530381003E636C /* QRCodeViewController.swift in Sources */,
 				8A5F2BF024530381003E636C /* AppDelegate.swift in Sources */,
 				8A5F2BF224530381003E636C /* SceneDelegate.swift in Sources */,
+				8AC1A7342453D26D0066CD8D /* LoginHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,6 +471,7 @@
 		};
 		8A5F2C0E24530383003E636C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C5EB5B0ABF00E7016FE695D4 /* Pods-InstaPass.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -374,7 +482,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.github.yuetsin.instapass;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.instapass.client;
 				PRODUCT_NAME = "InstaPass (Client)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -383,6 +491,7 @@
 		};
 		8A5F2C0F24530383003E636C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF2302E6AACFAC0B82C13CFA /* Pods-InstaPass.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -393,7 +502,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.github.yuetsin.instapass;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.instapass.client;
 				PRODUCT_NAME = "InstaPass (Client)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -402,6 +511,7 @@
 		};
 		8A5F2C1124530383003E636C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A80E8F5C9620A139773479F /* Pods-InstaPassTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -424,6 +534,7 @@
 		};
 		8A5F2C1224530383003E636C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3AD6F5DA28D0F688E5F82D8D /* Pods-InstaPassTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
