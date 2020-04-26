@@ -16,6 +16,7 @@
 		8A5F2BFB24530383003E636C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A5F2BFA24530383003E636C /* Assets.xcassets */; };
 		8A5F2BFE24530383003E636C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A5F2BFC24530383003E636C /* LaunchScreen.storyboard */; };
 		8A5F2C0924530383003E636C /* InstaPassTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5F2C0824530383003E636C /* InstaPassTests.swift */; };
+		8A81ACAE24552B61008CF847 /* raw_dark.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A81ACAD24552B61008CF847 /* raw_dark.png */; };
 		8A82E3D1245519E700008610 /* raw.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A82E3D0245519E700008610 /* raw.png */; };
 		8A9F444324546A8E0005FD01 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9F444224546A8E0005FD01 /* HistoryViewController.swift */; };
 		8A9F444624546B0C0005FD01 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9F444524546B0C0005FD01 /* UserViewController.swift */; };
@@ -53,6 +54,7 @@
 		8A5F2C0424530383003E636C /* InstaPassTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstaPassTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A5F2C0824530383003E636C /* InstaPassTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstaPassTests.swift; sourceTree = "<group>"; };
 		8A5F2C0A24530383003E636C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8A81ACAD24552B61008CF847 /* raw_dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = raw_dark.png; path = ../../../Icons/raw_dark.png; sourceTree = "<group>"; };
 		8A82E3D0245519E700008610 /* raw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = raw.png; path = ../../../Icons/raw.png; sourceTree = "<group>"; };
 		8A9F444224546A8E0005FD01 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		8A9F444524546B0C0005FD01 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				8A82E3D0245519E700008610 /* raw.png */,
+				8A81ACAD24552B61008CF847 /* raw_dark.png */,
 			);
 			path = Icons;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 				8A5F2BFE24530383003E636C /* LaunchScreen.storyboard in Resources */,
 				8A5F2BFB24530383003E636C /* Assets.xcassets in Resources */,
 				8A5F2BF924530381003E636C /* Main.storyboard in Resources */,
+				8A81ACAE24552B61008CF847 /* raw_dark.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
