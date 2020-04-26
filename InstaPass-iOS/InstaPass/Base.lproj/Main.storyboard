@@ -15,8 +15,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="54" translatesAutoresizingMaskIntoConstraints="NO" id="K5z-Ce-p1T">
-                                <rect key="frame" x="64" y="166.5" width="247" height="334"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="K5z-Ce-p1T">
+                                <rect key="frame" x="64" y="175" width="247" height="317"/>
                                 <subviews>
                                     <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="RME-6Y-6cD" customClass="UIImageView">
                                         <rect key="frame" x="3.5" y="0.0" width="240" height="240"/>
@@ -24,8 +24,14 @@
                                             <constraint firstAttribute="width" secondItem="RME-6Y-6cD" secondAttribute="height" multiplier="1:1" id="b7v-Io-XCF"/>
                                         </constraints>
                                     </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="最後更新于 17:21" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HEX-wY-cDc">
+                                        <rect key="frame" x="69.5" y="250" width="108.5" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MvL-ID-roa">
-                                        <rect key="frame" x="103.5" y="294" width="40" height="40"/>
+                                        <rect key="frame" x="103.5" y="277" width="40" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="VyG-CT-vj7"/>
                                             <constraint firstAttribute="width" constant="40" id="pdR-9Z-ygZ"/>
@@ -361,7 +367,7 @@
                                 </subviews>
                             </stackView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sDF-uW-XqN">
-                                <rect key="frame" x="0.0" y="322" width="375" height="296"/>
+                                <rect key="frame" x="0.0" y="321.5" width="375" height="296.5"/>
                                 <connections>
                                     <segue destination="hzy-tv-i5y" kind="embed" id="kwY-Jb-0S7"/>
                                 </connections>
@@ -399,7 +405,7 @@
             <objects>
                 <tableViewController id="hzy-tv-i5y" customClass="UserTableViewController" customModule="InstaPass__Client_" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="0wz-XT-IiM">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="296"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="296.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <sections>

@@ -16,6 +16,7 @@
 		8A5F2BFB24530383003E636C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A5F2BFA24530383003E636C /* Assets.xcassets */; };
 		8A5F2BFE24530383003E636C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A5F2BFC24530383003E636C /* LaunchScreen.storyboard */; };
 		8A5F2C0924530383003E636C /* InstaPassTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5F2C0824530383003E636C /* InstaPassTests.swift */; };
+		8A82E3D1245519E700008610 /* raw.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A82E3D0245519E700008610 /* raw.png */; };
 		8A9F444324546A8E0005FD01 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9F444224546A8E0005FD01 /* HistoryViewController.swift */; };
 		8A9F444624546B0C0005FD01 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9F444524546B0C0005FD01 /* UserViewController.swift */; };
 		8A9F4448245470BE0005FD01 /* UserTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9F4447245470BE0005FD01 /* UserTableViewController.swift */; };
@@ -52,6 +53,7 @@
 		8A5F2C0424530383003E636C /* InstaPassTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstaPassTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A5F2C0824530383003E636C /* InstaPassTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstaPassTests.swift; sourceTree = "<group>"; };
 		8A5F2C0A24530383003E636C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8A82E3D0245519E700008610 /* raw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = raw.png; path = ../../../Icons/raw.png; sourceTree = "<group>"; };
 		8A9F444224546A8E0005FD01 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		8A9F444524546B0C0005FD01 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		8A9F4447245470BE0005FD01 /* UserTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewController.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 		8A5F2BEE24530381003E636C /* InstaPass */ = {
 			isa = PBXGroup;
 			children = (
+				8A82E3CF245519DE00008610 /* Icons */,
 				8A240D0C245462EF007ACEF4 /* Delegate */,
 				8A240D0B245462E0007ACEF4 /* Helper */,
 				8A240D0A245462D8007ACEF4 /* VC */,
@@ -163,6 +166,14 @@
 				8A5F2C0A24530383003E636C /* Info.plist */,
 			);
 			path = InstaPassTests;
+			sourceTree = "<group>";
+		};
+		8A82E3CF245519DE00008610 /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				8A82E3D0245519E700008610 /* raw.png */,
+			);
+			path = Icons;
 			sourceTree = "<group>";
 		};
 		FE54CBF7B862E10B1247281C /* Pods */ = {
@@ -260,6 +271,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A82E3D1245519E700008610 /* raw.png in Resources */,
 				8A5F2BFE24530383003E636C /* LaunchScreen.storyboard in Resources */,
 				8A5F2BFB24530383003E636C /* Assets.xcassets in Resources */,
 				8A5F2BF924530381003E636C /* Main.storyboard in Resources */,
