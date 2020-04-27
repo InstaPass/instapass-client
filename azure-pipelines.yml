@@ -10,7 +10,7 @@ pool:
   vmImage: 'macos-latest'
 
 jobs:
-  - job: 'iOS build'
+  - job: 'ios_build'
     steps:
     - task: Xcode@5
       inputs:
@@ -20,7 +20,7 @@ jobs:
         configuration: 'Release'
         xcWorkspacePath: '**/InstaPass.xcworkspace'
         xcodeVersion: 'default' # Options: 8, 9, 10, default, specifyPath
-  - job: 'Android build'
+  - job: 'android_build'
     steps:
       - task: Gradle@2
         inputs:
