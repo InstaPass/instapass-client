@@ -25,7 +25,7 @@ jobs:
       - task: Gradle@2
         inputs:
           workingDirectory: './InstaPass-Android/'
-          gradleWrapperFile: './gradlew'
+          gradleWrapperFile: './InstaPass-Android/gradlew'
           gradleOptions: '-Xmx3072m'
           publishJUnitResults: false
           testResultsFiles: '**/TEST-*.xml'
