@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HistoryViewController: UIViewController {
+class HistoryViewController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

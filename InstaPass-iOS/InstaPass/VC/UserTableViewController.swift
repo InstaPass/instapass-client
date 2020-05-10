@@ -19,7 +19,12 @@ class UserTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
+    
+    var parentVC: UserViewController?
 
+    @IBAction func switchUserButton(_ sender: UIBarButtonItem) {
+        parentVC?.switchUser()
+    }
     // MARK: - Table view data source
     
     /*
@@ -36,6 +41,14 @@ class UserTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        if indexPath.section == 2 {
+            if indexPath.row == 0 {
+                // switch account
+            } else if indexPath.section == 1 {
+                // quit
+            }
+        }
     }
 
     /*
@@ -92,5 +105,4 @@ class UserTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
 }

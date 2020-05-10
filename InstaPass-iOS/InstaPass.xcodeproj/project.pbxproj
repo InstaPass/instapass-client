@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		3E1F39C4BBA9FED36FDDDC5D /* Pods_InstaPassTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66EF274B1621B26EF58B5436 /* Pods_InstaPassTests.framework */; };
+		7A91381A2E329798AA42A0F1 /* Pods_InstaPass.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A70FCDE24683CD00053DECF /* Pods_InstaPass.framework */; };
+		8A307978246807AE00C1E129 /* QRCodeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A307977246807AE00C1E129 /* QRCodeManager.swift */; };
+		8A4FAFD92468423600BBB9DA /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4FAFD82468423600BBB9DA /* Utils.swift */; };
+		8A4FAFDC24684DE400BBB9DA /* UserPrefInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4FAFDB24684DE400BBB9DA /* UserPrefInitializer.swift */; };
 		8A5F2BF024530381003E636C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5F2BEF24530381003E636C /* AppDelegate.swift */; };
 		8A5F2BF224530381003E636C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5F2BF124530381003E636C /* SceneDelegate.swift */; };
 		8A5F2BF424530381003E636C /* QRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5F2BF324530381003E636C /* QRCodeViewController.swift */; };
@@ -26,7 +30,7 @@
 		8AC1A7342453D26D0066CD8D /* LoginHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC1A7332453D26D0066CD8D /* LoginHelper.swift */; };
 		8AF4C7532467B0C4004D2D65 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF4C7522467B0C4004D2D65 /* RequestManager.swift */; };
 		8AF4C7552467B128004D2D65 /* DisgracefulLife.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF4C7542467B128004D2D65 /* DisgracefulLife.swift */; };
-		93BBFA7D6545AE7C53A682C4 /* Pods_InstaPass.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C2B2E328B8B9FD4B94E8BA1 /* Pods_InstaPass.framework */; };
+		C7F8D187C023B718DE084E09 /* Pods_InstaPassTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A70FCDF24683CD00053DECF /* Pods_InstaPassTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,11 +43,40 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		8A30796D246803E600C1E129 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		0C2B2E328B8B9FD4B94E8BA1 /* Pods_InstaPass.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstaPass.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A80E8F5C9620A139773479F /* Pods-InstaPassTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaPassTests.debug.xcconfig"; path = "Target Support Files/Pods-InstaPassTests/Pods-InstaPassTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3AD6F5DA28D0F688E5F82D8D /* Pods-InstaPassTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaPassTests.release.xcconfig"; path = "Target Support Files/Pods-InstaPassTests/Pods-InstaPassTests.release.xcconfig"; sourceTree = "<group>"; };
 		66EF274B1621B26EF58B5436 /* Pods_InstaPassTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstaPassTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A307976246807AE00C1E129 /* InstaPass Watch-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "InstaPass Watch-Bridging-Header.h"; sourceTree = "<group>"; };
+		8A307977246807AE00C1E129 /* QRCodeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeManager.swift; sourceTree = "<group>"; };
+		8A30797A246808BF00C1E129 /* Alamofire_SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire_SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A30797B246808BF00C1E129 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A30797C246808BF00C1E129 /* QRCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = QRCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A30797D246808BF00C1E129 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A307988246808EE00C1E129 /* Alamofire_SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire_SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A307989246808EE00C1E129 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A30798A246808EE00C1E129 /* QRCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = QRCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A30798B246808EE00C1E129 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A372CEC2468375100CDE400 /* Pods_InstaPass.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_InstaPass.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A372CF0246837F100CDE400 /* swift_qrcodejs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = swift_qrcodejs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A372CF32468397200CDE400 /* EFQRCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = EFQRCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A372CF62468398900CDE400 /* Pods_InstaPass.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_InstaPass.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A4FAFD82468423600BBB9DA /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		8A4FAFDB24684DE400BBB9DA /* UserPrefInitializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPrefInitializer.swift; sourceTree = "<group>"; };
 		8A5F2BEC24530381003E636C /* InstaPass (Client).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "InstaPass (Client).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A5F2BEF24530381003E636C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8A5F2BF124530381003E636C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,13 +89,36 @@
 		8A5F2C0424530383003E636C /* InstaPassTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstaPassTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A5F2C0824530383003E636C /* InstaPassTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstaPassTests.swift; sourceTree = "<group>"; };
 		8A5F2C0A24530383003E636C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8A70FCCC24683C210053DECF /* EFQRCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = EFQRCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A70FCCF24683C240053DECF /* swift_qrcodejs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = swift_qrcodejs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A70FCD224683C2A0053DECF /* swift_qrcodejs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = swift_qrcodejs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A70FCD524683C6E0053DECF /* EFQRCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = EFQRCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A70FCD724683CAE0053DECF /* EFQRCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = EFQRCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A70FCDA24683CD00053DECF /* Alamofire_SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire_SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A70FCDB24683CD00053DECF /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A70FCDC24683CD00053DECF /* EFQRCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = EFQRCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A70FCDD24683CD00053DECF /* IQKeyboardManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = IQKeyboardManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A70FCDE24683CD00053DECF /* Pods_InstaPass.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_InstaPass.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A70FCDF24683CD00053DECF /* Pods_InstaPassTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_InstaPassTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A70FCE024683CD00053DECF /* swift_qrcodejs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = swift_qrcodejs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A70FCE124683CD00053DECF /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A81ACAD24552B61008CF847 /* raw_dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = raw_dark.png; path = ../../../Icons/raw_dark.png; sourceTree = "<group>"; };
 		8A82E3D0245519E700008610 /* raw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = raw.png; path = ../../../Icons/raw.png; sourceTree = "<group>"; };
+		8A8CA789246834DB00E87F08 /* EFQRCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = EFQRCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A8CA78C246834DE00E87F08 /* Alamofire_SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire_SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A8CA78F246834E800E87F08 /* EFQRCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = EFQRCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A8CA7922468358C00E87F08 /* Alamofire_SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire_SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A8CA7932468358C00E87F08 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A8CA7942468358C00E87F08 /* EFQRCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = EFQRCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A8CA7952468358C00E87F08 /* IQKeyboardManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = IQKeyboardManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A8CA7962468358C00E87F08 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A9E2A1D2467B6AB00243DE0 /* RequestEnumerates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestEnumerates.swift; sourceTree = "<group>"; };
 		8A9F444224546A8E0005FD01 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		8A9F444524546B0C0005FD01 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		8A9F4447245470BE0005FD01 /* UserTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewController.swift; sourceTree = "<group>"; };
 		8A9F44492454719E0005FD01 /* HistoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewController.swift; sourceTree = "<group>"; };
+		8AC01D5424683ACB00EFD45E /* EFQRCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = EFQRCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8AC01D5824683AEC00EFD45E /* EFQRCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = EFQRCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AC1A7332453D26D0066CD8D /* LoginHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginHelper.swift; sourceTree = "<group>"; };
 		8AF4C7522467B0C4004D2D65 /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
 		8AF4C7542467B128004D2D65 /* DisgracefulLife.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisgracefulLife.swift; sourceTree = "<group>"; };
@@ -75,7 +131,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93BBFA7D6545AE7C53A682C4 /* Pods_InstaPass.framework in Frameworks */,
+				7A91381A2E329798AA42A0F1 /* Pods_InstaPass.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +140,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E1F39C4BBA9FED36FDDDC5D /* Pods_InstaPassTests.framework in Frameworks */,
+				C7F8D187C023B718DE084E09 /* Pods_InstaPassTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +150,41 @@
 		2FDD58FC73DAB06AAF9DE93C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8A70FCDA24683CD00053DECF /* Alamofire_SwiftyJSON.framework */,
+				8A70FCDB24683CD00053DECF /* Alamofire.framework */,
+				8A70FCDC24683CD00053DECF /* EFQRCode.framework */,
+				8A70FCDD24683CD00053DECF /* IQKeyboardManager.framework */,
+				8A70FCDE24683CD00053DECF /* Pods_InstaPass.framework */,
+				8A70FCDF24683CD00053DECF /* Pods_InstaPassTests.framework */,
+				8A70FCE024683CD00053DECF /* swift_qrcodejs.framework */,
+				8A70FCE124683CD00053DECF /* SwiftyJSON.framework */,
+				8A70FCD724683CAE0053DECF /* EFQRCode.framework */,
+				8A70FCD524683C6E0053DECF /* EFQRCode.framework */,
+				8A70FCD224683C2A0053DECF /* swift_qrcodejs.framework */,
+				8A70FCCF24683C240053DECF /* swift_qrcodejs.framework */,
+				8A70FCCC24683C210053DECF /* EFQRCode.framework */,
+				8AC01D5824683AEC00EFD45E /* EFQRCode.framework */,
+				8AC01D5424683ACB00EFD45E /* EFQRCode.framework */,
+				8A372CF62468398900CDE400 /* Pods_InstaPass.framework */,
+				8A372CF32468397200CDE400 /* EFQRCode.framework */,
+				8A372CF0246837F100CDE400 /* swift_qrcodejs.framework */,
+				8A372CEC2468375100CDE400 /* Pods_InstaPass.framework */,
+				8A8CA7922468358C00E87F08 /* Alamofire_SwiftyJSON.framework */,
+				8A8CA7932468358C00E87F08 /* Alamofire.framework */,
+				8A8CA7942468358C00E87F08 /* EFQRCode.framework */,
+				8A8CA7952468358C00E87F08 /* IQKeyboardManager.framework */,
+				8A8CA7962468358C00E87F08 /* SwiftyJSON.framework */,
+				8A8CA78F246834E800E87F08 /* EFQRCode.framework */,
+				8A8CA78C246834DE00E87F08 /* Alamofire_SwiftyJSON.framework */,
+				8A8CA789246834DB00E87F08 /* EFQRCode.framework */,
+				8A307988246808EE00C1E129 /* Alamofire_SwiftyJSON.framework */,
+				8A307989246808EE00C1E129 /* Alamofire.framework */,
+				8A30798A246808EE00C1E129 /* QRCode.framework */,
+				8A30798B246808EE00C1E129 /* SwiftyJSON.framework */,
+				8A30797A246808BF00C1E129 /* Alamofire_SwiftyJSON.framework */,
+				8A30797B246808BF00C1E129 /* Alamofire.framework */,
+				8A30797C246808BF00C1E129 /* QRCode.framework */,
+				8A30797D246808BF00C1E129 /* SwiftyJSON.framework */,
 				0C2B2E328B8B9FD4B94E8BA1 /* Pods_InstaPass.framework */,
 				66EF274B1621B26EF58B5436 /* Pods_InstaPassTests.framework */,
 			);
@@ -129,6 +221,23 @@
 			path = Delegate;
 			sourceTree = "<group>";
 		};
+		8A3079752468078A00C1E129 /* QRCode */ = {
+			isa = PBXGroup;
+			children = (
+				8A307977246807AE00C1E129 /* QRCodeManager.swift */,
+				8A307976246807AE00C1E129 /* InstaPass Watch-Bridging-Header.h */,
+			);
+			path = QRCode;
+			sourceTree = "<group>";
+		};
+		8A4FAFDA24684DC400BBB9DA /* Preferences */ = {
+			isa = PBXGroup;
+			children = (
+				8A4FAFDB24684DE400BBB9DA /* UserPrefInitializer.swift */,
+			);
+			path = Preferences;
+			sourceTree = "<group>";
+		};
 		8A5F2BE324530381003E636C = {
 			isa = PBXGroup;
 			children = (
@@ -152,8 +261,11 @@
 		8A5F2BEE24530381003E636C /* InstaPass */ = {
 			isa = PBXGroup;
 			children = (
+				8A4FAFD82468423600BBB9DA /* Utils.swift */,
 				8AF4C7542467B128004D2D65 /* DisgracefulLife.swift */,
+				8A4FAFDA24684DC400BBB9DA /* Preferences */,
 				8AF4C7512467B0A4004D2D65 /* Request */,
+				8A3079752468078A00C1E129 /* QRCode */,
 				8A82E3CF245519DE00008610 /* Icons */,
 				8A240D0C245462EF007ACEF4 /* Delegate */,
 				8A240D0B245462E0007ACEF4 /* Helper */,
@@ -216,6 +328,7 @@
 				8A5F2BE924530381003E636C /* Frameworks */,
 				8A5F2BEA24530381003E636C /* Resources */,
 				A834C049CE810EDEDB9DCC42 /* [CP] Embed Pods Frameworks */,
+				8A30796D246803E600C1E129 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
@@ -251,7 +364,7 @@
 		8A5F2BE424530381003E636C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1130;
+				LastSwiftUpdateCheck = 1140;
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = yuetsin;
 				TargetAttributes = {
@@ -377,6 +490,7 @@
 				8A9F4448245470BE0005FD01 /* UserTableViewController.swift in Sources */,
 				8A9F444624546B0C0005FD01 /* UserViewController.swift in Sources */,
 				8A5F2BF624530381003E636C /* LoginViewController.swift in Sources */,
+				8A4FAFD92468423600BBB9DA /* Utils.swift in Sources */,
 				8A9F444A2454719E0005FD01 /* HistoryTableViewController.swift in Sources */,
 				8A5F2BF424530381003E636C /* QRCodeViewController.swift in Sources */,
 				8A5F2BF024530381003E636C /* AppDelegate.swift in Sources */,
@@ -384,7 +498,9 @@
 				8AF4C7532467B0C4004D2D65 /* RequestManager.swift in Sources */,
 				8A5F2BF224530381003E636C /* SceneDelegate.swift in Sources */,
 				8AF4C7552467B128004D2D65 /* DisgracefulLife.swift in Sources */,
+				8A307978246807AE00C1E129 /* QRCodeManager.swift in Sources */,
 				8A9F444324546A8E0005FD01 /* HistoryViewController.swift in Sources */,
+				8A4FAFDC24684DE400BBB9DA /* UserPrefInitializer.swift in Sources */,
 				8AC1A7342453D26D0066CD8D /* LoginHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -547,6 +663,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 24XARD42BP;
 				INFOPLIST_FILE = InstaPass/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -554,6 +671,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.instapass.client;
 				PRODUCT_NAME = "InstaPass (Client)";
 				SWIFT_VERSION = 5.0;
@@ -567,6 +685,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 24XARD42BP;
 				INFOPLIST_FILE = InstaPass/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -574,6 +693,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.instapass.client;
 				PRODUCT_NAME = "InstaPass (Client)";
 				SWIFT_VERSION = 5.0;

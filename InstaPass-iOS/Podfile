@@ -13,6 +13,9 @@ target 'InstaPass' do
   end
 
   pod 'Alamofire-SwiftyJSON'
-  pod "QRCode"
+# pod "QRCode"
+  pod 'EFQRCode', '~> 5.1.6'
+  pod 'EFQRCode/watchOS', '~> 5.1.6'
   pod 'IQKeyboardManager'
+  pod 'SPAlert'
 end

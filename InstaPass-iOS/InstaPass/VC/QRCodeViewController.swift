@@ -6,49 +6,65 @@
 //  Copyright © 2020 yuetsin. All rights reserved.
 //
 
-import QRCode
+import EFQRCode
 import UIKit
 
 class QRCodeViewController: UIViewController {
     @IBOutlet var loadingRingIndicator: UIActivityIndicatorView!
     @IBOutlet var QRCodeView: UIImageView!
     @IBOutlet var refreshButton: UIButton!
+    @IBOutlet var lastUpdateTextField: UILabel!
 
-    var targetUrl: URL?
+    // var targetUrl: URL?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
 
-        targetUrl = URL(string: "https://en.wikipedia.org/wiki/Death")
+        // targetUrl = URL(string: "https://en.wikipedia.org/wiki/Death")
         flushQRCode()
+        refreshQRCode()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        flushQRCode()
+        refreshQRCode()
     }
 
     func flushQRCode() {
-        if targetUrl == nil {
-            return
+//        let style = traitCollection.userInterfaceStyle
+
+        QRCodeView.image = QRCodeManager.getQRCodeImage()
+
+        if QRCodeView.image == nil {
+            QRCodeView.image = UIImage(systemName: "questionmark.square.fill")
         }
-
-        var qrCode = QRCode(targetUrl!)
-        qrCode?.color = CIColor(rgba: "64d277")
-
-        let style = traitCollection.userInterfaceStyle
-        if style == .dark {
-            qrCode?.backgroundColor = CIColor.black
-        } else if style == .light {
-            qrCode?.backgroundColor = CIColor.white
-        }
-
-        QRCodeView.image = qrCode?.image
     }
-
-    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
-        super.traitCollectionDidChange(previousTraitCollection)
-        flushQRCode()
-    }
+//
+//    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+//        super.traitCollectionDidChange(previousTraitCollection)
+//        flushQRCode()
+//    }
 
     @IBAction func onRefreshButtonTapped(_ sender: UIButton) {
-        targetUrl = URL(string: "https://en.wikipedia.org/wiki/\(arc4random_uniform(1024))")
-        flushQRCode()
+        refreshQRCode()
+    }
+
+    func refreshQRCode() {
+        if !refreshButton.isEnabled {
+            return
+        }
+        refreshButton.isEnabled = false
+        QRCodeManager.refreshQrCode(success: { _, time in
+            self.flushQRCode()
+            self.lastUpdateTextField.text = "最後更新 \(dateToString(time, dateFormat: "HH:mm"))"
+            self.refreshButton.isEnabled = true
+        }, failure: { error in
+            // show ${error} message
+            self.lastUpdateTextField.text = "请求失败 \(error)"
+            self.refreshButton.isEnabled = true
+        })
     }
 }

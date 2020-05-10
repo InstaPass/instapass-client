@@ -3,30 +3,42 @@ PODS:
   - Alamofire-SwiftyJSON (3.0.0):
     - Alamofire (~> 4.5)
     - SwiftyJSON (~> 4.0.0)
+  - EFQRCode (5.1.6):
+    - EFQRCode/Core (= 5.1.6)
+  - EFQRCode/Core (5.1.6)
+  - EFQRCode/watchOS (5.1.6):
+    - swift_qrcodejs (>= 1.1.1)
   - IQKeyboardManager (6.5.5)
-  - QRCode (2.0)
+  - SPAlert (2.1.4)
+  - swift_qrcodejs (1.1.2)
   - SwiftyJSON (4.0.0)
 
 DEPENDENCIES:
   - Alamofire-SwiftyJSON
+  - EFQRCode (~> 5.1.6)
+  - EFQRCode/watchOS (~> 5.1.6)
   - IQKeyboardManager
-  - QRCode
+  - SPAlert
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - Alamofire-SwiftyJSON
+    - EFQRCode
     - IQKeyboardManager
-    - QRCode
+    - SPAlert
+    - swift_qrcodejs
     - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   Alamofire-SwiftyJSON: 2b3649d57dc7bb2880fb8b86f8bb969397666916
+  EFQRCode: a7ea2e517912f5bf6ba258b631327a83cd8084a5
   IQKeyboardManager: 3a8b9e603f8b0eeaf5f096a1f2b2cfcf121992ef
-  QRCode: f98a1886c8f37523704a7512a4c0cd45b34c18a4
+  SPAlert: 1a8afa1c6ac86a82ab5b2cfdf7f9a51e68cb6c0c
+  swift_qrcodejs: 4d024fc98b0778b804ec6a5c810880fd092aec9d
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
 
-PODFILE CHECKSUM: c20fd4a9f6b7cb961c20ed4f8fc9fb394feea7ca
+PODFILE CHECKSUM: fdd204b0cd647051b9ce8059aec268f7fd92e070
 
 COCOAPODS: 1.8.4

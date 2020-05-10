@@ -21,9 +21,12 @@ enum RequestResponse {
 }
 
 enum FeatureType: String {
-    case login = "/resident/login"
-    case logout = "/resident/logout"
+    // TODO: separate user login and guard login
+    case login = "/login"
     case qrcode = "/resident/qrcode"
+    
+    // unimplemented:
+    case logout = "/resident/logout"
     case avatar = "/resident/avatar"
     case history = "/resident/history"
     case info = "/resident/info"

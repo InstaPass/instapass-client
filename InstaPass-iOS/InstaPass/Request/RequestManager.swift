@@ -14,10 +14,12 @@ import SwiftyJSON
 class RequestManager {
     // MARK: - stop doing anything stupid
 
-    static var baseUrl = URL(string: "http://127.0.0.1")!
+    static var baseUrl = URL(string: "http://47.100.50.175:8288")!
+    
+//    static var jwtToken: String?
 
     static func request(type requestType: RequestType, feature featureType: FeatureType,
-                        params parameters: Parameters,
+                        params parameters: Parameters?,
                         success successHandler: @escaping (JSON) -> Void, failure failureHandler: @escaping (String) -> Void) {
         var method: HTTPMethod!
 
@@ -32,7 +34,8 @@ class RequestManager {
         Alamofire.request(URL.init(string: featureType.rawValue, relativeTo: baseUrl)!,
                           method: method,
                           parameters: parameters,
-                          encoding: JSONEncoding.default).responseSwiftyJSON(completionHandler: { responseJSON in
+                          encoding: JSONEncoding.default,
+                          headers: ["Jwt-Token" : UserPrefInitializer.jwtToken ]).responseSwiftyJSON(completionHandler: { responseJSON in
             if responseJSON.error != nil {
                 failureHandler(responseJSON.error!.localizedDescription)
             } else {
@@ -40,7 +43,7 @@ class RequestManager {
                 if jsonResp == nil {
                     failureHandler("bad response")
                 } else {
-                    if jsonResp!["status"].stringValue != "ok" {
+                    if jsonResp!["status"].stringValue != "ok" && jsonResp!["jwt_token"].stringValue == "" {
                         failureHandler(jsonResp!["status"].stringValue)
                     } else {
                         successHandler(jsonResp!)
