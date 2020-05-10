@@ -7,6 +7,7 @@
 //
 
 import EFQRCode
+import SPAlert
 import UIKit
 
 class QRCodeViewController: UIViewController {
@@ -25,10 +26,10 @@ class QRCodeViewController: UIViewController {
         flushQRCode()
         refreshQRCode()
     }
-    
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
+
         flushQRCode()
         refreshQRCode()
     }
@@ -42,6 +43,7 @@ class QRCodeViewController: UIViewController {
             QRCodeView.image = UIImage(systemName: "questionmark.square.fill")
         }
     }
+
 //
 //    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
 //        super.traitCollectionDidChange(previousTraitCollection)
@@ -63,8 +65,11 @@ class QRCodeViewController: UIViewController {
             self.refreshButton.isEnabled = true
         }, failure: { error in
             // show ${error} message
-            self.lastUpdateTextField.text = "请求失败 \(error)"
+            self.flushQRCode()
+            self.lastUpdateTextField.text = "请求失败"
+            SPAlert.present(title: "请求 QR 码失败", message: error, image: UIImage(systemName: "wifi.exclamationmark")!)
             self.refreshButton.isEnabled = true
+
         })
     }
 }

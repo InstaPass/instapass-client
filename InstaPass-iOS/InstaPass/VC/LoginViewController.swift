@@ -6,8 +6,8 @@
 //  Copyright © 2020 yuetsin. All rights reserved.
 //
 
-import SPAlert
 import UIKit
+import SPAlert
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var userNameTextField: UITextField!

@@ -42,6 +42,7 @@ class QRCodeManager {
                                    qrCodeSecret = secret
                                    success(secret, Date(timeIntervalSince1970: lastRefreshTime))
                                }, failure: { errorMsg in
+                                    qrCodeSecret = nil
                                    failure(errorMsg)
         })
     }
