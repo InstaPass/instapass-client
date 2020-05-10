@@ -8,8 +8,9 @@
 
 import Alamofire
 import SwiftyJSON
-import Foundation
 import Alamofire_SwiftyJSON
+import Foundation
+
 
 class LoginHelper {
     
