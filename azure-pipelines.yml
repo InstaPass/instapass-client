@@ -12,12 +12,12 @@ pool:
 jobs:
   - job: 'ios_build'
     steps:
-    - task: Xcode@5
+    - task: ShellScript@2
       inputs:
         scriptPath: "./build_ios.sh"
   - job: 'watchos_build'
     steps:
-    - task: Xcode@5
+    - task: ShellScript@2
       inputs:
         scriptPath: "./build_watchos.sh"
   - job: 'android_build'
