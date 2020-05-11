@@ -16,7 +16,17 @@ jobs:
       inputs:
         actions: 'build'
         scheme: 'InstaPass'
-        sdk: 'iphoneos'
+        # sdk: 'iphoneos'
+        configuration: 'Release'
+        xcWorkspacePath: '**/InstaPass.xcworkspace'
+        xcodeVersion: 'default' # Options: 8, 9, 10, default, specifyPath
+  - job: 'watchos_build'
+    steps:
+    - task: Xcode@5
+      inputs:
+        actions: 'build'
+        scheme: 'InstaPass Watch'
+        # sdk: 'watchos'
         configuration: 'Release'
         xcWorkspacePath: '**/InstaPass.xcworkspace'
         xcodeVersion: 'default' # Options: 8, 9, 10, default, specifyPath
