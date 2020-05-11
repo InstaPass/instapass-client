@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -40,8 +40,10 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="MzT-Y0-DtW" firstAttribute="top" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="1xB-t8-3c2"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KKq-Ir-mgl" secondAttribute="trailing" constant="20" id="3hs-rJ-qg7"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MzT-Y0-DtW" secondAttribute="trailing" constant="64" id="Ahp-rf-yNI"/>
+                            <constraint firstItem="KKq-Ir-mgl" firstAttribute="top" relation="greaterThanOrEqual" secondItem="MzT-Y0-DtW" secondAttribute="bottom" constant="30" id="HIJ-bE-RCC"/>
                             <constraint firstItem="MzT-Y0-DtW" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="KlS-da-6Me"/>
                             <constraint firstItem="KKq-Ir-mgl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="lc0-8h-2Wi"/>
                             <constraint firstItem="MzT-Y0-DtW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="64" id="phL-ye-JKY"/>
