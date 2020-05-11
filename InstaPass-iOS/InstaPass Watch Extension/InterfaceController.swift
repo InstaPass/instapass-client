@@ -46,6 +46,7 @@ class InterfaceController: WKInterfaceController {
             self.flushQRCode()
             self.lastRefreshTime.setText("最後更新 \(dateToString(time, dateFormat: "HH:mm"))")
             self.refreshButton.setEnabled(true)
+            self.scroll(to: self.imageField, at: WKInterfaceScrollPosition.top, animated: true)
             self.isLoading = false
         }, failure: { error in
             // show ${error} message

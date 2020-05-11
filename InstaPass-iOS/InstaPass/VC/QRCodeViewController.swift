@@ -26,7 +26,7 @@ class QRCodeViewController: UIViewController {
         flushQRCode()
         refreshQRCode()
         
-        let timer = Timer(timeInterval: 5, target: self, selector: #selector(refreshQRCodeWrapped), userInfo: nil, repeats: true)
+        let timer = Timer(timeInterval: 10, target: self, selector: #selector(refreshQRCodeWrapped), userInfo: nil, repeats: true)
         RunLoop.main.add(timer, forMode: RunLoop.Mode.default)
     }
 
@@ -67,6 +67,10 @@ class QRCodeViewController: UIViewController {
         if !refreshButton.isEnabled {
             return
         }
+        
+        let appDelegate = UIApplication.shared.delegate as? AppDelegate
+        appDelegate?.sendJwtToken(token: UserPrefInitializer.jwtToken)
+        
         refreshButton.isEnabled = false
         QRCodeManager.refreshQrCode(success: { _, time in
             self.flushQRCode()
@@ -78,7 +82,7 @@ class QRCodeViewController: UIViewController {
             self.lastUpdateTextField.text = "请求失败"
             SPAlert.present(title: "请求 QR 码失败", message: error, image: UIImage(systemName: "wifi.exclamationmark")!)
             self.refreshButton.isEnabled = true
-
+            LoginHelper.isLogin = false
         })
     }
 }
