@@ -26,7 +26,8 @@ class RequestsManager {
                             if (responseJson["status"] == "ok") {
                                 success(responseJson)
                             } else {
-                                failure(responseJson["status"].toString())
+                                // TODO: fix status msg
+                                failure(responseJson["msg"].toString())
                             }
                         }, {
                             failure(it.localizedMessage ?: "Unknown Error")
