@@ -25,6 +25,9 @@ class QRCodeViewController: UIViewController {
         // targetUrl = URL(string: "https://en.wikipedia.org/wiki/Death")
         flushQRCode()
         refreshQRCode()
+        
+        let timer = Timer(timeInterval: 5, target: self, selector: #selector(refreshQRCodeWrapped), userInfo: nil, repeats: true)
+        RunLoop.main.add(timer, forMode: RunLoop.Mode.default)
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -52,6 +55,12 @@ class QRCodeViewController: UIViewController {
 
     @IBAction func onRefreshButtonTapped(_ sender: UIButton) {
         refreshQRCode()
+    }
+    
+    @objc func refreshQRCodeWrapped() {
+        if LoginHelper.isLogin {
+            refreshQRCode()
+        }
     }
 
     func refreshQRCode() {

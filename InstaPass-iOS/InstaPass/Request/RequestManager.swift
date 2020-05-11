@@ -44,7 +44,8 @@ class RequestManager {
                     failureHandler("bad response")
                 } else {
                     if jsonResp!["status"].stringValue != "ok" && jsonResp!["jwt_token"].stringValue == "" {
-                        failureHandler(jsonResp!["status"].stringValue)
+                        // TODO: fix status msg
+                        failureHandler(jsonResp!["msg"].stringValue)
                     } else {
                         successHandler(jsonResp!)
                     }

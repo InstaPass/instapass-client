@@ -12,9 +12,6 @@ class UserViewController: UINavigationController, UITableViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
-        let childVC = viewControllers.last as? UserTableViewController
-        childVC?.parentVC = self
     }
 
     /*
@@ -34,11 +31,5 @@ class UserViewController: UINavigationController, UITableViewDelegate {
 //            tableContainerVC.parentVC = self
 //        }
 //    }
-    
-    func switchUser() {
-        LoginHelper.logout(handler: { _ in
-            // handle logout stuff
-        })
-        performSegue(withIdentifier: "loginSegue", sender: self)
-    }
+
 }
