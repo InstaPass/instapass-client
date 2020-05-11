@@ -1,5 +1,4 @@
 # Uncomment the next line to define a global platform for your project
-platform :ios, '13.0'
 
 target 'InstaPass' do
   # Comment the next line if you don't want to use dynamic frameworks
@@ -15,7 +14,13 @@ target 'InstaPass' do
   pod 'Alamofire-SwiftyJSON'
 # pod "QRCode"
   pod 'EFQRCode', '~> 5.1.6'
-  pod 'EFQRCode/watchOS', '~> 5.1.6'
   pod 'IQKeyboardManager'
   pod 'SPAlert'
+end
+
+target 'InstaPass Watch Extension' do
+  use_frameworks!
+  pod 'EFQRCode/watchOS', '~> 5.1.6'
+  pod 'Alamofire'
+  pod 'SwiftyJSON'
 end

@@ -14,11 +14,13 @@ PODS:
   - SwiftyJSON (4.0.0)
 
 DEPENDENCIES:
+  - Alamofire
   - Alamofire-SwiftyJSON
   - EFQRCode (~> 5.1.6)
   - EFQRCode/watchOS (~> 5.1.6)
   - IQKeyboardManager
   - SPAlert
+  - SwiftyJSON
 
 SPEC REPOS:
   trunk:
@@ -39,6 +41,6 @@ SPEC CHECKSUMS:
   swift_qrcodejs: 4d024fc98b0778b804ec6a5c810880fd092aec9d
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
 
-PODFILE CHECKSUM: fdd204b0cd647051b9ce8059aec268f7fd92e070
+PODFILE CHECKSUM: e80bece67019b93e2eeb54779254407b82f1ce7d
 
 COCOAPODS: 1.8.4

@@ -26,17 +26,20 @@ class LoginHelper {
                                success: { jsonResp in
                                    LoginHelper.isLogin = true
                                    UserPrefInitializer.jwtToken = jsonResp["jwt_token"].stringValue
+                                   let appDelegate = UIApplication.shared.delegate as? AppDelegate
+                                   appDelegate?.sendJwtToken(token: UserPrefInitializer.jwtToken)
                                    handler(.ok)
                                }, failure: { _ in
                                    LoginHelper.isLogin = false
                                    handler(.unauthorized)
-                                   // TODO: fix this foolish response
-                                   handler(.ok)
         })
     }
 
     static func logout(handler: (RequestResponse) -> Void) {
         isLogin = false
         UserPrefInitializer.jwtToken = ""
+        
+        let appDelegate = UIApplication.shared.delegate as? AppDelegate
+        appDelegate?.sendJwtToken(token: "")
     }
 }

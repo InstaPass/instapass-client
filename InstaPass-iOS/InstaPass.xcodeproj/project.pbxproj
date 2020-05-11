@@ -9,6 +9,17 @@
 /* Begin PBXBuildFile section */
 		3E1F39C4BBA9FED36FDDDC5D /* Pods_InstaPassTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66EF274B1621B26EF58B5436 /* Pods_InstaPassTests.framework */; };
 		7A91381A2E329798AA42A0F1 /* Pods_InstaPass.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A70FCDE24683CD00053DECF /* Pods_InstaPass.framework */; };
+		8A13C6AF2468D9EF006CA98B /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A13C6AD2468D9EF006CA98B /* Interface.storyboard */; };
+		8A13C6B12468D9F2006CA98B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A13C6B02468D9F2006CA98B /* Assets.xcassets */; };
+		8A13C6B82468D9F2006CA98B /* InstaPass Watch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8A13C6B72468D9F2006CA98B /* InstaPass Watch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		8A13C6BD2468D9F2006CA98B /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A13C6BC2468D9F2006CA98B /* InterfaceController.swift */; };
+		8A13C6BF2468D9F2006CA98B /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A13C6BE2468D9F2006CA98B /* ExtensionDelegate.swift */; };
+		8A13C6C12468D9F3006CA98B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A13C6C02468D9F3006CA98B /* Assets.xcassets */; };
+		8A13C6C52468D9F3006CA98B /* InstaPass Watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 8A13C6AB2468D9EF006CA98B /* InstaPass Watch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		8A13C6CD2468DAD9006CA98B /* QRCodeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A307977246807AE00C1E129 /* QRCodeManager.swift */; };
+		8A13C6CE2468DAE5006CA98B /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF4C7522467B0C4004D2D65 /* RequestManager.swift */; };
+		8A13C6CF2468DAE5006CA98B /* RequestEnumerates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9E2A1D2467B6AB00243DE0 /* RequestEnumerates.swift */; };
+		8A13C6D02468DAE7006CA98B /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4FAFD82468423600BBB9DA /* Utils.swift */; };
 		8A307978246807AE00C1E129 /* QRCodeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A307977246807AE00C1E129 /* QRCodeManager.swift */; };
 		8A4FAFD92468423600BBB9DA /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4FAFD82468423600BBB9DA /* Utils.swift */; };
 		8A4FAFDC24684DE400BBB9DA /* UserPrefInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4FAFDB24684DE400BBB9DA /* UserPrefInitializer.swift */; };
@@ -27,13 +38,31 @@
 		8A9F444624546B0C0005FD01 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9F444524546B0C0005FD01 /* UserViewController.swift */; };
 		8A9F4448245470BE0005FD01 /* UserTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9F4447245470BE0005FD01 /* UserTableViewController.swift */; };
 		8A9F444A2454719E0005FD01 /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9F44492454719E0005FD01 /* HistoryTableViewController.swift */; };
+		8AA5DD0E2468DD3D002A7817 /* WatchExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA5DD0D2468DD3D002A7817 /* WatchExtension.swift */; };
+		8AA5DD0F2468DDF0002A7817 /* UserPrefInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4FAFDB24684DE400BBB9DA /* UserPrefInitializer.swift */; };
 		8AC1A7342453D26D0066CD8D /* LoginHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC1A7332453D26D0066CD8D /* LoginHelper.swift */; };
 		8AF4C7532467B0C4004D2D65 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF4C7522467B0C4004D2D65 /* RequestManager.swift */; };
 		8AF4C7552467B128004D2D65 /* DisgracefulLife.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF4C7542467B128004D2D65 /* DisgracefulLife.swift */; };
 		C7F8D187C023B718DE084E09 /* Pods_InstaPassTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A70FCDF24683CD00053DECF /* Pods_InstaPassTests.framework */; };
+		D39206D961BC394CBD4A029C /* Pods_InstaPass_Watch_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13AA98E9B9AE1826B041D79A /* Pods_InstaPass_Watch_Extension.framework */; };
+		D90F934C4CB07158DF0D40F5 /* Pods_InstaPass.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A13C6E22468DB20006CA98B /* Pods_InstaPass.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		8A13C6B92468D9F2006CA98B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8A5F2BE424530381003E636C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8A13C6B62468D9F2006CA98B;
+			remoteInfo = "InstaPass Watch Extension";
+		};
+		8A13C6C32468D9F3006CA98B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8A5F2BE424530381003E636C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8A13C6AA2468D9EF006CA98B;
+			remoteInfo = "InstaPass Watch";
+		};
 		8A5F2C0524530383003E636C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 8A5F2BE424530381003E636C /* Project object */;
@@ -44,12 +73,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		8A13C6C82468D9F3006CA98B /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				8A13C6B82468D9F2006CA98B /* InstaPass Watch Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8A30796D246803E600C1E129 /* Embed Watch Content */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
+				8A13C6C52468D9F3006CA98B /* InstaPass Watch.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -58,9 +99,25 @@
 
 /* Begin PBXFileReference section */
 		0C2B2E328B8B9FD4B94E8BA1 /* Pods_InstaPass.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstaPass.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		13AA98E9B9AE1826B041D79A /* Pods_InstaPass_Watch_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstaPass_Watch_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A80E8F5C9620A139773479F /* Pods-InstaPassTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaPassTests.debug.xcconfig"; path = "Target Support Files/Pods-InstaPassTests/Pods-InstaPassTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3AD6F5DA28D0F688E5F82D8D /* Pods-InstaPassTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaPassTests.release.xcconfig"; path = "Target Support Files/Pods-InstaPassTests/Pods-InstaPassTests.release.xcconfig"; sourceTree = "<group>"; };
 		66EF274B1621B26EF58B5436 /* Pods_InstaPassTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstaPassTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A13C6AB2468D9EF006CA98B /* InstaPass Watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "InstaPass Watch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A13C6AE2468D9EF006CA98B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		8A13C6B02468D9F2006CA98B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8A13C6B22468D9F2006CA98B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8A13C6B72468D9F2006CA98B /* InstaPass Watch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "InstaPass Watch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A13C6BC2468D9F2006CA98B /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		8A13C6BE2468D9F2006CA98B /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		8A13C6C02468D9F3006CA98B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8A13C6C22468D9F3006CA98B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8A13C6D22468DB02006CA98B /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A13C6D62468DB05006CA98B /* Alamofire_SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire_SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A13C6D92468DB07006CA98B /* EFQRCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = EFQRCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A13C6DC2468DB0A006CA98B /* swift_qrcodejs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = swift_qrcodejs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A13C6DF2468DB0E006CA98B /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A13C6E22468DB20006CA98B /* Pods_InstaPass.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_InstaPass.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A307976246807AE00C1E129 /* InstaPass Watch-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "InstaPass Watch-Bridging-Header.h"; sourceTree = "<group>"; };
 		8A307977246807AE00C1E129 /* QRCodeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeManager.swift; sourceTree = "<group>"; };
 		8A30797A246808BF00C1E129 /* Alamofire_SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire_SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,6 +174,8 @@
 		8A9F444524546B0C0005FD01 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		8A9F4447245470BE0005FD01 /* UserTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewController.swift; sourceTree = "<group>"; };
 		8A9F44492454719E0005FD01 /* HistoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewController.swift; sourceTree = "<group>"; };
+		8AA5DD0C2468DD3D002A7817 /* InstaPass Watch-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "InstaPass Watch-Bridging-Header.h"; sourceTree = "<group>"; };
+		8AA5DD0D2468DD3D002A7817 /* WatchExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchExtension.swift; sourceTree = "<group>"; };
 		8AC01D5424683ACB00EFD45E /* EFQRCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = EFQRCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AC01D5824683AEC00EFD45E /* EFQRCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = EFQRCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AC1A7332453D26D0066CD8D /* LoginHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginHelper.swift; sourceTree = "<group>"; };
@@ -124,14 +183,32 @@
 		8AF4C7542467B128004D2D65 /* DisgracefulLife.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisgracefulLife.swift; sourceTree = "<group>"; };
 		C5EB5B0ABF00E7016FE695D4 /* Pods-InstaPass.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaPass.debug.xcconfig"; path = "Target Support Files/Pods-InstaPass/Pods-InstaPass.debug.xcconfig"; sourceTree = "<group>"; };
 		DF2302E6AACFAC0B82C13CFA /* Pods-InstaPass.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaPass.release.xcconfig"; path = "Target Support Files/Pods-InstaPass/Pods-InstaPass.release.xcconfig"; sourceTree = "<group>"; };
+		EB7E0E03337FA768ACACF7AD /* Pods-InstaPass Watch Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaPass Watch Extension.debug.xcconfig"; path = "Target Support Files/Pods-InstaPass Watch Extension/Pods-InstaPass Watch Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		FFF3828EE7190A5051519E4E /* Pods-InstaPass Watch Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaPass Watch Extension.release.xcconfig"; path = "Target Support Files/Pods-InstaPass Watch Extension/Pods-InstaPass Watch Extension.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		67500702A33E604413CB21B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A13C6B42468D9F2006CA98B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D39206D961BC394CBD4A029C /* Pods_InstaPass_Watch_Extension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8A5F2BE924530381003E636C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				7A91381A2E329798AA42A0F1 /* Pods_InstaPass.framework in Frameworks */,
+				D90F934C4CB07158DF0D40F5 /* Pods_InstaPass.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,6 +227,12 @@
 		2FDD58FC73DAB06AAF9DE93C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8A13C6E22468DB20006CA98B /* Pods_InstaPass.framework */,
+				8A13C6DF2468DB0E006CA98B /* SwiftyJSON.framework */,
+				8A13C6DC2468DB0A006CA98B /* swift_qrcodejs.framework */,
+				8A13C6D92468DB07006CA98B /* EFQRCode.framework */,
+				8A13C6D62468DB05006CA98B /* Alamofire_SwiftyJSON.framework */,
+				8A13C6D22468DB02006CA98B /* Alamofire.framework */,
 				8A70FCDA24683CD00053DECF /* Alamofire_SwiftyJSON.framework */,
 				8A70FCDB24683CD00053DECF /* Alamofire.framework */,
 				8A70FCDC24683CD00053DECF /* EFQRCode.framework */,
@@ -187,8 +270,30 @@
 				8A30797D246808BF00C1E129 /* SwiftyJSON.framework */,
 				0C2B2E328B8B9FD4B94E8BA1 /* Pods_InstaPass.framework */,
 				66EF274B1621B26EF58B5436 /* Pods_InstaPassTests.framework */,
+				13AA98E9B9AE1826B041D79A /* Pods_InstaPass_Watch_Extension.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8A13C6AC2468D9EF006CA98B /* InstaPass Watch */ = {
+			isa = PBXGroup;
+			children = (
+				8A13C6AD2468D9EF006CA98B /* Interface.storyboard */,
+				8A13C6B02468D9F2006CA98B /* Assets.xcassets */,
+				8A13C6B22468D9F2006CA98B /* Info.plist */,
+			);
+			path = "InstaPass Watch";
+			sourceTree = "<group>";
+		};
+		8A13C6BB2468D9F2006CA98B /* InstaPass Watch Extension */ = {
+			isa = PBXGroup;
+			children = (
+				8A13C6BC2468D9F2006CA98B /* InterfaceController.swift */,
+				8A13C6BE2468D9F2006CA98B /* ExtensionDelegate.swift */,
+				8A13C6C02468D9F3006CA98B /* Assets.xcassets */,
+				8A13C6C22468D9F3006CA98B /* Info.plist */,
+			);
+			path = "InstaPass Watch Extension";
 			sourceTree = "<group>";
 		};
 		8A240D0A245462D8007ACEF4 /* VC */ = {
@@ -243,6 +348,8 @@
 			children = (
 				8A5F2BEE24530381003E636C /* InstaPass */,
 				8A5F2C0724530383003E636C /* InstaPassTests */,
+				8A13C6AC2468D9EF006CA98B /* InstaPass Watch */,
+				8A13C6BB2468D9F2006CA98B /* InstaPass Watch Extension */,
 				8A5F2BED24530381003E636C /* Products */,
 				FE54CBF7B862E10B1247281C /* Pods */,
 				2FDD58FC73DAB06AAF9DE93C /* Frameworks */,
@@ -254,6 +361,8 @@
 			children = (
 				8A5F2BEC24530381003E636C /* InstaPass (Client).app */,
 				8A5F2C0424530383003E636C /* InstaPassTests.xctest */,
+				8A13C6AB2468D9EF006CA98B /* InstaPass Watch.app */,
+				8A13C6B72468D9F2006CA98B /* InstaPass Watch Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -274,6 +383,8 @@
 				8A5F2BFA24530383003E636C /* Assets.xcassets */,
 				8A5F2BFC24530383003E636C /* LaunchScreen.storyboard */,
 				8A5F2BFF24530383003E636C /* Info.plist */,
+				8AA5DD0D2468DD3D002A7817 /* WatchExtension.swift */,
+				8AA5DD0C2468DD3D002A7817 /* InstaPass Watch-Bridging-Header.h */,
 			);
 			path = InstaPass;
 			sourceTree = "<group>";
@@ -312,6 +423,8 @@
 				DF2302E6AACFAC0B82C13CFA /* Pods-InstaPass.release.xcconfig */,
 				2A80E8F5C9620A139773479F /* Pods-InstaPassTests.debug.xcconfig */,
 				3AD6F5DA28D0F688E5F82D8D /* Pods-InstaPassTests.release.xcconfig */,
+				EB7E0E03337FA768ACACF7AD /* Pods-InstaPass Watch Extension.debug.xcconfig */,
+				FFF3828EE7190A5051519E4E /* Pods-InstaPass Watch Extension.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -319,6 +432,43 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		8A13C6AA2468D9EF006CA98B /* InstaPass Watch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8A13C6CC2468D9F3006CA98B /* Build configuration list for PBXNativeTarget "InstaPass Watch" */;
+			buildPhases = (
+				8A13C6A92468D9EF006CA98B /* Resources */,
+				8A13C6C82468D9F3006CA98B /* Embed App Extensions */,
+				67500702A33E604413CB21B5 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8A13C6BA2468D9F2006CA98B /* PBXTargetDependency */,
+			);
+			name = "InstaPass Watch";
+			productName = "InstaPass Watch";
+			productReference = 8A13C6AB2468D9EF006CA98B /* InstaPass Watch.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		8A13C6B62468D9F2006CA98B /* InstaPass Watch Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8A13C6CB2468D9F3006CA98B /* Build configuration list for PBXNativeTarget "InstaPass Watch Extension" */;
+			buildPhases = (
+				2E9B47E8A3C62069C00B0E49 /* [CP] Check Pods Manifest.lock */,
+				8A13C6B32468D9F2006CA98B /* Sources */,
+				8A13C6B42468D9F2006CA98B /* Frameworks */,
+				8A13C6B52468D9F2006CA98B /* Resources */,
+				6315E2370AED22C6C0267821 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "InstaPass Watch Extension";
+			productName = "InstaPass Watch Extension";
+			productReference = 8A13C6B72468D9F2006CA98B /* InstaPass Watch Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 		8A5F2BEB24530381003E636C /* InstaPass */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8A5F2C0D24530383003E636C /* Build configuration list for PBXNativeTarget "InstaPass" */;
@@ -333,6 +483,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				8A13C6C42468D9F3006CA98B /* PBXTargetDependency */,
 			);
 			name = InstaPass;
 			productName = InstaPass;
@@ -364,10 +515,17 @@
 		8A5F2BE424530381003E636C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1140;
-				LastUpgradeCheck = 1130;
+				LastSwiftUpdateCheck = 1150;
+				LastUpgradeCheck = 1140;
 				ORGANIZATIONNAME = yuetsin;
 				TargetAttributes = {
+					8A13C6AA2468D9EF006CA98B = {
+						CreatedOnToolsVersion = 11.5;
+						LastSwiftMigration = 1140;
+					};
+					8A13C6B62468D9F2006CA98B = {
+						CreatedOnToolsVersion = 11.5;
+					};
 					8A5F2BEB24530381003E636C = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
@@ -392,11 +550,30 @@
 			targets = (
 				8A5F2BEB24530381003E636C /* InstaPass */,
 				8A5F2C0324530383003E636C /* InstaPassTests */,
+				8A13C6AA2468D9EF006CA98B /* InstaPass Watch */,
+				8A13C6B62468D9F2006CA98B /* InstaPass Watch Extension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		8A13C6A92468D9EF006CA98B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A13C6B12468D9F2006CA98B /* Assets.xcassets in Resources */,
+				8A13C6AF2468D9EF006CA98B /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A13C6B52468D9F2006CA98B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A13C6C12468D9F3006CA98B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8A5F2BEA24530381003E636C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -419,6 +596,45 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		2E9B47E8A3C62069C00B0E49 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-InstaPass Watch Extension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6315E2370AED22C6C0267821 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-InstaPass Watch Extension/Pods-InstaPass Watch Extension-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-InstaPass Watch Extension/Pods-InstaPass Watch Extension-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-InstaPass Watch Extension/Pods-InstaPass Watch Extension-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		7785B86DCFC3D46AC98A8008 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -483,6 +699,21 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		8A13C6B32468D9F2006CA98B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AA5DD0F2468DDF0002A7817 /* UserPrefInitializer.swift in Sources */,
+				8A13C6D02468DAE7006CA98B /* Utils.swift in Sources */,
+				8A13C6CE2468DAE5006CA98B /* RequestManager.swift in Sources */,
+				8A13C6CF2468DAE5006CA98B /* RequestEnumerates.swift in Sources */,
+				8A13C6CD2468DAD9006CA98B /* QRCodeManager.swift in Sources */,
+				8A13C6BF2468D9F2006CA98B /* ExtensionDelegate.swift in Sources */,
+				8AA5DD0E2468DD3D002A7817 /* WatchExtension.swift in Sources */,
+				8A13C6BD2468D9F2006CA98B /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8A5F2BE824530381003E636C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -516,6 +747,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		8A13C6BA2468D9F2006CA98B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8A13C6B62468D9F2006CA98B /* InstaPass Watch Extension */;
+			targetProxy = 8A13C6B92468D9F2006CA98B /* PBXContainerItemProxy */;
+		};
+		8A13C6C42468D9F3006CA98B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8A13C6AA2468D9EF006CA98B /* InstaPass Watch */;
+			targetProxy = 8A13C6C32468D9F3006CA98B /* PBXContainerItemProxy */;
+		};
 		8A5F2C0624530383003E636C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 8A5F2BEB24530381003E636C /* InstaPass */;
@@ -524,6 +765,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		8A13C6AD2468D9EF006CA98B /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8A13C6AE2468D9EF006CA98B /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
 		8A5F2BF724530381003E636C /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -543,6 +792,105 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		8A13C6C62468D9F3006CA98B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 24XARD42BP;
+				IBSC_MODULE = InstaPass_Watch_Extension;
+				INFOPLIST_FILE = "InstaPass Watch/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.instapass.client.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "InstaPass/InstaPass Watch-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.2;
+			};
+			name = Debug;
+		};
+		8A13C6C72468D9F3006CA98B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 24XARD42BP;
+				IBSC_MODULE = InstaPass_Watch_Extension;
+				INFOPLIST_FILE = "InstaPass Watch/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.instapass.client.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "InstaPass/InstaPass Watch-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.2;
+			};
+			name = Release;
+		};
+		8A13C6C92468D9F3006CA98B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB7E0E03337FA768ACACF7AD /* Pods-InstaPass Watch Extension.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 24XARD42BP;
+				INFOPLIST_FILE = "InstaPass Watch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.instapass.client.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.2;
+			};
+			name = Debug;
+		};
+		8A13C6CA2468D9F3006CA98B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FFF3828EE7190A5051519E4E /* Pods-InstaPass Watch Extension.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 24XARD42BP;
+				INFOPLIST_FILE = "InstaPass Watch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.instapass.client.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.2;
+			};
+			name = Release;
+		};
 		8A5F2C0B24530383003E636C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -750,6 +1098,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		8A13C6CB2468D9F3006CA98B /* Build configuration list for PBXNativeTarget "InstaPass Watch Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A13C6C92468D9F3006CA98B /* Debug */,
+				8A13C6CA2468D9F3006CA98B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8A13C6CC2468D9F3006CA98B /* Build configuration list for PBXNativeTarget "InstaPass Watch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A13C6C62468D9F3006CA98B /* Debug */,
+				8A13C6C72468D9F3006CA98B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		8A5F2BE724530381003E636C /* Build configuration list for PBXProject "InstaPass" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

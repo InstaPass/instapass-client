@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="16096" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="16012"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="InstaPass_Watch" customModuleProvider="target">
+                    <items>
+                        <imageView alignment="center" contentMode="scaleAspectFit" id="adh-KE-u3x"/>
+                        <label alignment="center" text="正在刷新…" textAlignment="center" id="J34-9x-RZN"/>
+                        <button width="1" alignment="left" title="现在刷新" id="7G5-5f-ycc">
+                            <connections>
+                                <action selector="refreshImmediately" destination="AgC-eL-Hgc" id="cqz-Y7-afE"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="imageField" destination="adh-KE-u3x" id="FfI-RC-ikz"/>
+                        <outlet property="lastRefreshTime" destination="J34-9x-RZN" id="kKE-pN-Mf0"/>
+                        <outlet property="refreshButton" destination="7G5-5f-ycc" id="eef-b2-XQ7"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="34" y="31"/>
+        </scene>
+    </scenes>
+</document>

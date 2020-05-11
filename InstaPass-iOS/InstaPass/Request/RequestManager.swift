@@ -7,7 +7,11 @@
 //
 
 import Alamofire
+
+#if canImport(Alamofire_SwiftyJSON)
 import Alamofire_SwiftyJSON
+#endif
+
 import Foundation
 import SwiftyJSON
 

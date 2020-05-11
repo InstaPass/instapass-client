@@ -7,12 +7,32 @@
 //
 
 import UIKit
+import WatchConnectivity
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        NSLog("iOS: session init")
+    }
+    
+    func sessionDidBecomeInactive(_ session: WCSession) {
+        NSLog("iOS: session inactive")
+    }
+    
+    func sessionDidDeactivate(_ session: WCSession) {
+        NSLog("iOS: session deactivate")
+    }
+    
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        if WCSession.isSupported() {
+            let session = WCSession.default
+            session.delegate = self
+            session.activate()
+        }
+        
+        sendJwtToken(token: UserPrefInitializer.jwtToken)
         return true
     }
 
@@ -29,7 +49,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
-
-
+    
+    func sendJwtToken(token: String) {
+        let session = WCSession.default
+        session.sendMessage(["jwtToken" : token], replyHandler: { _ in
+            NSLog("jwt token sent to Apple Watch")
+        }, errorHandler: { _ in
+            NSLog("failed to send jwt token to Apple Watch")
+        })
+    }
 }
 

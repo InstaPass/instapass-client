@@ -16,6 +16,7 @@ func dateToString(_ date: Date, dateFormat: String = "yyyy-MM-dd HH:mm:ss") -> S
     return formatter.string(from: date)
 }
 
+#if os(iOS)
 extension UIAlertController {
 
     private struct ActivityIndicatorData {
@@ -36,3 +37,4 @@ extension UIAlertController {
         self.dismiss(animated: false)
     }
 }
+#endif

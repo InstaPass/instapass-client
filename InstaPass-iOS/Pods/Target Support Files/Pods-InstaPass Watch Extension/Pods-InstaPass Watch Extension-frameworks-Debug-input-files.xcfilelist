@@ -1,0 +1,5 @@
+${PODS_ROOT}/Target Support Files/Pods-InstaPass Watch Extension/Pods-InstaPass Watch Extension-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Alamofire-watchOS/Alamofire.framework
+${BUILT_PRODUCTS_DIR}/EFQRCode-watchOS/EFQRCode.framework
+${BUILT_PRODUCTS_DIR}/SwiftyJSON-watchOS/SwiftyJSON.framework
+${BUILT_PRODUCTS_DIR}/swift_qrcodejs/swift_qrcodejs.framework
