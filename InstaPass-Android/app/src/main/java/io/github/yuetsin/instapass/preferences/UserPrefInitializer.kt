@@ -1,7 +1,19 @@
 package io.github.yuetsin.instapass.preferences
 
+import android.app.Activity
+import android.content.Context.MODE_PRIVATE
+
+
 class UserPrefInitializer {
     companion object {
-        var jwtToken: String? = null
+        var jwtToken: String?
+            get() {
+                return Activity().getPreferences(MODE_PRIVATE).getString(PrefKeyEnum.JwtToken.key, "")
+            }
+            set(value) {
+                val editor = Activity().getPreferences(MODE_PRIVATE).edit()
+                editor.putString(PrefKeyEnum.JwtToken.key, value)
+                editor.apply()
+            }
     }
 }

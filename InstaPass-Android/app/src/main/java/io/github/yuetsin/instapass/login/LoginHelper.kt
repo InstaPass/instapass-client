@@ -1,7 +1,5 @@
 package io.github.yuetsin.instapass.login
 
-import io.github.yuetsin.instapass.login.LoginHelper.Companion.isLogin
-import io.github.yuetsin.instapass.preferences.UserPrefInitializer
 import io.github.yuetsin.instapass.preferences.UserPrefInitializer.Companion.jwtToken
 import io.github.yuetsin.instapass.request.FeatureTypeEnum
 import io.github.yuetsin.instapass.request.RequestTypeEnum
@@ -35,7 +33,6 @@ class LoginHelper {
             jwtToken = ""
 
             // do some logout requests
-
             success()
         }
     }
