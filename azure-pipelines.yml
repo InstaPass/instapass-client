@@ -12,7 +12,7 @@ pool:
 jobs:
   - job: 'ios_build'
     steps:
-    - task: ShellScript@2
+    - task: Xcode@5
       inputs:
         actions: 'build'
         scheme: 'InstaPass'
@@ -22,7 +22,7 @@ jobs:
         xcodeVersion: 'default' # Options: 8, 9, 10, default, specifyPath
   - job: 'watchos_build'
     steps:
-    - task: ShellScript@2
+    - task: Xcode@5
       inputs:
         actions: 'build'
         scheme: 'InstaPass Watch'
