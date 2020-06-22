@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2BDF227A005B22B9B93B3D5E /* Pods_InstaPass.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A13C6E22468DB20006CA98B /* Pods_InstaPass.framework */; };
 		3E1F39C4BBA9FED36FDDDC5D /* Pods_InstaPassTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66EF274B1621B26EF58B5436 /* Pods_InstaPassTests.framework */; };
 		7A91381A2E329798AA42A0F1 /* Pods_InstaPass.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A70FCDE24683CD00053DECF /* Pods_InstaPass.framework */; };
 		8A13C6AF2468D9EF006CA98B /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A13C6AD2468D9EF006CA98B /* Interface.storyboard */; };
@@ -216,6 +217,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A91381A2E329798AA42A0F1 /* Pods_InstaPass.framework in Frameworks */,
+				2BDF227A005B22B9B93B3D5E /* Pods_InstaPass.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
