@@ -20,6 +20,10 @@ class InterfaceController: WKInterfaceController {
     @IBOutlet var imageField: WKInterfaceImage!
     @IBOutlet var lastRefreshTime: WKInterfaceLabel!
     @IBOutlet var refreshButton: WKInterfaceButton!
+    
+    var currentCommunityIndex: Int = 0
+    var communityIds: [Int] = []
+    var communityNames: [String] = []
 
     var isLoading: Bool = false
 
@@ -33,6 +37,13 @@ class InterfaceController: WKInterfaceController {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
     }
+    
+    func getCommunityId() -> Int {
+        if currentCommunityIndex >= communityIds.count {
+            return 0
+        }
+        return communityIds[currentCommunityIndex]
+    }
 
     @IBAction func refreshImmediately() {
         if isLoading {
@@ -42,7 +53,7 @@ class InterfaceController: WKInterfaceController {
         isLoading = true
 
         refreshButton.setEnabled(false)
-        QRCodeManager.refreshQrCode(success: { _, time in
+        QRCodeManager.refreshQrCode(id: getCommunityId(), success: { _, time in
             self.flushQRCode()
             self.lastRefreshTime.setText("最後更新 \(dateToString(time, dateFormat: "HH:mm"))")
             self.refreshButton.setEnabled(true)

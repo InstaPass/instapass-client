@@ -32,10 +32,10 @@ class QRCodeManager {
         return nil
     }
 
-    static func refreshQrCode(success: @escaping (String, Date) -> Void, failure: @escaping (String) -> Void) {
+    static func refreshQrCode(id: Int, success: @escaping (String, Date) -> Void, failure: @escaping (String) -> Void) {
         RequestManager.request(type: .get,
                                feature: .qrcode,
-                               params: nil,
+                               params: ["community_id": id],
                                success: { jsonObject in
                                    let secret = jsonObject["secret"].stringValue
                                    let lastRefreshTime = jsonObject["last_refresh_time"].doubleValue

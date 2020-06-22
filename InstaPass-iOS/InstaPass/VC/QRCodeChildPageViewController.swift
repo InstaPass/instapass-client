@@ -11,10 +11,19 @@ import SPAlert
 
 class QRCodeChildPageViewController: UIViewController {
     
-    @IBOutlet var cardView: UIView!
+    @IBOutlet var cardView: UIVisualEffectView!
     @IBOutlet var QRCodeView: UIImageView!
     @IBOutlet var refreshButton: UIButton!
     @IBOutlet var lastUpdateTextField: UILabel!
+    @IBOutlet weak var communityNameLabel: UILabel!
+    
+    var communityId: Int!
+    var communityName: String!
+    
+    func initCommunityInfo(id: Int, name: String) {
+        communityId = id
+        communityName = name
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,13 +33,17 @@ class QRCodeChildPageViewController: UIViewController {
         
         let timer = Timer(timeInterval: 10, target: self, selector: #selector(refreshQRCodeWrapped), userInfo: nil, repeats: true)
         RunLoop.main.add(timer, forMode: RunLoop.Mode.default)
+        
+        communityNameLabel.text = communityName ?? "未知社区"
     }
     
     func redrawPageShadow() {
         let layer = cardView.layer
-        layer.cornerRadius = 5.0
+        
+        // radius seems doesn't work with UIVisualEffectView
+//        layer.cornerRadius = 10
         layer.shadowOffset = CGSize(width: 0, height: 5)
-        layer.shadowRadius = 10
+        layer.shadowRadius = 5
         layer.shadowColor = UIColor.label.cgColor
         layer.shadowOpacity = 0.5
     }
@@ -92,7 +105,7 @@ class QRCodeChildPageViewController: UIViewController {
         appDelegate?.sendJwtToken(token: UserPrefInitializer.jwtToken)
 
         refreshButton.isEnabled = false
-        QRCodeManager.refreshQrCode(success: { _, time in
+        QRCodeManager.refreshQrCode(id: communityId, success: { _, time in
             self.flushQRCode()
             self.lastUpdateTextField.text = "最後更新 \(dateToString(time, dateFormat: "HH:mm"))"
             self.refreshButton.isEnabled = true

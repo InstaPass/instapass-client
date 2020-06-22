@@ -18,6 +18,8 @@ class QRCodePageViewController: UIViewController, PageControlDelegate {
     
     @IBOutlet weak var blurView: UIVisualEffectView!
     
+    @IBOutlet weak var navItem: UINavigationItem!
+    
     // var targetUrl: URL?
     @IBAction func switchToLoginPage(_ sender: UIButton) {
         tabBarController?.selectedIndex = 2
@@ -27,6 +29,10 @@ class QRCodePageViewController: UIViewController, PageControlDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         blurView.isHidden = true
+        
+//        self.navigationController?.navigationBar.titleTextAttributes = [
+//            NSAttributedString.Key.foregroundColor: UIColor.white
+//        ]
     }
     
     func setNumberOfPages(number: Int) {

@@ -34,6 +34,7 @@
 		8A81ACAE24552B61008CF847 /* raw_dark.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A81ACAD24552B61008CF847 /* raw_dark.png */; };
 		8A82E3D1245519E700008610 /* raw.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A82E3D0245519E700008610 /* raw.png */; };
 		8A9E2A1E2467B6AB00243DE0 /* RequestEnumerates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9E2A1D2467B6AB00243DE0 /* RequestEnumerates.swift */; };
+		8A9F12D924A0B1FD00EA7D4C /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A9F12D824A0B1FC00EA7D4C /* bg.png */; };
 		8A9F444324546A8E0005FD01 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9F444224546A8E0005FD01 /* HistoryViewController.swift */; };
 		8A9F444624546B0C0005FD01 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9F444524546B0C0005FD01 /* UserViewController.swift */; };
 		8A9F4448245470BE0005FD01 /* UserTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9F4447245470BE0005FD01 /* UserTableViewController.swift */; };
@@ -173,6 +174,7 @@
 		8A8CA7952468358C00E87F08 /* IQKeyboardManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = IQKeyboardManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A8CA7962468358C00E87F08 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A9E2A1D2467B6AB00243DE0 /* RequestEnumerates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestEnumerates.swift; sourceTree = "<group>"; };
+		8A9F12D824A0B1FC00EA7D4C /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bg.png; path = ../../../Icons/bg.png; sourceTree = "<group>"; };
 		8A9F444224546A8E0005FD01 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		8A9F444524546B0C0005FD01 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		8A9F4447245470BE0005FD01 /* UserTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewController.swift; sourceTree = "<group>"; };
@@ -409,6 +411,7 @@
 			isa = PBXGroup;
 			children = (
 				8AA71CFF24A08EF100A30DF0 /* 62457185.PNG */,
+				8A9F12D824A0B1FC00EA7D4C /* bg.png */,
 				8A82E3D0245519E700008610 /* raw.png */,
 				8A81ACAD24552B61008CF847 /* raw_dark.png */,
 			);
@@ -591,6 +594,7 @@
 				8A5F2BFE24530383003E636C /* LaunchScreen.storyboard in Resources */,
 				8A5F2BFB24530383003E636C /* Assets.xcassets in Resources */,
 				8A5F2BF924530381003E636C /* Main.storyboard in Resources */,
+				8A9F12D924A0B1FD00EA7D4C /* bg.png in Resources */,
 				8A81ACAE24552B61008CF847 /* raw_dark.png in Resources */,
 				8AA71D0024A08EF100A30DF0 /* 62457185.PNG in Resources */,
 			);
