@@ -9,6 +9,9 @@
 import UIKit
 
 class UserTableViewController: UITableViewController {
+    
+    @IBOutlet weak var profileImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -17,8 +20,9 @@ class UserTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        profileImageView.layer.cornerRadius = 14
     }
-
+    
     func switchUser() {
         LoginHelper.logout(handler: { _ in
             // handle logout stuff

@@ -1,0 +1,6 @@
+framework module Randient {
+  umbrella header "Randient-umbrella.h"
+
+  export *
+  module * { export * }
+}

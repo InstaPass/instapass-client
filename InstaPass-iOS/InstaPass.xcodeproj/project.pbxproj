@@ -25,7 +25,7 @@
 		8A4FAFDC24684DE400BBB9DA /* UserPrefInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4FAFDB24684DE400BBB9DA /* UserPrefInitializer.swift */; };
 		8A5F2BF024530381003E636C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5F2BEF24530381003E636C /* AppDelegate.swift */; };
 		8A5F2BF224530381003E636C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5F2BF124530381003E636C /* SceneDelegate.swift */; };
-		8A5F2BF424530381003E636C /* QRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5F2BF324530381003E636C /* QRCodeViewController.swift */; };
+		8A5F2BF424530381003E636C /* QRCodePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5F2BF324530381003E636C /* QRCodePageViewController.swift */; };
 		8A5F2BF624530381003E636C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5F2BF524530381003E636C /* LoginViewController.swift */; };
 		8A5F2BF924530381003E636C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A5F2BF724530381003E636C /* Main.storyboard */; };
 		8A5F2BFB24530383003E636C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A5F2BFA24530383003E636C /* Assets.xcassets */; };
@@ -40,12 +40,15 @@
 		8A9F444A2454719E0005FD01 /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9F44492454719E0005FD01 /* HistoryTableViewController.swift */; };
 		8AA5DD0E2468DD3D002A7817 /* WatchExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA5DD0D2468DD3D002A7817 /* WatchExtension.swift */; };
 		8AA5DD0F2468DDF0002A7817 /* UserPrefInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4FAFDB24684DE400BBB9DA /* UserPrefInitializer.swift */; };
+		8AA71D0024A08EF100A30DF0 /* 62457185.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 8AA71CFF24A08EF100A30DF0 /* 62457185.PNG */; };
+		8AA71D0124A08EF100A30DF0 /* 62457185.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 8AA71CFF24A08EF100A30DF0 /* 62457185.PNG */; };
+		8AA71D0324A091D300A30DF0 /* QRCodesViewController+PageControlDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA71D0224A091D300A30DF0 /* QRCodesViewController+PageControlDelegate.swift */; };
+		8AA71D0524A0925A00A30DF0 /* QRCodeChildPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA71D0424A0925A00A30DF0 /* QRCodeChildPageViewController.swift */; };
 		8AC1A7342453D26D0066CD8D /* LoginHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC1A7332453D26D0066CD8D /* LoginHelper.swift */; };
 		8AF4C7532467B0C4004D2D65 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF4C7522467B0C4004D2D65 /* RequestManager.swift */; };
 		8AF4C7552467B128004D2D65 /* DisgracefulLife.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF4C7542467B128004D2D65 /* DisgracefulLife.swift */; };
 		C7F8D187C023B718DE084E09 /* Pods_InstaPassTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A70FCDF24683CD00053DECF /* Pods_InstaPassTests.framework */; };
 		D39206D961BC394CBD4A029C /* Pods_InstaPass_Watch_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13AA98E9B9AE1826B041D79A /* Pods_InstaPass_Watch_Extension.framework */; };
-		D90F934C4CB07158DF0D40F5 /* Pods_InstaPass.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A13C6E22468DB20006CA98B /* Pods_InstaPass.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -137,7 +140,7 @@
 		8A5F2BEC24530381003E636C /* InstaPass (Client).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "InstaPass (Client).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A5F2BEF24530381003E636C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8A5F2BF124530381003E636C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8A5F2BF324530381003E636C /* QRCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeViewController.swift; sourceTree = "<group>"; };
+		8A5F2BF324530381003E636C /* QRCodePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodePageViewController.swift; sourceTree = "<group>"; };
 		8A5F2BF524530381003E636C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		8A5F2BF824530381003E636C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8A5F2BFA24530383003E636C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -176,6 +179,9 @@
 		8A9F44492454719E0005FD01 /* HistoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewController.swift; sourceTree = "<group>"; };
 		8AA5DD0C2468DD3D002A7817 /* InstaPass Watch-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "InstaPass Watch-Bridging-Header.h"; sourceTree = "<group>"; };
 		8AA5DD0D2468DD3D002A7817 /* WatchExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchExtension.swift; sourceTree = "<group>"; };
+		8AA71CFF24A08EF100A30DF0 /* 62457185.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 62457185.PNG; sourceTree = "<group>"; };
+		8AA71D0224A091D300A30DF0 /* QRCodesViewController+PageControlDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QRCodesViewController+PageControlDelegate.swift"; sourceTree = "<group>"; };
+		8AA71D0424A0925A00A30DF0 /* QRCodeChildPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeChildPageViewController.swift; sourceTree = "<group>"; };
 		8AC01D5424683ACB00EFD45E /* EFQRCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = EFQRCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AC01D5824683AEC00EFD45E /* EFQRCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = EFQRCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AC1A7332453D26D0066CD8D /* LoginHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginHelper.swift; sourceTree = "<group>"; };
@@ -208,7 +214,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A91381A2E329798AA42A0F1 /* Pods_InstaPass.framework in Frameworks */,
-				D90F934C4CB07158DF0D40F5 /* Pods_InstaPass.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,12 +304,14 @@
 		8A240D0A245462D8007ACEF4 /* VC */ = {
 			isa = PBXGroup;
 			children = (
-				8A5F2BF324530381003E636C /* QRCodeViewController.swift */,
+				8A5F2BF324530381003E636C /* QRCodePageViewController.swift */,
 				8A5F2BF524530381003E636C /* LoginViewController.swift */,
 				8A9F444224546A8E0005FD01 /* HistoryViewController.swift */,
 				8A9F44492454719E0005FD01 /* HistoryTableViewController.swift */,
 				8A9F444524546B0C0005FD01 /* UserViewController.swift */,
 				8A9F4447245470BE0005FD01 /* UserTableViewController.swift */,
+				8AA71D0224A091D300A30DF0 /* QRCodesViewController+PageControlDelegate.swift */,
+				8AA71D0424A0925A00A30DF0 /* QRCodeChildPageViewController.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -401,6 +408,7 @@
 		8A82E3CF245519DE00008610 /* Icons */ = {
 			isa = PBXGroup;
 			children = (
+				8AA71CFF24A08EF100A30DF0 /* 62457185.PNG */,
 				8A82E3D0245519E700008610 /* raw.png */,
 				8A81ACAD24552B61008CF847 /* raw_dark.png */,
 			);
@@ -516,7 +524,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1150;
-				LastUpgradeCheck = 1140;
+				LastUpgradeCheck = 1160;
 				ORGANIZATIONNAME = yuetsin;
 				TargetAttributes = {
 					8A13C6AA2468D9EF006CA98B = {
@@ -563,6 +571,7 @@
 			files = (
 				8A13C6B12468D9F2006CA98B /* Assets.xcassets in Resources */,
 				8A13C6AF2468D9EF006CA98B /* Interface.storyboard in Resources */,
+				8AA71D0124A08EF100A30DF0 /* 62457185.PNG in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -583,6 +592,7 @@
 				8A5F2BFB24530383003E636C /* Assets.xcassets in Resources */,
 				8A5F2BF924530381003E636C /* Main.storyboard in Resources */,
 				8A81ACAE24552B61008CF847 /* raw_dark.png in Resources */,
+				8AA71D0024A08EF100A30DF0 /* 62457185.PNG in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -723,7 +733,9 @@
 				8A5F2BF624530381003E636C /* LoginViewController.swift in Sources */,
 				8A4FAFD92468423600BBB9DA /* Utils.swift in Sources */,
 				8A9F444A2454719E0005FD01 /* HistoryTableViewController.swift in Sources */,
-				8A5F2BF424530381003E636C /* QRCodeViewController.swift in Sources */,
+				8A5F2BF424530381003E636C /* QRCodePageViewController.swift in Sources */,
+				8AA71D0524A0925A00A30DF0 /* QRCodeChildPageViewController.swift in Sources */,
+				8AA71D0324A091D300A30DF0 /* QRCodesViewController+PageControlDelegate.swift in Sources */,
 				8A5F2BF024530381003E636C /* AppDelegate.swift in Sources */,
 				8A9E2A1E2467B6AB00243DE0 /* RequestEnumerates.swift in Sources */,
 				8AF4C7532467B0C4004D2D65 /* RequestManager.swift in Sources */,
@@ -1031,7 +1043,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.instapass.client;
 				PRODUCT_NAME = "InstaPass (Client)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1053,7 +1065,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.instapass.client;
 				PRODUCT_NAME = "InstaPass (Client)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

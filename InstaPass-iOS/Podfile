@@ -16,6 +16,8 @@ target 'InstaPass' do
   pod 'EFQRCode', '~> 5.1.6'
   pod 'IQKeyboardManager'
   pod 'SPAlert'
+  pod 'Pageboy', '~> 3.6'
+  pod 'Randient'
 end
 
 target 'InstaPass Watch Extension' do
