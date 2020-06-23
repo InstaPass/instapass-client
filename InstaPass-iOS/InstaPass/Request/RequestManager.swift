@@ -25,20 +25,20 @@ class RequestManager {
     static func request(type requestType: RequestType, feature featureType: FeatureType,
                         params parameters: Parameters?,
                         success successHandler: @escaping (JSON) -> Void, failure failureHandler: @escaping (String) -> Void) {
-        var method: HTTPMethod!
-
+        var method: HTTPMethod = .get
+        var encoding: ParameterEncoding = URLEncoding.queryString
         if requestType == .get {
             method = .get
+            encoding = URLEncoding.queryString
         } else if requestType == .post {
             method = .post
-        } else {
-            // fallback
-            method = .get
+            encoding = JSONEncoding.default
         }
+        
         Alamofire.request(URL.init(string: featureType.rawValue, relativeTo: baseUrl)!,
                           method: method,
                           parameters: parameters,
-                          encoding: JSONEncoding.default,
+                          encoding: encoding,
                           headers: ["Jwt-Token" : UserPrefInitializer.jwtToken ]).responseSwiftyJSON(completionHandler: { responseJSON in
             if responseJSON.error != nil {
                 failureHandler(responseJSON.error!.localizedDescription)

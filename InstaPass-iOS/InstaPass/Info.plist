@@ -39,6 +39,39 @@
 			</array>
 		</dict>
 	</dict>
+	<key>UIApplicationShortcutItems</key>
+	<array>
+		<dict>
+			<key>UIApplicationShortcutItemIconType</key>
+			<string>UIApplicationShortcutIconTypeConfirmation</string>
+			<key>UIApplicationShortcutItemSubtitle</key>
+			<string>作为出入凭证</string>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>展示 QR 码</string>
+			<key>UIApplicationShortcutItemType</key>
+			<string>qrcode</string>
+		</dict>
+		<dict>
+			<key>UIApplicationShortcutItemIconType</key>
+			<string>UIApplicationShortcutIconTypeBookmark</string>
+			<key>UIApplicationShortcutItemSubtitle</key>
+			<string></string>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>出入日志</string>
+			<key>UIApplicationShortcutItemType</key>
+			<string>history</string>
+		</dict>
+		<dict>
+			<key>UIApplicationShortcutItemIconType</key>
+			<string>UIApplicationShortcutIconTypeLove</string>
+			<key>UIApplicationShortcutItemSubtitle</key>
+			<string></string>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>个人</string>
+			<key>UIApplicationShortcutItemType</key>
+			<string>person</string>
+		</dict>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

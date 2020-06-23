@@ -21,6 +21,7 @@
 		8A13C6CF2468DAE5006CA98B /* RequestEnumerates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9E2A1D2467B6AB00243DE0 /* RequestEnumerates.swift */; };
 		8A13C6D02468DAE7006CA98B /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4FAFD82468423600BBB9DA /* Utils.swift */; };
 		8A307978246807AE00C1E129 /* QRCodeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A307977246807AE00C1E129 /* QRCodeManager.swift */; };
+		8A38495E24A239370024BC5A /* MainTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A38495D24A239370024BC5A /* MainTabViewController.swift */; };
 		8A4FAFD92468423600BBB9DA /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4FAFD82468423600BBB9DA /* Utils.swift */; };
 		8A4FAFDC24684DE400BBB9DA /* UserPrefInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4FAFDB24684DE400BBB9DA /* UserPrefInitializer.swift */; };
 		8A5F2BF024530381003E636C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5F2BEF24530381003E636C /* AppDelegate.swift */; };
@@ -136,6 +137,7 @@
 		8A372CF0246837F100CDE400 /* swift_qrcodejs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = swift_qrcodejs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A372CF32468397200CDE400 /* EFQRCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = EFQRCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A372CF62468398900CDE400 /* Pods_InstaPass.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_InstaPass.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A38495D24A239370024BC5A /* MainTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabViewController.swift; sourceTree = "<group>"; };
 		8A4FAFD82468423600BBB9DA /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		8A4FAFDB24684DE400BBB9DA /* UserPrefInitializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPrefInitializer.swift; sourceTree = "<group>"; };
 		8A5F2BEC24530381003E636C /* InstaPass (Client).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "InstaPass (Client).app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -314,6 +316,7 @@
 				8A9F4447245470BE0005FD01 /* UserTableViewController.swift */,
 				8AA71D0224A091D300A30DF0 /* QRCodesViewController+PageControlDelegate.swift */,
 				8AA71D0424A0925A00A30DF0 /* QRCodeChildPageViewController.swift */,
+				8A38495D24A239370024BC5A /* MainTabViewController.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -749,6 +752,7 @@
 				8A9F444324546A8E0005FD01 /* HistoryViewController.swift in Sources */,
 				8A4FAFDC24684DE400BBB9DA /* UserPrefInitializer.swift in Sources */,
 				8AC1A7342453D26D0066CD8D /* LoginHelper.swift in Sources */,
+				8A38495E24A239370024BC5A /* MainTabViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

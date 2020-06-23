@@ -11,6 +11,9 @@ import WatchConnectivity
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
+    
+    static var defaultPage: Page?
+    
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
         NSLog("iOS: session init")
     }
@@ -58,5 +61,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
             NSLog("failed to send jwt token to Apple Watch")
         })
     }
+    
+    func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
+        NSLog(shortcutItem.type)
+        switch shortcutItem.type {
+        case "qrcode":
+            AppDelegate.defaultPage = .qrcode
+            break
+        case "history":
+            AppDelegate.defaultPage = .history
+            break
+        case "person":
+            AppDelegate.defaultPage = .person
+            break
+        default:
+            break
+        }
+        
+        completionHandler(true)
+    }
 }
-

@@ -17,6 +17,13 @@ func dateToString(_ date: Date, dateFormat: String = "yyyy-MM-dd HH:mm:ss") -> S
 }
 
 #if os(iOS)
+
+enum Page {
+    case qrcode
+    case history
+    case person
+}
+
 extension UIAlertController {
 
     private struct ActivityIndicatorData {
