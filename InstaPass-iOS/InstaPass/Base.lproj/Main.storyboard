@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
-    <device id="retina4_0" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17132" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+    <device id="retina3_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17105"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -12,7 +14,7 @@
             <objects>
                 <viewController id="9pv-A4-QxB" customClass="QRCodePageViewController" customModule="InstaPass__Client_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TitleBar" translatesAutoresizingMaskIntoConstraints="NO" id="ey4-vP-j6A">
@@ -22,33 +24,31 @@
                                 </constraints>
                             </imageView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4mk-Ov-jb4">
-                                <rect key="frame" x="0.0" y="98.5" width="320" height="420.5"/>
+                                <rect key="frame" x="0.0" y="96" width="320" height="335"/>
                                 <connections>
                                     <segue destination="ama-QU-mOs" kind="embed" identifier="QRCodeSegue" id="FSq-mp-4lK"/>
                                 </connections>
                             </containerView>
-                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="18" translatesAutoresizingMaskIntoConstraints="NO" id="f1m-fk-8iy">
-                                <rect key="frame" x="20.5" y="482" width="279" height="37"/>
-                                <color key="pageIndicatorTintColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="currentPageIndicatorTintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" hidesForSinglePage="YES" numberOfPages="6" currentPage="4" translatesAutoresizingMaskIntoConstraints="NO" id="f1m-fk-8iy">
+                                <rect key="frame" x="8" y="403.5" width="304" height="27.5"/>
                                 <connections>
                                     <action selector="onPageControlChanges:" destination="9pv-A4-QxB" eventType="valueChanged" id="FQL-Fr-Ltb"/>
                                 </connections>
                             </pageControl>
                             <visualEffectView hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aZh-Zl-2nW">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="431"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="SGO-se-4rH">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="431"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gx8-aa-Zvc">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="431"/>
                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="q2Y-T9-w1h">
-                                                <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="431"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="center" axis="vertical" distribution="equalCentering" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Q7g-FK-cXd">
-                                                        <rect key="frame" x="62" y="216" width="196.5" height="87"/>
+                                                        <rect key="frame" x="62" y="172" width="196.5" height="87"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="尚未有登录" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JvC-GM-dXg">
                                                                 <rect key="frame" x="0.0" y="0.0" width="196.5" height="47"/>
@@ -56,7 +56,7 @@
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XBu-NF-Qur">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XBu-NF-Qur">
                                                                 <rect key="frame" x="67" y="57" width="62" height="30"/>
                                                                 <state key="normal" title="立即登录">
                                                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
@@ -85,16 +85,19 @@
                                         <constraint firstItem="gx8-aa-Zvc" firstAttribute="leading" secondItem="SGO-se-4rH" secondAttribute="leading" id="R0r-2t-iqa"/>
                                     </constraints>
                                 </view>
-                                <color key="backgroundColor" systemColor="tertiarySystemFillColor" red="0.46274509800000002" green="0.46274509800000002" blue="0.50196078430000002" alpha="0.12" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" systemColor="tertiarySystemFillColor"/>
                                 <blurEffect style="regular"/>
                             </visualEffectView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
+                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="4mk-Ov-jb4" firstAttribute="trailing" secondItem="PQr-Ze-W5v" secondAttribute="trailing" id="43G-Sl-rWi"/>
+                            <constraint firstItem="f1m-fk-8iy" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="8" id="Ahm-nj-I28"/>
                             <constraint firstItem="ey4-vP-j6A" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" id="FMg-JV-RIa"/>
                             <constraint firstItem="aZh-Zl-2nW" firstAttribute="trailing" secondItem="PQr-Ze-W5v" secondAttribute="trailing" id="Mgw-TW-Nrx"/>
                             <constraint firstItem="4mk-Ov-jb4" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" id="NQG-2B-RjY"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="f1m-fk-8iy" secondAttribute="trailing" constant="8" id="S4o-2i-aZ7"/>
                             <constraint firstItem="f1m-fk-8iy" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="SX6-3C-KPx"/>
                             <constraint firstItem="4mk-Ov-jb4" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" id="UZc-Dy-69r"/>
                             <constraint firstItem="ey4-vP-j6A" firstAttribute="trailing" secondItem="PQr-Ze-W5v" secondAttribute="trailing" id="Wo8-iB-IQu"/>
@@ -106,12 +109,11 @@
                             <constraint firstItem="ey4-vP-j6A" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" id="ySl-l0-zpn"/>
                             <constraint firstItem="PQr-Ze-W5v" firstAttribute="bottom" secondItem="f1m-fk-8iy" secondAttribute="bottom" id="zGz-26-aTZ"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="QR 码" image="qrcode" catalog="system" id="acW-dT-cKf"/>
                     <navigationItem key="navigationItem" title="出行认证 QR 码" id="uDN-hd-bud">
                         <barButtonItem key="rightBarButtonItem" title="遇到问题？" image="questionmark.circle.fill" catalog="system" id="9qg-V1-5Fn">
-                            <color key="tintColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" systemColor="secondaryLabelColor"/>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -130,7 +132,7 @@
                 <navigationController id="tf3-Sn-9WO" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="QR 码" image="qrcode" catalog="system" id="Z3X-bP-cvu"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="5f6-LE-AKv">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="98.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -146,9 +148,9 @@
             <objects>
                 <tableViewController id="z4b-7P-vhu" customClass="HistoryTableViewController" customModule="InstaPass__Client_" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="NFB-3e-GpF">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <sections>
                             <tableViewSection id="GXq-FG-kkz">
                                 <cells>
@@ -165,7 +167,7 @@
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="上次出行" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OaJ-IX-GDZ">
                                                             <rect key="frame" x="108.5" y="0.0" width="61.5" height="23"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                            <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="textColor" systemColor="secondaryLabelColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 小时前" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VZO-wX-E7W">
@@ -184,7 +186,7 @@
                                                 </stackView>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timer" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="eeD-45-nzO">
                                                     <rect key="frame" x="0.0" y="0.5" width="144" height="142.5"/>
-                                                    <color key="tintColor" systemColor="tertiarySystemFillColor" red="0.46274509800000002" green="0.46274509800000002" blue="0.50196078430000002" alpha="0.12" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="tintColor" systemColor="tertiarySystemFillColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="eeD-45-nzO" secondAttribute="height" multiplier="1:1" id="g3f-RP-Kss"/>
                                                     </constraints>
@@ -214,7 +216,7 @@
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="已外出" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nDg-wM-wtz">
                                                             <rect key="frame" x="111" y="0.0" width="46" height="23"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                            <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="textColor" systemColor="secondaryLabelColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5 小时" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RkF-fp-uzf">
@@ -232,8 +234,8 @@
                                                     </subviews>
                                                 </stackView>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.crop.circle.fill.badge.minus" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="1mi-3b-2uD">
-                                                    <rect key="frame" x="0.0" y="1" width="144" height="142.5"/>
-                                                    <color key="tintColor" systemColor="secondarySystemFillColor" red="0.47058823529999999" green="0.47058823529999999" blue="0.50196078430000002" alpha="0.16" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <rect key="frame" x="0.0" y="0.5" width="144" height="142.5"/>
+                                                    <color key="tintColor" systemColor="secondarySystemFillColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="1mi-3b-2uD" secondAttribute="height" multiplier="1:1" id="wwM-oK-1hp"/>
                                                     </constraints>
@@ -318,7 +320,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="2020 年 2 月 16 日 08:59:32" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Oo2-Y7-LKC">
-                                                    <rect key="frame" x="16" y="31.5" width="160" height="14.5"/>
+                                                    <rect key="frame" x="16" y="31.5" width="159.5" height="14.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="textColor"/>
@@ -354,7 +356,7 @@
                     <tabBarItem key="tabBarItem" title="个人信息" image="person.crop.circle" catalog="system" id="Q0r-UP-BL6"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="hcc-bz-CSt">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="98.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -372,7 +374,7 @@
                     <tabBarItem key="tabBarItem" title="出行记录" image="tag" catalog="system" id="kJb-BC-WCs"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="smt-7L-gnO">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="98.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="102"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -388,15 +390,15 @@
             <objects>
                 <viewController id="8rJ-Kc-sve" customClass="LoginViewController" customModule="InstaPass__Client_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="Z0g-NY-A6P">
-                                <rect key="frame" x="36" y="12" width="248" height="524"/>
+                                <rect key="frame" x="36" y="-32" width="248" height="524"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9cR-Ws-1MM">
                                         <rect key="frame" x="0.0" y="0.0" width="248" height="88"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="88" id="aNE-CB-hTu"/>
                                         </constraints>
@@ -429,7 +431,7 @@
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.3.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="IiR-JU-fCb">
                                         <rect key="frame" x="0.0" y="276" width="248" height="246.5"/>
-                                        <color key="tintColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" systemColor="systemGray5Color"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="IiR-JU-fCb" secondAttribute="height" multiplier="200:201" id="IBA-u1-4B4"/>
                                         </constraints>
@@ -440,7 +442,7 @@
                                 </constraints>
                             </stackView>
                             <navigationBar contentMode="scaleToFill" largeTitles="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aUu-Ha-5pi">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="110.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="108"/>
                                 <items>
                                     <navigationItem title="登录" id="IfN-ql-kqc">
                                         <barButtonItem key="leftBarButtonItem" title="联络客服" id="bad-xW-XRx"/>
@@ -453,7 +455,8 @@
                                 </items>
                             </navigationBar>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Z0g-NY-A6P" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="HMO-a1-cTT"/>
                             <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Z0g-NY-A6P" secondAttribute="trailing" constant="36" id="XII-4w-UaN"/>
@@ -463,7 +466,6 @@
                             <constraint firstItem="aUu-Ha-5pi" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" id="ngz-Js-Vnq"/>
                             <constraint firstItem="Z0g-NY-A6P" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="36" id="xvP-Da-Kx3"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="个人信息" image="person.crop.circle" catalog="system" id="cPa-gy-q4n"/>
                     <navigationItem key="navigationItem" id="T4s-VZ-fAN"/>
@@ -482,7 +484,7 @@
             <objects>
                 <tableViewController id="hzy-tv-i5y" customClass="UserTableViewController" customModule="InstaPass__Client_" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="0wz-XT-IiM">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <sections>
                             <tableViewSection footerTitle="" id="fJ4-D3-dd4" userLabel="头像昵称">
@@ -516,9 +518,9 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@realDonaldTrump" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jg5-LM-WEd">
-                                                    <rect key="frame" x="70.5" y="11.5" width="147" height="21"/>
+                                                    <rect key="frame" x="71" y="11.5" width="146" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="textColor" systemColor="linkColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -540,14 +542,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="姓名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Dch-cw-gfq">
-                                                    <rect key="frame" x="15" y="12" width="35" height="20.5"/>
+                                                    <rect key="frame" x="16" y="12" width="35" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="textColor" systemColor="secondaryLabelColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="随*山" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ypa-1F-yo0">
-                                                    <rect key="frame" x="230.5" y="12" width="42.5" height="20.5"/>
+                                                    <rect key="frame" x="229.5" y="12" width="42.5" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -564,14 +566,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="联系电话" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lbB-LK-80u">
-                                                    <rect key="frame" x="15" y="12" width="69.5" height="20.5"/>
+                                                    <rect key="frame" x="16" y="12" width="69.5" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="textColor" systemColor="secondaryLabelColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="139****5678" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cmG-zL-puq">
-                                                    <rect key="frame" x="175" y="12" width="98" height="20.5"/>
+                                                    <rect key="frame" x="173.5" y="12" width="98.5" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -588,14 +590,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="住址" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qbc-8D-7Xh">
-                                                    <rect key="frame" x="15" y="9" width="35" height="20.5"/>
+                                                    <rect key="frame" x="16" y="9" width="35" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="textColor" systemColor="secondaryLabelColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="10 Downing Street, London, SW1A 2AA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4ga-2v-1d6">
-                                                    <rect key="frame" x="15" y="31.5" width="219.5" height="14.5"/>
+                                                    <rect key="frame" x="16" y="31.5" width="219.5" height="14.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="textColor"/>
@@ -616,10 +618,10 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="切换账号" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="RUr-Fu-tWr">
-                                                    <rect key="frame" x="15" y="0.0" width="258" height="44"/>
+                                                    <rect key="frame" x="16" y="0.0" width="256" height="44"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="textColor" systemColor="linkColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -633,10 +635,10 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="退出登录" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YuN-9t-DF9">
-                                                    <rect key="frame" x="15" y="0.0" width="258" height="44"/>
+                                                    <rect key="frame" x="16" y="0.0" width="256" height="44"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="textColor" systemColor="systemRedColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -660,7 +662,7 @@
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lock.icloud.fill" catalog="system" id="gN5-fp-BsU">
                     <rect key="frame" x="0.0" y="1.5" width="441" height="437.5"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="tintColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="tintColor" systemColor="systemGray5Color"/>
                 </imageView>
             </objects>
             <point key="canvasLocation" x="-778" y="1567"/>
@@ -689,7 +691,7 @@
             <objects>
                 <viewController id="ama-QU-mOs" customClass="QRCodesViewController" customModule="InstaPass__Client_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nCr-IV-LQE">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="420.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="335"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="XUc-dX-BYT"/>
                     </view>
@@ -703,24 +705,24 @@
             <objects>
                 <viewController storyboardIdentifier="QrCodeChildVC" id="HD6-Kc-0HK" customClass="QRCodeChildPageViewController" customModule="InstaPass__Client_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="53R-Kk-6P1">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9yw-8p-MlV">
-                                <rect key="frame" x="32" y="48" width="256" height="472"/>
+                                <rect key="frame" x="32" y="48" width="256" height="384"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="uqZ-y9-qdY">
-                                    <rect key="frame" x="0.0" y="0.0" width="256" height="472"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="256" height="384"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="etj-Vb-Yil">
-                                            <rect key="frame" x="0.0" y="0.0" width="256" height="472"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="256" height="384"/>
                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="VHx-wZ-5Sr">
-                                                <rect key="frame" x="0.0" y="0.0" width="256" height="472"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="256" height="384"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dcp-KM-iPM">
                                                         <rect key="frame" x="14" y="14" width="5" height="20"/>
-                                                        <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="backgroundColor" systemColor="systemPinkColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="5" id="Pnf-tj-MEH"/>
                                                             <constraint firstAttribute="height" constant="20" id="Roh-kE-uTs"/>
@@ -730,7 +732,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yae-GY-4WF">
-                                                        <rect key="frame" x="27" y="8" width="42" height="32"/>
+                                                        <rect key="frame" x="27" y="8" width="41.5" height="32"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="32" id="BIa-Pf-oPD"/>
                                                         </constraints>
@@ -771,10 +773,10 @@
                                 <blurEffect style="prominent"/>
                             </visualEffectView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wrK-cC-DiB">
-                                <rect key="frame" x="32" y="48" width="256" height="472"/>
+                                <rect key="frame" x="32" y="48" width="256" height="384"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="CAe-1O-ADX">
-                                        <rect key="frame" x="8" y="102.5" width="240" height="267"/>
+                                        <rect key="frame" x="8" y="58.5" width="240" height="267"/>
                                         <subviews>
                                             <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="ADV-C1-eKn" customClass="UIImageView">
                                                 <rect key="frame" x="0.0" y="0.0" width="240" height="240"/>
@@ -790,7 +792,7 @@
                                                     <constraint firstAttribute="height" constant="17" id="VZJ-CG-GV6"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="textColor" systemColor="secondaryLabelColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -803,6 +805,7 @@
                                 </constraints>
                             </view>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="IgY-w8-f5C"/>
                         <constraints>
                             <constraint firstItem="9yw-8p-MlV" firstAttribute="leading" secondItem="IgY-w8-f5C" secondAttribute="leading" constant="32" id="0HF-6F-IyB"/>
                             <constraint firstItem="IgY-w8-f5C" firstAttribute="bottom" secondItem="9yw-8p-MlV" secondAttribute="bottom" constant="48" id="4k8-GT-QcC"/>
@@ -815,7 +818,6 @@
                             <constraint firstItem="IgY-w8-f5C" firstAttribute="trailing" secondItem="wrK-cC-DiB" secondAttribute="trailing" constant="32" id="s1T-XY-zMd"/>
                             <constraint firstItem="wrK-cC-DiB" firstAttribute="centerX" secondItem="53R-Kk-6P1" secondAttribute="centerX" id="xgB-KS-1I1"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="IgY-w8-f5C"/>
                     </view>
                     <connections>
                         <outlet property="QRCodeView" destination="ADV-C1-eKn" id="cV1-7M-A99"/>
@@ -839,12 +841,39 @@
         <image name="lock.icloud.fill" catalog="system" width="128" height="88"/>
         <image name="person.3.fill" catalog="system" width="128" height="61"/>
         <image name="person.crop.circle" catalog="system" width="128" height="121"/>
-        <image name="person.crop.circle.fill.badge.minus" catalog="system" width="128" height="101"/>
+        <image name="person.crop.circle.fill.badge.minus" catalog="system" width="128" height="113"/>
         <image name="printer.fill" catalog="system" width="128" height="111"/>
-        <image name="qrcode" catalog="system" width="128" height="114"/>
+        <image name="qrcode" catalog="system" width="32" height="32"/>
         <image name="questionmark.circle.fill" catalog="system" width="128" height="121"/>
         <image name="square.and.arrow.down.on.square.fill" catalog="system" width="122" height="128"/>
-        <image name="tag" catalog="system" width="128" height="116"/>
+        <image name="tag" catalog="system" width="128" height="119"/>
         <image name="timer" catalog="system" width="128" height="121"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondarySystemFillColor">
+            <color red="0.47058823529411764" green="0.47058823529411764" blue="0.50196078431372548" alpha="0.16" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiarySystemFillColor">
+            <color red="0.46274509803921571" green="0.46274509803921571" blue="0.50196078431372548" alpha="0.12" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>

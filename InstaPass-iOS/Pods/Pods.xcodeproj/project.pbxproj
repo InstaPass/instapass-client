@@ -360,7 +360,7 @@
 		054DCCE99495B6BF561FD4582AD7DB98 /* Pods-InstaPass Watch Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-InstaPass Watch Extension.debug.xcconfig"; sourceTree = "<group>"; };
 		061A307D228C8C224C5344D6C874D171 /* SPAlertIconDocView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SPAlertIconDocView.swift; path = Source/SPAlert/Views/Icons/SPAlertIconDocView.swift; sourceTree = "<group>"; };
 		090FC6FB50A98FBAEBB56296E422759B /* SPAlertIconRepeatView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SPAlertIconRepeatView.swift; path = Source/SPAlert/Views/Icons/SPAlertIconRepeatView.swift; sourceTree = "<group>"; };
-		09C16EF7C38E5DAB1C2344C5998283CE /* Pods_InstaPass_Watch_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_InstaPass_Watch_Extension.framework; path = "Pods-InstaPass Watch Extension.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		09C16EF7C38E5DAB1C2344C5998283CE /* Pods_InstaPass_Watch_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstaPass_Watch_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A38065B95BEF89056B4ACCC6BF58146 /* PatchedPageViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PatchedPageViewController.swift; path = Sources/Pageboy/Utilities/PatchedPageViewController.swift; sourceTree = "<group>"; };
 		0A8E05D6E15D929763096EA1164633F1 /* SessionManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionManager.swift; path = Source/SessionManager.swift; sourceTree = "<group>"; };
 		0B2A0DD5115F9D4A496C2D66DF0492F4 /* PageboyViewController+ScrollCalculations.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "PageboyViewController+ScrollCalculations.swift"; path = "Sources/Pageboy/PageboyViewController+ScrollCalculations.swift"; sourceTree = "<group>"; };
@@ -373,7 +373,7 @@
 		1617FBA1E00B3B548681C58510F7D042 /* EFInputCorrectionLevel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EFInputCorrectionLevel.swift; path = Source/EFInputCorrectionLevel.swift; sourceTree = "<group>"; };
 		187209F1D9421BA9217E2F0C8CAC5833 /* IQKeyboardManager-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "IQKeyboardManager-prefix.pch"; sourceTree = "<group>"; };
 		18B14135683292A67053A70F8F4F2AD0 /* Pods-InstaPass Watch Extension-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-InstaPass Watch Extension-frameworks.sh"; sourceTree = "<group>"; };
-		1B9DD3FA7983D05EF914A51A1D9755E1 /* Pods_InstaPass.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_InstaPass.framework; path = "Pods-InstaPass.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B9DD3FA7983D05EF914A51A1D9755E1 /* Pods_InstaPass.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstaPass.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C072B384EB46226CE8D788644AF21E6 /* EFQRCode-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EFQRCode-prefix.pch"; sourceTree = "<group>"; };
 		1EFF01535596A1775FD2C30052101B8A /* Pods-InstaPass-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-InstaPass-umbrella.h"; sourceTree = "<group>"; };
 		1F27714966379AC71753FC182868ADDC /* IQUIViewController+Additions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "IQUIViewController+Additions.m"; path = "IQKeyboardManager/Categories/IQUIViewController+Additions.m"; sourceTree = "<group>"; };
@@ -384,7 +384,7 @@
 		2142069EF0FEB91235110CD9F020AE3A /* SPAlertIconAnimatable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SPAlertIconAnimatable.swift; path = Source/SPAlert/Protocol/SPAlertIconAnimatable.swift; sourceTree = "<group>"; };
 		217B31A743301D1D57564A84DB1DF8EF /* SessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDelegate.swift; path = Source/SessionDelegate.swift; sourceTree = "<group>"; };
 		2375083446F09D99C1E6D604DE546CAF /* Pods-InstaPass Watch Extension-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-InstaPass Watch Extension-acknowledgements.markdown"; sourceTree = "<group>"; };
-		23D5CD291D18F2187712FE6F84B6F1C6 /* Pageboy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pageboy.framework; path = Pageboy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		23D5CD291D18F2187712FE6F84B6F1C6 /* Pageboy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pageboy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2503B922E8C790C8BF25A0D4CC56BA3F /* UIColor+.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIColor+.swift"; path = "Source/UIColor+.swift"; sourceTree = "<group>"; };
 		256A13D29052BFC453D5A85FBE2773A5 /* SPAlert-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SPAlert-dummy.m"; sourceTree = "<group>"; };
 		25C43F249ADEB4B5F01C41E842AE709D /* SPAlertIconStarView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SPAlertIconStarView.swift; path = Source/SPAlert/Views/Icons/SPAlertIconStarView.swift; sourceTree = "<group>"; };
@@ -400,7 +400,7 @@
 		2E28BFE11ED3175CEC0B97A140796BF2 /* BinaryInteger+.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "BinaryInteger+.swift"; path = "Source/BinaryInteger+.swift"; sourceTree = "<group>"; };
 		2F418F34BF5D773FCDC550D3F18BB4E5 /* EFQRCode-watchOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = "EFQRCode-watchOS.modulemap"; path = "../EFQRCode-watchOS/EFQRCode-watchOS.modulemap"; sourceTree = "<group>"; };
 		2FEB777D53E836A99D032985D2D27D97 /* SPAlertIconExclamationView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SPAlertIconExclamationView.swift; path = Source/SPAlert/Views/Icons/SPAlertIconExclamationView.swift; sourceTree = "<group>"; };
-		300232A457594A2142CCD4EBBEAEEE83 /* swift_qrcodejs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = swift_qrcodejs.framework; path = swift_qrcodejs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		300232A457594A2142CCD4EBBEAEEE83 /* swift_qrcodejs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = swift_qrcodejs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		30640185CED3D303B2E7B46E52FBC2CB /* IQKeyboardManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IQKeyboardManager.h; path = IQKeyboardManager/IQKeyboardManager.h; sourceTree = "<group>"; };
 		310270AA4341426918452242DC2D3E89 /* EFWatermarkMode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EFWatermarkMode.swift; path = Source/EFWatermarkMode.swift; sourceTree = "<group>"; };
 		310E8D5D0256DB2B4368DD3E668E7128 /* swift_qrcodejs.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = swift_qrcodejs.h; path = Sources/swift_qrcodejs.h; sourceTree = "<group>"; };
@@ -414,12 +414,12 @@
 		410E57D04CCE69C6FFB27448FE4B7E91 /* QRCodeType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QRCodeType.swift; path = Sources/QRCodeType.swift; sourceTree = "<group>"; };
 		42D198EB3C380879183CDF4708E615A4 /* SwiftyJSON-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyJSON-iOS-dummy.m"; sourceTree = "<group>"; };
 		430A5F64BE7572DCE72F6B950FAEF7FC /* EFQRCodeMode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EFQRCodeMode.swift; path = Source/EFQRCodeMode.swift; sourceTree = "<group>"; };
-		43DA6DFAA898F949ACBD91D709EF13F8 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Alamofire.framework; path = "Alamofire-watchOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		43DA6DFAA898F949ACBD91D709EF13F8 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		448CF900458F0E68CA1B396DAD778CD2 /* SPAlertLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SPAlertLayout.swift; path = Source/SPAlert/Models/SPAlertLayout.swift; sourceTree = "<group>"; };
 		460E44C379BF75FD1A98A640E986A40D /* SPAlert.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SPAlert.swift; path = Source/SPAlert/SPAlert.swift; sourceTree = "<group>"; };
 		4900FB98FA97293A3A08E906CEEA31DC /* IQKeyboardReturnKeyHandler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IQKeyboardReturnKeyHandler.m; path = IQKeyboardManager/IQKeyboardReturnKeyHandler.m; sourceTree = "<group>"; };
-		4919E5F2B6A6807BB518ABF82953B627 /* EFQRCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = EFQRCode.framework; path = EFQRCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4A4E3E90551CBC3B68EB11A1623EA14F /* Pods_InstaPassTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_InstaPassTests.framework; path = "Pods-InstaPassTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4919E5F2B6A6807BB518ABF82953B627 /* EFQRCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EFQRCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A4E3E90551CBC3B68EB11A1623EA14F /* Pods_InstaPassTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstaPassTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C3E47728CF9B4B2744182F9046069D6 /* Alamofire-SwiftyJSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Alamofire-SwiftyJSON.swift"; path = "Source/Alamofire-SwiftyJSON.swift"; sourceTree = "<group>"; };
 		4F02CF626186BF5B50D9162E5A705DDF /* SwiftyJSON-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-iOS-umbrella.h"; sourceTree = "<group>"; };
 		50A0781AC6801E5D6D238E3F22C5AD32 /* QRRSBlock.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QRRSBlock.swift; path = Sources/QRRSBlock.swift; sourceTree = "<group>"; };
@@ -452,7 +452,7 @@
 		6AFA8E4DE181F406D3939E71B94EAEA6 /* PageboyViewControllerDataSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PageboyViewControllerDataSource.swift; path = Sources/Pageboy/Protocols/PageboyViewControllerDataSource.swift; sourceTree = "<group>"; };
 		6BD8CF0B6969A2F7031CC7E38951DE73 /* PageboyViewController+Transitioning.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "PageboyViewController+Transitioning.swift"; path = "Sources/Pageboy/Transitioning/PageboyViewController+Transitioning.swift"; sourceTree = "<group>"; };
 		6C36F34841B231BA766219E93D118B4D /* Pods-InstaPass Watch Extension-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-InstaPass Watch Extension-acknowledgements.plist"; sourceTree = "<group>"; };
-		6F348CF3DF73CCBE882148B54AFDFDD5 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyJSON.framework; path = "SwiftyJSON-iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F348CF3DF73CCBE882148B54AFDFDD5 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		701FF3C73567C0EA3560A26EEFF4F9D5 /* SPAlertIconQuestionView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SPAlertIconQuestionView.swift; path = Source/SPAlert/Views/Icons/SPAlertIconQuestionView.swift; sourceTree = "<group>"; };
 		708D9AA1479DBD0A98B3A43D94C051C7 /* SPAlertIconSearchView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SPAlertIconSearchView.swift; path = Source/SPAlert/Views/Icons/SPAlertIconSearchView.swift; sourceTree = "<group>"; };
 		70DA6C390F27ECCC87AD24D20DAE1D84 /* EFQRCode-watchOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EFQRCode-watchOS-umbrella.h"; path = "../EFQRCode-watchOS/EFQRCode-watchOS-umbrella.h"; sourceTree = "<group>"; };
@@ -460,7 +460,7 @@
 		7275AA65D76A6D618E3ECE46959860D3 /* IQKeyboardManager.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = IQKeyboardManager.xcconfig; sourceTree = "<group>"; };
 		73AC3CA785082643B8EC47E3FBAB6B51 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS5.2.sdk/System/Library/Frameworks/ImageIO.framework; sourceTree = DEVELOPER_DIR; };
 		73BE7257C07072CB554A6E17489A4CD5 /* TransitionOperation+Action.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "TransitionOperation+Action.swift"; path = "Sources/Pageboy/Transitioning/TransitionOperation+Action.swift"; sourceTree = "<group>"; };
-		749D4F911D9251D5E6D1603C57F820D9 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyJSON.framework; path = "SwiftyJSON-watchOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		749D4F911D9251D5E6D1603C57F820D9 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		75993361AF9D4DA40D0C69A1ACEE1DFC /* SPAlert-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SPAlert-umbrella.h"; sourceTree = "<group>"; };
 		75B89C7F694523ADE5CA3CD9AA5C638E /* SPAlertIconLikeView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SPAlertIconLikeView.swift; path = Source/SPAlert/Views/Icons/SPAlertIconLikeView.swift; sourceTree = "<group>"; };
 		761BABC65486D981167DDAB4C7571123 /* Alamofire-SwiftyJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Alamofire-SwiftyJSON.modulemap"; sourceTree = "<group>"; };
@@ -496,11 +496,11 @@
 		943996114975556CCEE0FEE1DBFDF530 /* Pageboy-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pageboy-Info.plist"; sourceTree = "<group>"; };
 		95C13AF5EAD5A6CD780C9F48C7807C13 /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/MultipartFormData.swift; sourceTree = "<group>"; };
 		95F9E465B11543EC1BEDB7C629A9D21C /* Alamofire-watchOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Alamofire-watchOS.xcconfig"; path = "../Alamofire-watchOS/Alamofire-watchOS.xcconfig"; sourceTree = "<group>"; };
-		966AA42878212207687E9A2A4DBCD618 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Alamofire.framework; path = "Alamofire-iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		966AA42878212207687E9A2A4DBCD618 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		97267905908F491B32FE4C884482584B /* SPAlert-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SPAlert-Info.plist"; sourceTree = "<group>"; };
 		9749855E29CFF470FDAE3D2AF176B382 /* SPAlertIconShuffleView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SPAlertIconShuffleView.swift; path = Source/SPAlert/Views/Icons/SPAlertIconShuffleView.swift; sourceTree = "<group>"; };
 		98038CDE087DCEC19BD1C04B3B7D1FD8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		98527D7196957AAB07B79E2E2AFDE23E /* IQKeyboardManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = IQKeyboardManager.framework; path = IQKeyboardManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		98527D7196957AAB07B79E2E2AFDE23E /* IQKeyboardManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = IQKeyboardManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		986E18A01080CCE9CCC74AE730461834 /* EFQRCode-watchOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EFQRCode-watchOS-dummy.m"; path = "../EFQRCode-watchOS/EFQRCode-watchOS-dummy.m"; sourceTree = "<group>"; };
 		988C498E9D554D03CEEC0BBA098B4183 /* UIView+Animation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Animation.swift"; path = "Sources/Pageboy/Utilities/Extensions/UIView+Animation.swift"; sourceTree = "<group>"; };
 		9904E9B5F98951885E9F14E9F9CC1911 /* PageboyViewController+AutoScrolling.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "PageboyViewController+AutoScrolling.swift"; path = "Sources/Pageboy/AutoScrolling/PageboyViewController+AutoScrolling.swift"; sourceTree = "<group>"; };
@@ -509,7 +509,7 @@
 		9A307890D402B6F6CF2E2221D5C9A827 /* SwiftyJSON-watchOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "SwiftyJSON-watchOS-dummy.m"; path = "../SwiftyJSON-watchOS/SwiftyJSON-watchOS-dummy.m"; sourceTree = "<group>"; };
 		9BEE41E72E5BFFBF87D160C0ACFDAB21 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		9BEF266701020EC853425D1CF3E67C0A /* Pods-InstaPass Watch Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-InstaPass Watch Extension.release.xcconfig"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9EADCF52D4307F15F7D193F42952972E /* PageboyViewControllerDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PageboyViewControllerDelegate.swift; path = Sources/Pageboy/Protocols/PageboyViewControllerDelegate.swift; sourceTree = "<group>"; };
 		9EAEC3213C6E498E60BCD152ED8E9470 /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
 		9F19A099373ACE8E65346D933AAA7549 /* CGImage+.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CGImage+.swift"; path = "Source/CGImage+.swift"; sourceTree = "<group>"; };
@@ -537,15 +537,15 @@
 		BCA0DE2A95F0F198D9AA44AD5DE31CA7 /* Pods-InstaPass.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-InstaPass.modulemap"; sourceTree = "<group>"; };
 		BD3194D81DC5F3694C2E233FED3B43A0 /* CGColor+.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CGColor+.swift"; path = "Source/CGColor+.swift"; sourceTree = "<group>"; };
 		BD40A335DB10495CECAD6802399AF3B2 /* TransitionOperation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransitionOperation.swift; path = Sources/Pageboy/Transitioning/TransitionOperation.swift; sourceTree = "<group>"; };
-		BDF6136650C912756E10B2E3F289789C /* Alamofire_SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Alamofire_SwiftyJSON.framework; path = "Alamofire-SwiftyJSON.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		BE629661A28417489F63DBC74196BBD6 /* SPAlert.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SPAlert.framework; path = SPAlert.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDF6136650C912756E10B2E3F289789C /* Alamofire_SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire_SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE629661A28417489F63DBC74196BBD6 /* SPAlert.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SPAlert.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE80C2EFD21AFFDFCF100619BDB34E00 /* Alamofire-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Alamofire-iOS.modulemap"; sourceTree = "<group>"; };
 		BF51F4FFED9B37D1498F50A8F51C5B73 /* swift_qrcodejs.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = swift_qrcodejs.modulemap; sourceTree = "<group>"; };
 		BF620EA1B7885356D8F92FC819C5A036 /* Alamofire-SwiftyJSON-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-SwiftyJSON-umbrella.h"; sourceTree = "<group>"; };
 		BF9C50FD5D535FC56297420AAE848F96 /* EFQRCode-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "EFQRCode-dummy.m"; sourceTree = "<group>"; };
 		BFC6ABCB4C3100B4D701A70EC0AB517B /* Pods-InstaPass-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-InstaPass-Info.plist"; sourceTree = "<group>"; };
 		BFD04C1F48033B91D6E88C52CE3D858F /* IQUIScrollView+Additions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "IQUIScrollView+Additions.m"; path = "IQKeyboardManager/Categories/IQUIScrollView+Additions.m"; sourceTree = "<group>"; };
-		C1AE8B25B475191D8598213645E31283 /* EFQRCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = EFQRCode.framework; path = "EFQRCode-watchOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1AE8B25B475191D8598213645E31283 /* EFQRCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EFQRCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1CDD4A80B7C2066048302FD6A2E4053 /* QRCodeModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QRCodeModel.swift; path = Sources/QRCodeModel.swift; sourceTree = "<group>"; };
 		C2E91B78BA8E612EE27C9030E7C16F04 /* SPAlertIconHeartView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SPAlertIconHeartView.swift; path = Source/SPAlert/Views/Icons/SPAlertIconHeartView.swift; sourceTree = "<group>"; };
 		C45AA693E1DEBB93132B9247600CD19E /* IQToolbar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IQToolbar.h; path = IQKeyboardManager/IQToolbar/IQToolbar.h; sourceTree = "<group>"; };
@@ -756,7 +756,6 @@
 				310E8D5D0256DB2B4368DD3E668E7128 /* swift_qrcodejs.h */,
 				B76244CAC811642292DC09C6DE989E9C /* Support Files */,
 			);
-			name = swift_qrcodejs;
 			path = swift_qrcodejs;
 			sourceTree = "<group>";
 		};
@@ -820,7 +819,6 @@
 				E8CBDAAE3F0C79139FD69B2E6F87CEC2 /* SwiftyJSON.swift */,
 				7A78673C1303687BAB7206F40BAD49B5 /* Support Files */,
 			);
-			name = SwiftyJSON;
 			path = SwiftyJSON;
 			sourceTree = "<group>";
 		};
@@ -891,7 +889,6 @@
 				4C3E47728CF9B4B2744182F9046069D6 /* Alamofire-SwiftyJSON.swift */,
 				5943D20CE594E0E2258813C4C571FC55 /* Support Files */,
 			);
-			name = "Alamofire-SwiftyJSON";
 			path = "Alamofire-SwiftyJSON";
 			sourceTree = "<group>";
 		};
@@ -944,7 +941,6 @@
 				93D574E126507403828D610F7B68BC62 /* SPAlertView.swift */,
 				78BD7C2E4A3362C0E6F3B80E7BBDE0CA /* Support Files */,
 			);
-			name = SPAlert;
 			path = SPAlert;
 			sourceTree = "<group>";
 		};
@@ -1044,7 +1040,6 @@
 				5A8FC6D7029AB881A432C2C6B9ECE860 /* WeakContainer.swift */,
 				2E2A77977BBE1732867AF586E4BE89F8 /* Support Files */,
 			);
-			name = Pageboy;
 			path = Pageboy;
 			sourceTree = "<group>";
 		};
@@ -1091,7 +1086,6 @@
 				1F27714966379AC71753FC182868ADDC /* IQUIViewController+Additions.m */,
 				7524EC91838A6DE03EBC081FC1ED5B67 /* Support Files */,
 			);
-			name = IQKeyboardManager;
 			path = IQKeyboardManager;
 			sourceTree = "<group>";
 		};
@@ -1141,7 +1135,6 @@
 				DD0C84FD80E118AB10972F72464B7634 /* Validation.swift */,
 				5AB7ED62E58D9F2AF62F457CDC7BB122 /* Support Files */,
 			);
-			name = Alamofire;
 			path = Alamofire;
 			sourceTree = "<group>";
 		};
@@ -1180,7 +1173,6 @@
 				5A871D6A10B57F06F3A9E1F3D3A02E6B /* Support Files */,
 				5D5A76B2666D19A9614DA62AA4320643 /* watchOS */,
 			);
-			name = EFQRCode;
 			path = EFQRCode;
 			sourceTree = "<group>";
 		};
@@ -1645,7 +1637,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1100;
+				LastUpgradeCheck = 1200;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 10.0";
@@ -2162,7 +2154,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Alamofire-iOS/Alamofire-iOS-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Alamofire-iOS/Alamofire-iOS-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2198,7 +2190,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/EFQRCode/EFQRCode-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/EFQRCode/EFQRCode-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2234,7 +2226,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/EFQRCode/EFQRCode-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/EFQRCode/EFQRCode-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2346,7 +2338,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/SPAlert/SPAlert-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/SPAlert/SPAlert-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2382,7 +2374,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Alamofire-iOS/Alamofire-iOS-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Alamofire-iOS/Alamofire-iOS-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2417,7 +2409,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/IQKeyboardManager/IQKeyboardManager-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/IQKeyboardManager/IQKeyboardManager-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2564,7 +2556,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/SwiftyJSON-iOS/SwiftyJSON-iOS-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/SwiftyJSON-iOS/SwiftyJSON-iOS-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2601,7 +2593,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/SPAlert/SPAlert-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/SPAlert/SPAlert-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2646,6 +2638,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -2815,7 +2808,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/SwiftyJSON-iOS/SwiftyJSON-iOS-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/SwiftyJSON-iOS/SwiftyJSON-iOS-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2889,7 +2882,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/IQKeyboardManager/IQKeyboardManager-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/IQKeyboardManager/IQKeyboardManager-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2924,7 +2917,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Pageboy/Pageboy-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Pageboy/Pageboy-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -3005,6 +2998,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -3092,7 +3086,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Alamofire-SwiftyJSON/Alamofire-SwiftyJSON-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Alamofire-SwiftyJSON/Alamofire-SwiftyJSON-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -3164,7 +3158,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Pageboy/Pageboy-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Pageboy/Pageboy-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -3237,7 +3231,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Alamofire-SwiftyJSON/Alamofire-SwiftyJSON-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Alamofire-SwiftyJSON/Alamofire-SwiftyJSON-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
