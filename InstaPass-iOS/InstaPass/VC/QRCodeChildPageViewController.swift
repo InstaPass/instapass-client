@@ -38,14 +38,12 @@ class QRCodeChildPageViewController: UIViewController {
     }
     
     func redrawPageShadow() {
-        let layer = cardView.layer
-        
-        // radius seems doesn't work with UIVisualEffectView
-//        layer.cornerRadius = 10
-        layer.shadowOffset = CGSize(width: 0, height: 5)
-        layer.shadowRadius = 5
-        layer.shadowColor = UIColor.label.cgColor
-        layer.shadowOpacity = 0.5
+        cardView.layer.cornerRadius = 20
+        cardView.layer.shadowColor = UIColor.label.cgColor
+        cardView.layer.shadowOffset = CGSize(width: 0, height: 3)
+        cardView.layer.shadowRadius = 20
+        cardView.layer.shadowOpacity = 0.3
+//        cardView.clipsToBounds = true
     }
     
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {

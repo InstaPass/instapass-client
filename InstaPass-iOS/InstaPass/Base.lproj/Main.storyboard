@@ -15,7 +15,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="ey4-vP-j6A">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TitleBar" translatesAutoresizingMaskIntoConstraints="NO" id="ey4-vP-j6A">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="213.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ey4-vP-j6A" secondAttribute="height" multiplier="3:2" id="TXm-yH-dlt"/>
@@ -89,7 +89,7 @@
                                 <blurEffect style="regular"/>
                             </visualEffectView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="4mk-Ov-jb4" firstAttribute="trailing" secondItem="PQr-Ze-W5v" secondAttribute="trailing" id="43G-Sl-rWi"/>
                             <constraint firstItem="ey4-vP-j6A" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" id="FMg-JV-RIa"/>
@@ -110,7 +110,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="QR 码" image="qrcode" catalog="system" id="acW-dT-cKf"/>
                     <navigationItem key="navigationItem" title="出行认证 QR 码" id="uDN-hd-bud">
-                        <barButtonItem key="rightBarButtonItem" title="遇到问题？" image="questionmark.circle.fill" catalog="system" id="9qg-V1-5Fn"/>
+                        <barButtonItem key="rightBarButtonItem" title="遇到问题？" image="questionmark.circle.fill" catalog="system" id="9qg-V1-5Fn">
+                            <color key="tintColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="blurView" destination="aZh-Zl-2nW" id="s8H-zt-Nh5"/>
@@ -128,7 +130,7 @@
                 <navigationController id="tf3-Sn-9WO" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="QR 码" image="qrcode" catalog="system" id="Z3X-bP-cvu"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="5f6-LE-AKv">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="91"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="98.5"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -352,7 +354,7 @@
                     <tabBarItem key="tabBarItem" title="个人信息" image="person.crop.circle" catalog="system" id="Q0r-UP-BL6"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="hcc-bz-CSt">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="91"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="98.5"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -755,7 +757,7 @@
                                                 </constraints>
                                             </view>
                                             <vibrancyEffect>
-                                                <blurEffect style="prominent"/>
+                                                <blurEffect style="systemMaterial"/>
                                             </vibrancyEffect>
                                         </visualEffectView>
                                     </subviews>
@@ -831,9 +833,9 @@
     <color key="tintColor" red="0.40194425146421175" green="0.5767785730082492" blue="0.66386421319796951" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
     <resources>
         <image name="62457185.PNG" width="584" height="584"/>
+        <image name="TitleBar" width="1500" height="1000"/>
         <image name="arrow.clockwise.circle" catalog="system" width="128" height="121"/>
         <image name="arrow.right.circle" catalog="system" width="128" height="121"/>
-        <image name="bg.png" width="3000" height="2000"/>
         <image name="lock.icloud.fill" catalog="system" width="128" height="88"/>
         <image name="person.3.fill" catalog="system" width="128" height="61"/>
         <image name="person.crop.circle" catalog="system" width="128" height="121"/>
