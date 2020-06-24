@@ -11,13 +11,51 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
+    
+    static var mainVC: MainTabViewController?
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
+        
+        // Grab a reference to the shortcutItem to use in the scene
+        if let shortcutItem = connectionOptions.shortcutItem {
+            NSLog(shortcutItem.type)
+            switch shortcutItem.type {
+            case "qrcode":
+                AppDelegate.defaultPage = .qrcode
+                break
+            case "history":
+                AppDelegate.defaultPage = .history
+                break
+            case "person":
+                AppDelegate.defaultPage = .person
+                break
+            default:
+                break
+            }
+        }
+    }
+    
+    func windowScene(_ windowScene: UIWindowScene,
+                     performActionFor shortcutItem: UIApplicationShortcutItem,
+                     completionHandler: @escaping (Bool) -> Void) {
+        // When the user opens the app through a quick action, this is now the method that will be called
+        switch shortcutItem.type {
+        case "qrcode":
+            AppDelegate.defaultPage = .qrcode
+            break
+        case "history":
+            AppDelegate.defaultPage = .history
+            break
+        case "person":
+            AppDelegate.defaultPage = .person
+            break
+        default:
+            break
+        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -30,6 +68,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func sceneDidBecomeActive(_ scene: UIScene) {
         // Called when the scene has moved from an inactive state to an active state.
         // Use this method to restart any tasks that were paused (or not yet started) when the scene was inactive.
+        SceneDelegate.mainVC?.updateShortcutPage()
     }
 
     func sceneWillResignActive(_ scene: UIScene) {

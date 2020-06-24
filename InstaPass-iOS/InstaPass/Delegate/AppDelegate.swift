@@ -34,16 +34,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
             session.delegate = self
             session.activate()
         }
-        
+
         sendJwtToken(token: UserPrefInitializer.jwtToken)
         return true
     }
-
+    
     // MARK: UISceneSession Lifecycle
 
-    func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
+    func scene(_ scene: UIScene, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
         // Called when a new scene session is being created.
         // Use this method to select a configuration to create the new scene with.
+
         return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
     }
 
@@ -60,24 +61,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
         }, errorHandler: { _ in
             NSLog("failed to send jwt token to Apple Watch")
         })
-    }
-    
-    func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
-        NSLog(shortcutItem.type)
-        switch shortcutItem.type {
-        case "qrcode":
-            AppDelegate.defaultPage = .qrcode
-            break
-        case "history":
-            AppDelegate.defaultPage = .history
-            break
-        case "person":
-            AppDelegate.defaultPage = .person
-            break
-        default:
-            break
-        }
-        
-        completionHandler(true)
     }
 }

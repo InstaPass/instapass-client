@@ -11,15 +11,19 @@ import UIKit
 
 class QRCodesViewController: PageboyViewController, PageboyViewControllerDataSource, PageboyViewControllerDelegate {
     
+//    override func scrollToPage(_ page: PageboyViewController.Page, animated: Bool, completion: PageboyViewController.PageScrollCompletion? = nil) -> Bool {
+//        <#code#>
+//    }
+    
     var pgDelegate: PageControlDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        for i in 0 ..< 3 {
+        for i in 0 ..< 5 {
             let viewController = storyboard?.instantiateViewController(withIdentifier: "QrCodeChildVC") as! QRCodeChildPageViewController
             
-            viewController.initCommunityInfo(id: i, name: "The No.\(i) best community")
+            viewController.initCommunityInfo(id: i, name: "The No.\(i + 1) best community")
             viewControllers.append(viewController)
         }
         
@@ -46,12 +50,17 @@ class QRCodesViewController: PageboyViewController, PageboyViewControllerDataSou
     }
     
     func pageboyViewController(_ pageboyViewController: PageboyViewController, willScrollToPageAt index: PageboyViewController.PageIndex, direction: PageboyViewController.NavigationDirection, animated: Bool) {
-        // idiot PageBoy
+        pgDelegate?.setCurrentPage(current: index)
     }
     
     
     func pageboyViewController(_ pageboyViewController: PageboyViewController, didScrollToPageAt index: PageboyViewController.PageIndex, direction: PageboyViewController.NavigationDirection, animated: Bool) {
+        // idiot PageBoy
         pgDelegate?.setCurrentPage(current: index)
+    }
+    
+    func pageboyViewController(_ pageboyViewController: PageboyViewController, didCancelScrollToPageAt index: PageboyViewController.PageIndex, returnToPageAt previousIndex: PageboyViewController.PageIndex) {
+        pgDelegate?.setCurrentPage(current: previousIndex)
     }
 
     func viewController(for pageboyViewController: PageboyViewController, at index: PageboyViewController.PageIndex) -> UIViewController? {
@@ -63,7 +72,3 @@ class QRCodesViewController: PageboyViewController, PageboyViewControllerDataSou
     }
 }
 
-protocol PageControlDelegate {
-    func setNumberOfPages(number: Int) -> Void
-    func setCurrentPage(current: Int) -> Void
-}

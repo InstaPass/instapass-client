@@ -10,24 +10,28 @@ import UIKit
 
 class MainTabViewController: UITabBarController {
 
+    var strongDelegate = TabBarDelegate()
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        SceneDelegate.mainVC = self
+        updateShortcutPage()
+        
+        delegate = strongDelegate
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
+    func updateShortcutPage() {
+
         switch AppDelegate.defaultPage {
         case .qrcode:
-            tabBarController?.selectedIndex = 0
+            selectedIndex = 0
             break
         case .history:
-            tabBarController?.selectedIndex = 1
+            selectedIndex = 1
             break
         case .person:
-            tabBarController?.selectedIndex = 2
+            selectedIndex = 2
             break
         case nil:
             break

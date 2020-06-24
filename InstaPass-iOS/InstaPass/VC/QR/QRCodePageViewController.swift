@@ -55,9 +55,9 @@ class QRCodePageViewController: UIViewController, PageControlDelegate {
     public func updatePage(count: Int) {
         pageControl.numberOfPages = count
     }
-    
+
     @IBAction func onPageControlChanges(_ sender: UIPageControl) {
-        NSLog("onPageControlChanges. \(sender.currentPage)")
+        NSLog("change: onPageControlChanges. \(sender.currentPage)")
         containerVC?.scrollToPage(.at(index: sender.currentPage), animated: true)
     }
 }

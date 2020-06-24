@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17105"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -741,8 +742,10 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c2D-nj-57s">
-                                                        <rect key="frame" x="222" y="14" width="20" height="22"/>
-                                                        <state key="normal" image="arrow.clockwise.circle.fill" catalog="system"/>
+                                                        <rect key="frame" x="217" y="12" width="25" height="24"/>
+                                                        <state key="normal">
+                                                            <imageReference key="image" image="arrow.clockwise.circle.fill" catalog="system" symbolScale="large"/>
+                                                        </state>
                                                         <connections>
                                                             <action selector="onRefreshButtonTapped:" destination="HD6-Kc-0HK" eventType="touchUpInside" id="oH1-rW-ra7"/>
                                                         </connections>
@@ -750,9 +753,9 @@
                                                 </subviews>
                                                 <constraints>
                                                     <constraint firstItem="Dcp-KM-iPM" firstAttribute="leading" secondItem="VHx-wZ-5Sr" secondAttribute="leading" constant="14" id="1aS-mk-xgh"/>
+                                                    <constraint firstItem="c2D-nj-57s" firstAttribute="centerY" secondItem="yae-GY-4WF" secondAttribute="centerY" id="8HI-n9-xLP"/>
                                                     <constraint firstItem="c2D-nj-57s" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="yae-GY-4WF" secondAttribute="trailing" constant="16" id="JTN-Ag-THA"/>
                                                     <constraint firstAttribute="trailing" secondItem="c2D-nj-57s" secondAttribute="trailing" constant="14" id="Lct-Cp-CBs"/>
-                                                    <constraint firstItem="c2D-nj-57s" firstAttribute="top" secondItem="VHx-wZ-5Sr" secondAttribute="top" constant="14" id="Xw5-xx-hKt"/>
                                                     <constraint firstItem="yae-GY-4WF" firstAttribute="centerY" secondItem="Dcp-KM-iPM" secondAttribute="centerY" id="Yud-yP-KPt"/>
                                                     <constraint firstItem="yae-GY-4WF" firstAttribute="leading" secondItem="Dcp-KM-iPM" secondAttribute="trailing" constant="8" id="sRQ-Sb-J0l"/>
                                                     <constraint firstItem="Dcp-KM-iPM" firstAttribute="top" secondItem="VHx-wZ-5Sr" secondAttribute="top" constant="14" id="yFb-wI-jFP"/>
@@ -773,10 +776,10 @@
                                 <blurEffect style="prominent"/>
                             </visualEffectView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wrK-cC-DiB">
-                                <rect key="frame" x="32" y="48" width="256" height="472"/>
+                                <rect key="frame" x="32" y="36" width="256" height="496"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="CAe-1O-ADX">
-                                        <rect key="frame" x="8" y="102.5" width="240" height="267"/>
+                                        <rect key="frame" x="8" y="114.5" width="240" height="267"/>
                                         <subviews>
                                             <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="ADV-C1-eKn" customClass="UIImageView">
                                                 <rect key="frame" x="0.0" y="0.0" width="240" height="240"/>
@@ -809,12 +812,12 @@
                         <constraints>
                             <constraint firstItem="9yw-8p-MlV" firstAttribute="leading" secondItem="IgY-w8-f5C" secondAttribute="leading" constant="32" id="0HF-6F-IyB"/>
                             <constraint firstItem="IgY-w8-f5C" firstAttribute="bottom" secondItem="9yw-8p-MlV" secondAttribute="bottom" constant="48" id="4k8-GT-QcC"/>
-                            <constraint firstItem="wrK-cC-DiB" firstAttribute="top" secondItem="IgY-w8-f5C" secondAttribute="top" constant="48" id="8gV-Bx-fLs"/>
+                            <constraint firstItem="wrK-cC-DiB" firstAttribute="top" secondItem="IgY-w8-f5C" secondAttribute="top" constant="36" id="8gV-Bx-fLs"/>
                             <constraint firstItem="9yw-8p-MlV" firstAttribute="top" secondItem="IgY-w8-f5C" secondAttribute="top" constant="48" id="8h0-ny-9jw"/>
                             <constraint firstItem="wrK-cC-DiB" firstAttribute="centerY" secondItem="53R-Kk-6P1" secondAttribute="centerY" id="RET-92-1tP"/>
                             <constraint firstItem="IgY-w8-f5C" firstAttribute="trailing" secondItem="9yw-8p-MlV" secondAttribute="trailing" constant="32" id="hUK-lE-j3H"/>
                             <constraint firstItem="wrK-cC-DiB" firstAttribute="leading" secondItem="IgY-w8-f5C" secondAttribute="leading" constant="32" id="llD-hX-qLh"/>
-                            <constraint firstItem="IgY-w8-f5C" firstAttribute="bottom" secondItem="wrK-cC-DiB" secondAttribute="bottom" constant="48" id="qBn-Rq-ISt"/>
+                            <constraint firstItem="IgY-w8-f5C" firstAttribute="bottom" secondItem="wrK-cC-DiB" secondAttribute="bottom" constant="36" id="qBn-Rq-ISt"/>
                             <constraint firstItem="IgY-w8-f5C" firstAttribute="trailing" secondItem="wrK-cC-DiB" secondAttribute="trailing" constant="32" id="s1T-XY-zMd"/>
                             <constraint firstItem="wrK-cC-DiB" firstAttribute="centerX" secondItem="53R-Kk-6P1" secondAttribute="centerX" id="xgB-KS-1I1"/>
                         </constraints>
@@ -843,7 +846,7 @@
         <image name="person.crop.circle" catalog="system" width="128" height="121"/>
         <image name="person.crop.circle.fill.badge.minus" catalog="system" width="128" height="113"/>
         <image name="printer.fill" catalog="system" width="128" height="111"/>
-        <image name="qrcode" catalog="system" width="32" height="32"/>
+        <image name="qrcode" catalog="system" width="128" height="114"/>
         <image name="questionmark.circle.fill" catalog="system" width="128" height="121"/>
         <image name="square.and.arrow.down.on.square.fill" catalog="system" width="122" height="128"/>
         <image name="tag" catalog="system" width="128" height="119"/>
