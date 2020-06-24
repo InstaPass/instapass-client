@@ -15,7 +15,7 @@ class QRCodeManager {
 
     static var lastRefreshTime: Date?
 
-    static let qrCodeColor = UIColor(red: 0.390625, green: 0.8203125, blue: 0.46484375, alpha: 1.0)
+    static let qrCodeColor = UIColor(red: 0.341176, green: 0.764706, blue: 0.929412, alpha: 1.0)
 
     static func getQRCodeImage() -> UIImage? {
         if qrCodeSecret != nil && qrCodeSecret! != "" {

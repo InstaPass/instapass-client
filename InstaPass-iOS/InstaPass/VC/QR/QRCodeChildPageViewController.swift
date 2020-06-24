@@ -42,7 +42,7 @@ class QRCodeChildPageViewController: UIViewController {
         cardView.layer.shadowColor = UIColor.label.cgColor
         cardView.layer.shadowOffset = CGSize(width: 0, height: 3)
         cardView.layer.shadowRadius = 20
-        cardView.layer.shadowOpacity = 0.3
+        cardView.layer.shadowOpacity = 0.22
 //        cardView.clipsToBounds = true
     }
     
