@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		29F6FDD5F5184022F218D277 /* Pods_InstaPass.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A13C6E22468DB20006CA98B /* Pods_InstaPass.framework */; };
 		3E1F39C4BBA9FED36FDDDC5D /* Pods_InstaPassTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66EF274B1621B26EF58B5436 /* Pods_InstaPassTests.framework */; };
 		7A91381A2E329798AA42A0F1 /* Pods_InstaPass.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A70FCDE24683CD00053DECF /* Pods_InstaPass.framework */; };
 		8A13C6AF2468D9EF006CA98B /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A13C6AD2468D9EF006CA98B /* Interface.storyboard */; };
@@ -43,6 +42,7 @@
 		8A9F444A2454719E0005FD01 /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9F44492454719E0005FD01 /* HistoryTableViewController.swift */; };
 		8AA3556824A3857200750684 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA3556724A3857200750684 /* HistoryViewController.swift */; };
 		8AA3556B24A385BA00750684 /* PageControlDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA3556A24A385BA00750684 /* PageControlDelegate.swift */; };
+		8AA3556F24A386F800750684 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4FAFD82468423600BBB9DA /* Utils.swift */; };
 		8AA5DD0E2468DD3D002A7817 /* WatchExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA5DD0D2468DD3D002A7817 /* WatchExtension.swift */; };
 		8AA5DD0F2468DDF0002A7817 /* UserPrefInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4FAFDB24684DE400BBB9DA /* UserPrefInitializer.swift */; };
 		8AA71D0024A08EF100A30DF0 /* 62457185.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 8AA71CFF24A08EF100A30DF0 /* 62457185.PNG */; };
@@ -224,7 +224,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A91381A2E329798AA42A0F1 /* Pods_InstaPass.framework in Frameworks */,
-				29F6FDD5F5184022F218D277 /* Pods_InstaPass.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -794,6 +793,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AA3556F24A386F800750684 /* Utils.swift in Sources */,
 				8AA5DD0F2468DDF0002A7817 /* UserPrefInitializer.swift in Sources */,
 				8A13C6CE2468DAE5006CA98B /* RequestManager.swift in Sources */,
 				8A13C6CF2468DAE5006CA98B /* RequestEnumerates.swift in Sources */,
@@ -895,7 +895,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 14;
 				DEVELOPMENT_TEAM = 24XARD42BP;
 				IBSC_MODULE = InstaPass_Watch_Extension;
 				INFOPLIST_FILE = "InstaPass Watch/Info.plist";
@@ -924,7 +924,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 14;
 				DEVELOPMENT_TEAM = 24XARD42BP;
 				IBSC_MODULE = InstaPass_Watch_Extension;
 				INFOPLIST_FILE = "InstaPass Watch/Info.plist";
@@ -951,7 +951,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 14;
 				DEVELOPMENT_TEAM = 24XARD42BP;
 				INFOPLIST_FILE = "InstaPass Watch Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -976,7 +976,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 14;
 				DEVELOPMENT_TEAM = 24XARD42BP;
 				INFOPLIST_FILE = "InstaPass Watch Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
