@@ -41,7 +41,7 @@ class QRCodePageViewController: UIViewController, PageControlDelegate {
     }
     
     func setCurrentPage(current: Int) {
-        NSLog("setCurrentPage. \(current)")
+//        NSLog("setCurrentPage. \(current)")
         pageControl.currentPage = current
     }
     
@@ -56,8 +56,23 @@ class QRCodePageViewController: UIViewController, PageControlDelegate {
         pageControl.numberOfPages = count
     }
 
-    @IBAction func onPageControlChanges(_ sender: UIPageControl) {
-        NSLog("change: onPageControlChanges. \(sender.currentPage)")
-        containerVC?.scrollToPage(.at(index: sender.currentPage), animated: true)
+    
+    var isTouching = false
+    
+    @IBAction func onTouchDown(_ sender: UIPageControl) {
+//        NSLog("change: onPageControlChangesImmediately. \(sender.currentPage)")
+        isTouching = true
+    }
+    
+    @IBAction func onTouchUp(_ sender: UIPageControl) {
+        isTouching = false
+    }
+
+    @IBAction func onValueChanged(_ sender: UIPageControl) {
+        if isTouching {
+            containerVC?.scrollToPage(.at(index: sender.currentPage), animated: false)
+        } else {
+            containerVC?.scrollToPage(.at(index: sender.currentPage), animated: true)
+        }
     }
 }

@@ -33,7 +33,10 @@
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" hidesForSinglePage="YES" numberOfPages="6" currentPage="4" translatesAutoresizingMaskIntoConstraints="NO" id="f1m-fk-8iy">
                                 <rect key="frame" x="8" y="395.5" width="304" height="27.5"/>
                                 <connections>
-                                    <action selector="onPageControlChanges:" destination="9pv-A4-QxB" eventType="valueChanged" id="FQL-Fr-Ltb"/>
+                                    <action selector="onTouchDown:" destination="9pv-A4-QxB" eventType="touchDown" id="q8T-hL-lYo"/>
+                                    <action selector="onTouchUp:" destination="9pv-A4-QxB" eventType="touchUpOutside" id="CAd-T5-sx2"/>
+                                    <action selector="onTouchUp:" destination="9pv-A4-QxB" eventType="touchUpInside" id="reu-hI-bKk"/>
+                                    <action selector="onValueChanged:" destination="9pv-A4-QxB" eventType="valueChanged" id="jkK-pW-fSh"/>
                                 </connections>
                             </pageControl>
                             <visualEffectView hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aZh-Zl-2nW">
@@ -133,7 +136,7 @@
                 <navigationController id="tf3-Sn-9WO" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="QR 码" image="qrcode" catalog="system" id="Z3X-bP-cvu"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="5f6-LE-AKv">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="96"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="102"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -903,7 +906,7 @@
         <image name="person.crop.circle" catalog="system" width="128" height="121"/>
         <image name="person.crop.circle.fill.badge.minus" catalog="system" width="128" height="113"/>
         <image name="printer.fill" catalog="system" width="128" height="111"/>
-        <image name="qrcode" catalog="system" width="128" height="114"/>
+        <image name="qrcode" catalog="system" width="32" height="32"/>
         <image name="questionmark.circle.fill" catalog="system" width="128" height="121"/>
         <image name="square.and.arrow.down.on.square.fill" catalog="system" width="122" height="128"/>
         <image name="tag" catalog="system" width="128" height="119"/>

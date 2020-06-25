@@ -20,7 +20,7 @@ class QRCodesViewController: PageboyViewController, PageboyViewControllerDataSou
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        for i in 0 ..< 5 {
+        for i in 0 ..< 10 {
             let viewController = storyboard?.instantiateViewController(withIdentifier: "QrCodeChildVC") as! QRCodeChildPageViewController
             
             viewController.initCommunityInfo(id: i, name: "The No.\(i + 1) best community")
