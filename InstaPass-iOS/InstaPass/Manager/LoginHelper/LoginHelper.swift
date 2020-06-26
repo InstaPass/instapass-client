@@ -22,6 +22,9 @@ class LoginHelper {
             "username": username,
             "password": password,
         ]
+        
+        NotificationManager.notifications.removeAll()
+        
         RequestManager.request(type: .post,
                                feature: .login,
                                subUrl: nil,
@@ -44,5 +47,7 @@ class LoginHelper {
         
         let appDelegate = UIApplication.shared.delegate as? AppDelegate
         appDelegate?.sendJwtToken(token: "")
+        
+        NotificationManager.notifications.removeAll()
     }
 }

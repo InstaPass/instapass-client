@@ -100,7 +100,11 @@ class UserTableViewController: UITableViewController {
         if indexPath.section == 0 {
             
         } else if (indexPath.section == 1) {
-            performSegue(withIdentifier: "showNotificationsSegue", sender: self)
+            if NotificationManager.notifications.isEmpty {
+                SPAlert.present(title: "没有任何通知", image: UIImage(systemName: "ellipsis.bubble.fill")!)
+            } else {
+                performSegue(withIdentifier: "showNotificationsSegue", sender: self)
+            }
         } else if (indexPath.section == 2) {
             
         } else if indexPath.section == 3 {
