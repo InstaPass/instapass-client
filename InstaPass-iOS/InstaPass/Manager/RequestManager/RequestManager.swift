@@ -23,6 +23,7 @@ class RequestManager {
 //    static var jwtToken: String?
 
     static func request(type requestType: RequestType, feature featureType: FeatureType,
+                        subUrl requestSubUrl: [String]?,
                         params parameters: Parameters?,
                         success successHandler: @escaping (JSON) -> Void, failure failureHandler: @escaping (String) -> Void) {
         var method: HTTPMethod = .get
@@ -35,11 +36,18 @@ class RequestManager {
             encoding = JSONEncoding.default
         }
         
-        Alamofire.request(URL.init(string: featureType.rawValue, relativeTo: baseUrl)!,
+        var requestUrl: URL = URL.init(string: featureType.rawValue, relativeTo: baseUrl)!
+        
+        for subUrl in requestSubUrl ?? [] {
+            requestUrl.appendPathComponent(subUrl)
+        }
+        
+        Alamofire.request(requestUrl,
                           method: method,
                           parameters: parameters,
                           encoding: encoding,
                           headers: ["Jwt-Token" : UserPrefInitializer.jwtToken ]).responseSwiftyJSON(completionHandler: { responseJSON in
+                            NSLog(String(data: responseJSON.data!, encoding: .utf8)!)
             if responseJSON.error != nil {
                 failureHandler(responseJSON.error!.localizedDescription)
             } else {

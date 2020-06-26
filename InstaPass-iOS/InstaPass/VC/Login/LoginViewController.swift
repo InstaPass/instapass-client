@@ -33,7 +33,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
 
     @IBAction func loginButtonTapped(_ sender: UIButton) {
-        displayActivityIndicatorAlert(title: "正在登录", message: "请稍候…", handler: {
+        displayActivityIndicatorAlert(title: "登录中", message: nil, handler: {
             LoginHelper.login(username: self.userNameTextField.text ?? "",
                               password: self.passWordTextField.text ?? "",
                               handler: { resp in
@@ -42,7 +42,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                                       DispatchQueue.main.async {
                                           self.dismissActivityIndicatorAlert(handler: {
                                               SPAlert.present(title: "登录成功", image: UIImage(systemName: "checkmark.seal.fill")!)
-                                              self.dismiss(animated: true)
+                                            self.navigationController?.popViewController(animated: true)
                                           })
                                       }
                                   } else {
@@ -58,12 +58,12 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
 
     @IBAction func closeButtonTapped(_ sender: UIBarButtonItem) {
-        dismiss(animated: true)
+        navigationController?.popViewController(animated: true)
     }
 
     var activityIndicatorAlert: UIAlertController?
 
-    func displayActivityIndicatorAlert(title: String, message: String, handler: (() -> Void)?) {
+    func displayActivityIndicatorAlert(title: String, message: String?, handler: (() -> Void)?) {
         activityIndicatorAlert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
         activityIndicatorAlert!.addActivityIndicator()
         present(activityIndicatorAlert!, animated: true, completion: handler)

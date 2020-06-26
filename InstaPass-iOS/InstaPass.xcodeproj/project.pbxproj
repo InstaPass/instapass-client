@@ -35,6 +35,8 @@
 		8A69B8A224A38451001713E2 /* FadeAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A69B8A124A38451001713E2 /* FadeAnimator.swift */; };
 		8A81ACAE24552B61008CF847 /* raw_dark.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A81ACAD24552B61008CF847 /* raw_dark.png */; };
 		8A82E3D1245519E700008610 /* raw.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A82E3D0245519E700008610 /* raw.png */; };
+		8A8B7DA124A5823000587F19 /* CommunityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8B7DA024A5823000587F19 /* CommunityManager.swift */; };
+		8A8B7DA424A582C100587F19 /* Community.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8B7DA324A582C100587F19 /* Community.swift */; };
 		8A9E2A1E2467B6AB00243DE0 /* RequestEnumerates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9E2A1D2467B6AB00243DE0 /* RequestEnumerates.swift */; };
 		8A9F12D924A0B1FD00EA7D4C /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A9F12D824A0B1FC00EA7D4C /* bg.png */; };
 		8A9F444624546B0C0005FD01 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9F444524546B0C0005FD01 /* UserViewController.swift */; };
@@ -172,6 +174,8 @@
 		8A70FCE124683CD00053DECF /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A81ACAD24552B61008CF847 /* raw_dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = raw_dark.png; path = ../../../Icons/raw_dark.png; sourceTree = "<group>"; };
 		8A82E3D0245519E700008610 /* raw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = raw.png; path = ../../../Icons/raw.png; sourceTree = "<group>"; };
+		8A8B7DA024A5823000587F19 /* CommunityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CommunityManager.swift; path = ../../../../../../../CommunityManager.swift; sourceTree = "<group>"; };
+		8A8B7DA324A582C100587F19 /* Community.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Community.swift; sourceTree = "<group>"; };
 		8A8CA789246834DB00E87F08 /* EFQRCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = EFQRCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A8CA78C246834DE00E87F08 /* Alamofire_SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire_SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A8CA78F246834E800E87F08 /* EFQRCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = EFQRCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -390,10 +394,9 @@
 				8AA3556C24A385C700750684 /* Animation */,
 				8A240D0C245462EF007ACEF4 /* Delegate */,
 				8A82E3CF245519DE00008610 /* Icons */,
-				8A240D0B245462E0007ACEF4 /* LoginHelper */,
+				8A8B7D9E24A581F800587F19 /* Manager */,
+				8A8B7DA224A582B000587F19 /* Model */,
 				8A4FAFDA24684DC400BBB9DA /* Preferences */,
-				8A3079752468078A00C1E129 /* QRCodeManager */,
-				8AF4C7512467B0A4004D2D65 /* RequestManager */,
 				8AA3556D24A3860E00750684 /* Utilities */,
 				8A240D0A245462D8007ACEF4 /* VC */,
 				8AA3556E24A3865B00750684 /* WatchExtension */,
@@ -458,6 +461,33 @@
 				8A81ACAD24552B61008CF847 /* raw_dark.png */,
 			);
 			path = Icons;
+			sourceTree = "<group>";
+		};
+		8A8B7D9E24A581F800587F19 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				8A8B7D9F24A5822000587F19 /* CommunityManager */,
+				8A240D0B245462E0007ACEF4 /* LoginHelper */,
+				8A3079752468078A00C1E129 /* QRCodeManager */,
+				8AF4C7512467B0A4004D2D65 /* RequestManager */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		8A8B7D9F24A5822000587F19 /* CommunityManager */ = {
+			isa = PBXGroup;
+			children = (
+				8A8B7DA024A5823000587F19 /* CommunityManager.swift */,
+			);
+			path = CommunityManager;
+			sourceTree = "<group>";
+		};
+		8A8B7DA224A582B000587F19 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8A8B7DA324A582C100587F19 /* Community.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		8AA3556924A3857600750684 /* QR */ = {
@@ -828,7 +858,9 @@
 				8A307978246807AE00C1E129 /* QRCodeManager.swift in Sources */,
 				8A4FAFDC24684DE400BBB9DA /* UserPrefInitializer.swift in Sources */,
 				8AC1A7342453D26D0066CD8D /* LoginHelper.swift in Sources */,
+				8A8B7DA424A582C100587F19 /* Community.swift in Sources */,
 				8A38495E24A239370024BC5A /* MainTabViewController.swift in Sources */,
+				8A8B7DA124A5823000587F19 /* CommunityManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

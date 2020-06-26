@@ -1,4 +1,4 @@
-//
+    //
 //  RequestEnumerates.swift
 //  InstaPass
 //
@@ -21,12 +21,11 @@ enum RequestResponse {
 }
 
 enum FeatureType: String {
-    // TODO: separate user login and guard login
-    case login = "/login"
+    case login = "/resident/login"
     case qrcode = "/resident/qrcode"
-    
-    // unimplemented:
-    case logout = "/resident/logout"
+    case community = "/resident/community"
+//  case logout = "/resident/logout"
+//  no session, needless to logout
     case avatar = "/resident/avatar"
     case history = "/resident/history"
     case info = "/resident/info"

@@ -18,11 +18,16 @@ class QRCodePageViewController: UIViewController, PageControlDelegate {
     
     @IBOutlet weak var blurView: UIVisualEffectView!
     
+    @IBOutlet weak var blurLabel: UILabel!
+    
+    @IBOutlet weak var blurButton: UIButton!
+    
     @IBOutlet weak var navItem: UINavigationItem!
     
     // var targetUrl: URL?
-    @IBAction func switchToLoginPage(_ sender: UIButton) {
-        tabBarController?.selectedIndex = 2
+    @IBAction func reloadButtonTapped(_ sender: UIButton) {
+        setBlurView(title: "加载中", button: nil)
+        reloadCommunities()
     }
     
     override func viewDidLoad() {
@@ -33,6 +38,8 @@ class QRCodePageViewController: UIViewController, PageControlDelegate {
 //        self.navigationController?.navigationBar.titleTextAttributes = [
 //            NSAttributedString.Key.foregroundColor: UIColor.white
 //        ]
+        setBlurView(title: "加载中", button: nil)
+        reloadCommunities()
     }
     
     func setNumberOfPages(number: Int) {
@@ -49,6 +56,34 @@ class QRCodePageViewController: UIViewController, PageControlDelegate {
         if segue.identifier == "QRCodeSegue" {
             containerVC = segue.destination as? QRCodesViewController
             containerVC?.pgDelegate = self
+        }
+    }
+    
+    func reloadCommunities() {
+//        NSLog("reload!")
+        CommunityManager.refreshCommunity(success: {
+            self.containerVC?.refreshCommunities()
+            self.setBlurView(title: nil, button: nil)
+        }, failure: { error in
+            SPAlert.present(title: "加载数据失败", message: error, image: UIImage(systemName: "wifi.exclamationmark")!)
+            self.containerVC?.refreshCommunities()
+            self.setBlurView(title: "加载失败", button: "重试")
+        })
+    }
+    
+    func setBlurView(title: String?, button: String?) {
+        if title == nil {
+            blurView.isHidden = true
+        } else {
+            blurView.isHidden = false
+            blurLabel.text = title!
+            
+            if button == nil {
+                blurButton.isHidden = true
+            } else {
+                blurButton.isHidden = false
+                blurButton.setTitle(button!, for: .normal)
+            }
         }
     }
     

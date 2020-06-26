@@ -21,11 +21,17 @@ class MainTabViewController: UITabBarController {
         delegate = strongDelegate
     }
     
+    override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+        if item.tag == 0 {
+            ((viewControllers?.first as? UINavigationController)?.children.first as? QRCodePageViewController)?.reloadCommunities()
+        }
+    }
+    
     func updateShortcutPage() {
-
         switch AppDelegate.defaultPage {
         case .qrcode:
             selectedIndex = 0
+            ((viewControllers?.first as? UINavigationController)?.children.first as? QRCodePageViewController)?.reloadCommunities()
             break
         case .history:
             selectedIndex = 1

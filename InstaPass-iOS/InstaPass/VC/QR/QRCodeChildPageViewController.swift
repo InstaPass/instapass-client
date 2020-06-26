@@ -17,13 +17,19 @@ class QRCodeChildPageViewController: UIViewController {
     @IBOutlet var lastUpdateTextField: UILabel!
     @IBOutlet weak var communityNameLabel: UILabel!
     
-    var communityId: Int!
-    var communityName: String!
+    var communityInfo: Community!
     
-    func initCommunityInfo(id: Int, name: String) {
-        communityId = id
-        communityName = name
+    func initCommunityInfo(community: Community) {
+        communityInfo = community
     }
+    
+//    func initCommunityInfo(id: Int, name: String, address: String? = nil) {
+//        communityId = id
+//        communityName = name
+//        communityAddress = address
+//    }
+
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,8 +39,7 @@ class QRCodeChildPageViewController: UIViewController {
         
         let timer = Timer(timeInterval: 10, target: self, selector: #selector(refreshQRCodeWrapped), userInfo: nil, repeats: true)
         RunLoop.main.add(timer, forMode: RunLoop.Mode.default)
-        
-        communityNameLabel.text = communityName ?? "未知社区"
+        communityNameLabel.text = communityInfo.name
     }
     
     func redrawPageShadow() {
@@ -85,35 +90,80 @@ class QRCodeChildPageViewController: UIViewController {
     //    }
 
     @IBAction func onRefreshButtonTapped(_ sender: UIButton) {
-        refreshQRCode()
+//        refreshQRCode()
+        let alertController = UIAlertController(title: "「\(communityInfo.name)」小区",
+                                                message: "位于「\(communityInfo.address)」",
+                                                preferredStyle: .actionSheet)
+        
+        var refreshAction: UIAlertAction!
+        if canRefresh {
+            refreshAction = UIAlertAction(title: "更新 QR 码",
+                                          style: .default,
+                                          handler: { _ in
+                                            self.refreshQRCode()
+                                          })
+        } else {
+            refreshAction = UIAlertAction(title: "更新 QR 码中…",
+                                          style: .default,
+                                          handler: nil)
+            refreshAction.isEnabled = false
+        }
+        
+        let retrieveNotificationsAction = UIAlertAction(title: "检视通知",
+                                                  style: .default,
+                                                  handler: { _ in
+                                                    // TODO: add notification feature
+                                                  })
+        
+        let contactAction = UIAlertAction(title: "联系「\(communityInfo.name)」小区",
+                                          style: .default,
+                                          handler: { _ in
+                                            // TODO: add contact feature
+                                          })
+        
+        let cancelAction = UIAlertAction(title: "取消",
+                                         style: .cancel,
+                                         handler: nil)
+        
+        alertController.addAction(refreshAction)
+        alertController.addAction(retrieveNotificationsAction)
+        alertController.addAction(contactAction)
+        alertController.addAction(cancelAction)
+        
+        present(alertController, animated: true, completion: nil)
     }
 
     @objc func refreshQRCodeWrapped() {
+        canRefresh = true
         if LoginHelper.isLogin {
             refreshQRCode()
         }
     }
+    
+    var canRefresh: Bool = true
 
     func refreshQRCode() {
-        if !refreshButton.isEnabled {
+        if !canRefresh {
             return
         }
 
         let appDelegate = UIApplication.shared.delegate as? AppDelegate
         appDelegate?.sendJwtToken(token: UserPrefInitializer.jwtToken)
 
-        refreshButton.isEnabled = false
-        QRCodeManager.refreshQrCode(id: communityId, success: { _, time in
+        canRefresh = false
+        QRCodeManager.refreshQrCode(id: communityInfo.id, success: { _, time in
             self.flushQRCode()
-            self.lastUpdateTextField.text = "最後更新 \(dateToString(time, dateFormat: "HH:mm"))"
-            self.refreshButton.isEnabled = true
+            self.lastUpdateTextField.text = "已于 \(dateToString(time, dateFormat: "HH:mm")) 更新"
+            self.canRefresh = true
+            LoginHelper.isLogin = true
         }, failure: { error in
             // show ${error} message
             self.flushQRCode()
             self.lastUpdateTextField.text = "请求失败"
-            SPAlert.present(title: "请求 QR 码失败", message: error, image: UIImage(systemName: "wifi.exclamationmark")!)
-            self.refreshButton.isEnabled = true
+//            SPAlert.present(title: "请求 QR 码失败", message: error, image: UIImage(systemName: "wifi.exclamationmark")!)
+            self.canRefresh = true
             LoginHelper.isLogin = false
         })
     }
+    
 }

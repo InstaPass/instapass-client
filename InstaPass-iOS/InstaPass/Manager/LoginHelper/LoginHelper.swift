@@ -22,6 +22,7 @@ class LoginHelper {
         ]
         RequestManager.request(type: .post,
                                feature: .login,
+                               subUrl: nil,
                                params: loginParams,
                                success: { jsonResp in
                                    LoginHelper.isLogin = true

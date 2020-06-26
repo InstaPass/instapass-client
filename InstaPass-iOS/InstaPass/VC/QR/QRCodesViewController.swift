@@ -6,8 +6,9 @@
 //  Copyright © 2020 yuetsin. All rights reserved.
 //
 
-import Pageboy
 import UIKit
+import Pageboy
+import SPAlert
 
 class QRCodesViewController: PageboyViewController, PageboyViewControllerDataSource, PageboyViewControllerDelegate {
     
@@ -19,19 +20,29 @@ class QRCodesViewController: PageboyViewController, PageboyViewControllerDataSou
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        for i in 0 ..< 10 {
-            let viewController = storyboard?.instantiateViewController(withIdentifier: "QrCodeChildVC") as! QRCodeChildPageViewController
-            
-            viewController.initCommunityInfo(id: i, name: "The No.\(i + 1) best community")
-            viewControllers.append(viewController)
-        }
-        
+        refreshCommunities()
         delegate = self
         dataSource = self
     }
 
     var viewControllers: [UIViewController] = []
+    
+    func refreshCommunities() {
+        viewControllers.removeAll()
+        
+//        CommunityManager.refreshCommunity(success: { communities in
+        for comm in CommunityManager.communities {
+            let viewController = self.storyboard?.instantiateViewController(withIdentifier: "QrCodeChildVC") as! QRCodeChildPageViewController
+            
+            viewController.initCommunityInfo(community: comm)
+            self.viewControllers.append(viewController)
+        }
+        self.reloadData()
+//        }, failure: { error in
+//            SPAlert.present(title: "装载数据失败", message: error, image: UIImage(systemName: "wifi.exclamationmark")!)
+//        })
+    }
+
 
     func numberOfViewControllers(in pageboyViewController: PageboyViewController) -> Int {
         pgDelegate?.setNumberOfPages(number: viewControllers.count)
