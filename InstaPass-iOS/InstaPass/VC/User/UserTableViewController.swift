@@ -11,7 +11,6 @@ import SPAlert
 
 class UserTableViewController: UITableViewController {
     
-    
     var parentVC: UserViewController?
     
     @IBOutlet weak var profileImageView: UIImageView!
@@ -32,29 +31,39 @@ class UserTableViewController: UITableViewController {
         profileImageView.layer.cornerRadius = 14
     }
     
-    func renderData() {
+    func reloadData(success: @escaping () -> Void, failure: @escaping () -> Void) {
         CommunityManager.refreshCommunity(success: {
-            let unreadCount = NotificationManager.getFreshNotificationCount()
-            let totalCount = NotificationManager.getTotalNotificationCount()
-            if unreadCount != 0 {
-                self.notificationCountLabel.text = "\(unreadCount) 未读"
-            } else {
-                self.notificationCountLabel.text = "\(totalCount) 已读"
-            }
-            
-            let communityCount = CommunityManager.communities.count
-            if communityCount == 0 {
-                self.livingPositionLabel.text = "未知"
-            } else if communityCount == 1 {
-                self.livingPositionLabel.text = CommunityManager.communities.first!.address
-            } else {
-                self.livingPositionLabel.text = "\(CommunityManager.communities.first!.address)，和另外 \(communityCount - 1) 处"
-            }
-            
-            self.tableView.reloadData()
+            NotificationManager.retrieveNotifications(success: { _ in
+                success()
+            }, failure: { _ in
+                failure()
+            })
         }, failure: { _ in
-            
+            failure()
         })
+    }
+    
+    func renderData() {
+        let unreadCount = NotificationManager.getFreshNotificationCount()
+        let totalCount = NotificationManager.getTotalNotificationCount()
+        if unreadCount != 0 {
+            self.notificationCountLabel.text = "\(unreadCount) 未读"
+        } else if totalCount != 0 {
+            self.notificationCountLabel.text = "\(totalCount) 已读"
+        } else {
+            self.notificationCountLabel.text = "无"
+        }
+        
+        let communityCount = CommunityManager.communities.count
+        if communityCount == 0 {
+            self.livingPositionLabel.text = "未知"
+        } else if communityCount == 1 {
+            self.livingPositionLabel.text = CommunityManager.communities.first!.address
+        } else {
+            self.livingPositionLabel.text = "\(CommunityManager.communities.first!.address)，和另外 \(communityCount - 1) 处"
+        }
+        
+        self.tableView.reloadData()
     }
     
     func switchUser() {
@@ -67,6 +76,8 @@ class UserTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "loginSegue" {
             (segue.destination as? LoginViewController)?.parentVC = self
+        } else if segue.identifier == "showNotificationsSegue" {
+            (segue.destination as? NotificationTableViewController)?.parentVC = self
         }
     }
     // MARK: - Table view data source
@@ -89,7 +100,7 @@ class UserTableViewController: UITableViewController {
         if indexPath.section == 0 {
             
         } else if (indexPath.section == 1) {
-            
+            performSegue(withIdentifier: "showNotificationsSegue", sender: self)
         } else if (indexPath.section == 2) {
             
         } else if indexPath.section == 3 {

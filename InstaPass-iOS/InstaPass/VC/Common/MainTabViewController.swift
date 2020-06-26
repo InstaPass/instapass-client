@@ -19,24 +19,25 @@ class MainTabViewController: UITabBarController {
         // Do any additional setup after loading the view.
         SceneDelegate.mainVC = self
         updateShortcutPage()
-        retrieveNotifications()
         delegate = strongDelegate
-    }
-    
-    func retrieveNotifications() {
+        
         NotificationManager.retrieveNotifications(success: { _ in
-            if self.tabBar.items!.count < 3 {
-                return
-            }
-            let freshNotificationCount = NotificationManager.getFreshNotificationCount()
-            if freshNotificationCount == 0 {
-                self.tabBar.items![2].badgeValue = nil
-            } else {
-                self.tabBar.items![2].badgeValue = "\(freshNotificationCount)"
-            }
+            
         }, failure: { _ in
             
         })
+    }
+    
+    func refreshBadge() {
+        if self.tabBar.items!.count < 3 {
+            return
+        }
+        let freshNotificationCount = NotificationManager.getFreshNotificationCount()
+        if freshNotificationCount == 0 {
+            self.tabBar.items![2].badgeValue = nil
+        } else {
+            self.tabBar.items![2].badgeValue = "\(freshNotificationCount)"
+        }
     }
     
     override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {

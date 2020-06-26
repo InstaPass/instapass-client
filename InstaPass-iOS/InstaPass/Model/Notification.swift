@@ -23,7 +23,6 @@ struct Notification: Equatable {
         self.content = content
         self.stale = stale
     }
-
     var stale: Bool
     var from: Community
     var author: String

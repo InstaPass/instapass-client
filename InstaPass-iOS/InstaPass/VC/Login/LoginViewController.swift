@@ -59,9 +59,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                                       DispatchQueue.main.async {
                                           self.dismissActivityIndicatorAlert(handler: {
                                               SPAlert.present(title: "登录成功", image: UIImage(systemName: "checkmark.seal.fill")!)
-                                            MainTabViewController.instance?.retrieveNotifications()
+                                           
                                             self.navigationController?.popViewController(animated: true)
-                                            self.parentVC?.renderData()
+                                            self.parentVC?.reloadData(success: {
+                                                self.parentVC?.renderData()
+                                            }, failure: {})
                                           })
                                       }
                                   } else {

@@ -120,10 +120,10 @@ class QRCodeChildPageViewController: UIViewController {
         let retrieveNotificationsAction = UIAlertAction(title: "检视通知",
                                                   style: .default,
                                                   handler: { _ in
-                                                    // TODO: add notification feature
+                                                    self.performSegue(withIdentifier: "showNotificationsSegue", sender: self)
                                                   })
         
-        let contactAction = UIAlertAction(title: "联系「\(communityInfo.name)」小区",
+        let contactAction = UIAlertAction(title: "联系「\(communityInfo.name)」的管理员",
                                           style: .default,
                                           handler: { _ in
                                             // TODO: add contact feature
@@ -174,4 +174,9 @@ class QRCodeChildPageViewController: UIViewController {
         })
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showNotificationsSegue" {
+            (segue.destination as? NotificationTableViewController)?.defaultCommunity = communityInfo
+        }
+    }
 }

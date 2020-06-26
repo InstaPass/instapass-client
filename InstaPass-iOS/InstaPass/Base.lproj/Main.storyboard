@@ -677,6 +677,7 @@
                         <outlet property="userNameField" destination="Ypa-1F-yo0" id="6qR-6R-Asp"/>
                         <outlet property="userNickNameField" destination="Jg5-LM-WEd" id="2wO-L8-Mq3"/>
                         <segue destination="8rJ-Kc-sve" kind="show" identifier="loginSegue" id="h0S-dP-Rpx"/>
+                        <segue destination="yj8-pA-hbc" kind="show" identifier="showNotificationsSegue" id="u3W-jz-1g1"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YkU-vc-DR4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -721,6 +722,84 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LjP-RF-QmH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="838" y="1501"/>
+        </scene>
+        <!--消息-->
+        <scene sceneID="R9B-v9-ePh">
+            <objects>
+                <tableViewController hidesBottomBarWhenPushed="YES" id="yj8-pA-hbc" customClass="NotificationTableViewController" customModule="InstaPass__Client_" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="lIg-jI-3rh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="notificationCell" id="ukL-hp-A0P" customClass="NotificationTableViewCell" customModule="InstaPass__Client_" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="55.5" width="375" height="80"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ukL-hp-A0P" id="VQD-w6-KAv">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="waQ-JP-K3W">
+                                            <rect key="frame" x="16" y="8" width="343" height="64"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="l3x-5G-18m">
+                                                    <rect key="frame" x="0.0" y="0.0" width="219.5" height="32"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2dE-xQ-6ti">
+                                                            <rect key="frame" x="0.0" y="10" width="16.5" height="22"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                            <state key="normal">
+                                                                <imageReference key="image" image="circle.fill" catalog="system" symbolScale="small" renderingMode="template"/>
+                                                            </state>
+                                                        </button>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AuthorLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LU4-Cx-nFL">
+                                                            <rect key="frame" x="24.5" y="11.5" width="92.5" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ReleaseTimeLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hwN-a6-QNz">
+                                                            <rect key="frame" x="125" y="18.5" width="94.5" height="13.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                            <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ContentLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VLM-OH-clV">
+                                                    <rect key="frame" x="0.0" y="32" width="87" height="32"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="waQ-JP-K3W" firstAttribute="leading" secondItem="VQD-w6-KAv" secondAttribute="leading" constant="16" id="ION-SB-Dk2"/>
+                                        <constraint firstAttribute="trailing" secondItem="waQ-JP-K3W" secondAttribute="trailing" constant="16" id="MmY-rH-mS5"/>
+                                        <constraint firstItem="waQ-JP-K3W" firstAttribute="top" secondItem="VQD-w6-KAv" secondAttribute="top" constant="8" id="S4x-Io-VwW"/>
+                                        <constraint firstAttribute="bottom" secondItem="waQ-JP-K3W" secondAttribute="bottom" constant="8" id="YHn-DU-2qG"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="authorLabel" destination="LU4-Cx-nFL" id="0vq-kF-AkF"/>
+                                    <outlet property="contentLabel" destination="VLM-OH-clV" id="s9z-rw-ifT"/>
+                                    <outlet property="newMessagePrompt" destination="2dE-xQ-6ti" id="p9S-W0-1if"/>
+                                    <outlet property="releaseTimeLabel" destination="hwN-a6-QNz" id="dP7-2y-P86"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="yj8-pA-hbc" id="FW6-lX-zG9"/>
+                            <outlet property="delegate" destination="yj8-pA-hbc" id="Gcp-NT-aCk"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="消息" id="NHk-Yf-k7W"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5iA-jn-T3x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2.3999999999999999" y="2363.568215892054"/>
         </scene>
         <!--Code Child Page View Controller-->
         <scene sceneID="pzw-6A-VTX">
@@ -854,25 +933,30 @@
                         <outlet property="communityNameLabel" destination="yae-GY-4WF" id="C63-EA-Jaq"/>
                         <outlet property="lastUpdateTextField" destination="ubp-k0-v80" id="Nf9-Fk-9qR"/>
                         <outlet property="refreshButton" destination="c2D-nj-57s" id="xW2-GZ-dCk"/>
+                        <segue destination="yj8-pA-hbc" kind="show" identifier="showNotificationsSegue" id="4Bn-Hx-io2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YiO-xE-WE9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="841" y="2364"/>
+            <point key="canvasLocation" x="812" y="2364"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="u3W-jz-1g1"/>
+    </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.40194425146421175" green="0.5767785730082492" blue="0.66386421319796951" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
     <resources>
         <image name="62457185.PNG" width="584" height="584"/>
         <image name="ProfileBg" width="2000" height="2000"/>
         <image name="TitleBar" width="1500" height="1000"/>
         <image name="arrow.right.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="circle.fill" catalog="system" width="128" height="121"/>
         <image name="ellipsis" catalog="system" width="128" height="37"/>
         <image name="lock.icloud.fill" catalog="system" width="128" height="88"/>
         <image name="person" catalog="system" width="128" height="117"/>
         <image name="person.crop.circle" catalog="system" width="128" height="121"/>
         <image name="printer.fill" catalog="system" width="128" height="111"/>
-        <image name="qrcode" catalog="system" width="32" height="32"/>
+        <image name="qrcode" catalog="system" width="128" height="114"/>
         <image name="questionmark.circle.fill" catalog="system" width="128" height="121"/>
         <image name="square.and.arrow.down.on.square.fill" catalog="system" width="122" height="128"/>
         <image name="tag" catalog="system" width="128" height="119"/>

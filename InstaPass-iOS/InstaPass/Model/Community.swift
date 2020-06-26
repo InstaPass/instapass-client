@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Community: Equatable {
+struct Community: Equatable, Hashable {
     static func == (lhs: Community, rhs: Community) -> Bool {
         return lhs.address == rhs.address
             && lhs.id == rhs.id

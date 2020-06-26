@@ -28,22 +28,32 @@ class NotificationManager {
         return notifications.count
     }
     
+    static func staleNotification(notification: Notification) {
+        if notifications.contains(notification) {
+            let index = notifications.firstIndex(of: notification)!
+            notifications[index].stale = true
+        }
+    }
+    
     static func retrieveNotifications(success: @escaping ([Notification]) -> Void,
                                       failure: @escaping (String) -> Void) {
         if NotificationManager.mutex.wait(timeout: DispatchTime(uptimeNanoseconds: 1000)) == DispatchTimeoutResult.timedOut {
             failure("操作频率过快，请稍后再试。")
             return
         }
-        notifications.removeAll()
+//        notifications.removeAll()
         RequestManager.request(type: .get,
                                feature: .notify,
                                subUrl: nil,
                                params: nil,
                                success: { jsonObject in
                                 for notiObject in jsonObject["notifications"].arrayValue {
-                                    notifications.append(Notification(from: Community(id: notiObject["community_id"].intValue, name: notiObject["community"].stringValue, address: notiObject["address"].stringValue),
+                                    let newNotification = Notification(from: Community(id: notiObject["community_id"].intValue, name: notiObject["community"].stringValue, address: notiObject["address"].stringValue),
                                                                       author: notiObject["author"].stringValue,
-                                                                      releaseTime: Date(timeIntervalSince1970: notiObject["release_time"].doubleValue), content: notiObject["content"].stringValue, stale: false))
+                                                                      releaseTime: Date(timeIntervalSince1970: notiObject["release_time"].doubleValue), content: notiObject["content"].stringValue, stale: false)
+                                    if !notifications.contains(newNotification) {
+                                        notifications.append(newNotification)
+                                    }
                                 }
                                 
                                 RequestManager.request(type: .get,
@@ -62,6 +72,7 @@ class NotificationManager {
                                                         }
                                                         NotificationManager.mutex.signal()
                                                         success(notifications)
+                                                        MainTabViewController.instance?.refreshBadge()
                                                        }, failure: { errorMsg in
                                                         failure(errorMsg)
                                                         NotificationManager.mutex.signal()
