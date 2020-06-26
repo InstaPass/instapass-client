@@ -33,8 +33,7 @@ class QRCodePageViewController: UIViewController, PageControlDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        blurView.isHidden = true
-        
+        blurView.isHidden = false
 //        self.navigationController?.navigationBar.titleTextAttributes = [
 //            NSAttributedString.Key.foregroundColor: UIColor.white
 //        ]
@@ -73,16 +72,24 @@ class QRCodePageViewController: UIViewController, PageControlDelegate {
     
     func setBlurView(title: String?, button: String?) {
         if title == nil {
-            blurView.isHidden = true
+            UIVisualEffectView.animate(withDuration: 0.2, animations: {
+                self.blurView.alpha = 0
+            })
         } else {
-            blurView.isHidden = false
             blurLabel.text = title!
-            
+            UIVisualEffectView.animate(withDuration: 0.2, animations: {
+                self.blurView.alpha = 1
+            })
+
             if button == nil {
-                blurButton.isHidden = true
+                UIButton.animate(withDuration: 0.2, animations: {
+                    self.blurButton.alpha = 0
+                })
             } else {
-                blurButton.isHidden = false
                 blurButton.setTitle(button!, for: .normal)
+                UIButton.animate(withDuration: 0.2, animations: {
+                    self.blurButton.alpha = 1
+                })
             }
         }
     }

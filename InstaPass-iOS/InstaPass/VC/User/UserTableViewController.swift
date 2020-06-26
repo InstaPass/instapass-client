@@ -34,28 +34,24 @@ class UserTableViewController: UITableViewController {
     
     func renderData() {
         CommunityManager.refreshCommunity(success: {
-            NotificationManager.retrieveNotifications(success: { _ in
-                let unreadCount = NotificationManager.getFreshNotificationCount()
-                let totalCount = NotificationManager.getTotalNotificationCount()
-                if unreadCount != 0 {
-                    self.notificationCountLabel.text = "\(unreadCount) 未读"
-                } else {
-                    self.notificationCountLabel.text = "\(totalCount) 已读"
-                }
-                
-                let communityCount = CommunityManager.communities.count
-                if communityCount == 0 {
-                    self.livingPositionLabel.text = "未知"
-                } else if communityCount == 1 {
-                    self.livingPositionLabel.text = CommunityManager.communities.first!.address
-                } else {
-                    self.livingPositionLabel.text = "\(CommunityManager.communities.first!.address)，和另外 \(communityCount - 1) 处"
-                }
-                
-                self.tableView.reloadData()
-            }, failure: { _ in
-                
-            })
+            let unreadCount = NotificationManager.getFreshNotificationCount()
+            let totalCount = NotificationManager.getTotalNotificationCount()
+            if unreadCount != 0 {
+                self.notificationCountLabel.text = "\(unreadCount) 未读"
+            } else {
+                self.notificationCountLabel.text = "\(totalCount) 已读"
+            }
+            
+            let communityCount = CommunityManager.communities.count
+            if communityCount == 0 {
+                self.livingPositionLabel.text = "未知"
+            } else if communityCount == 1 {
+                self.livingPositionLabel.text = CommunityManager.communities.first!.address
+            } else {
+                self.livingPositionLabel.text = "\(CommunityManager.communities.first!.address)，和另外 \(communityCount - 1) 处"
+            }
+            
+            self.tableView.reloadData()
         }, failure: { _ in
             
         })
@@ -98,9 +94,12 @@ class UserTableViewController: UITableViewController {
             
         } else if indexPath.section == 3 {
             if indexPath.row == 0 {
+                
+            }
+            else if indexPath.row == 1 {
                 // switch user
                 switchUser()
-            } else if indexPath.section == 1 {
+            } else if indexPath.section == 2 {
                 // quit
                 LoginHelper.logout(handler: { _ in
                     SPAlert.present(title: "已退出登录", image: UIImage(systemName: "checkmark")!)

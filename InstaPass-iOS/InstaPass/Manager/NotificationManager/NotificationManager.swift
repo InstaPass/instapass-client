@@ -9,6 +9,9 @@
 import Foundation
 
 class NotificationManager {
+    
+    static var mutex = DispatchSemaphore(value: 1)
+    
     static var notifications: [Notification] = []
     
     static func getFreshNotificationCount() -> Int {
@@ -27,8 +30,11 @@ class NotificationManager {
     
     static func retrieveNotifications(success: @escaping ([Notification]) -> Void,
                                       failure: @escaping (String) -> Void) {
+        if NotificationManager.mutex.wait(timeout: DispatchTime(uptimeNanoseconds: 1000)) == DispatchTimeoutResult.timedOut {
+            failure("操作频率过快，请稍后再试。")
+            return
+        }
         notifications.removeAll()
-        
         RequestManager.request(type: .get,
                                feature: .notify,
                                subUrl: nil,
@@ -54,13 +60,15 @@ class NotificationManager {
                                                                 notifications.append(staleNotification)
                                                             }
                                                         }
-                                                        
+                                                        NotificationManager.mutex.signal()
                                                         success(notifications)
                                                        }, failure: { errorMsg in
                                                         failure(errorMsg)
+                                                        NotificationManager.mutex.signal()
                                                        })
                                }, failure: { errorMsg in
                                 failure(errorMsg)
+                                NotificationManager.mutex.signal()
                                })
     }
 }
