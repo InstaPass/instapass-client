@@ -48,6 +48,7 @@ class RequestManager {
                           encoding: encoding,
                           headers: ["Jwt-Token" : UserPrefInitializer.jwtToken ]).responseSwiftyJSON(completionHandler: { responseJSON in
                             NSLog(String(data: responseJSON.data!, encoding: .utf8)!)
+                            NSLog("requestUrl: \(requestUrl)")
             if responseJSON.error != nil {
                 failureHandler(responseJSON.error!.localizedDescription)
             } else {

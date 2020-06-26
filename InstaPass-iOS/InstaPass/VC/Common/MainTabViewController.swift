@@ -9,21 +9,43 @@
 import UIKit
 
 class MainTabViewController: UITabBarController {
-
+    
+    static var instance: MainTabViewController?
+    
     var strongDelegate = TabBarDelegate()
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        MainTabViewController.instance = self
         // Do any additional setup after loading the view.
         SceneDelegate.mainVC = self
         updateShortcutPage()
-        
+        retrieveNotifications()
         delegate = strongDelegate
+    }
+    
+    func retrieveNotifications() {
+        NotificationManager.retrieveNotifications(success: { _ in
+            if self.tabBar.items!.count < 3 {
+                return
+            }
+            let freshNotificationCount = NotificationManager.getFreshNotificationCount()
+            if freshNotificationCount == 0 {
+                self.tabBar.items![2].badgeValue = nil
+            } else {
+                self.tabBar.items![2].badgeValue = "\(freshNotificationCount)"
+            }
+        }, failure: { _ in
+            
+        })
     }
     
     override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
         if item.tag == 0 {
             ((viewControllers?.first as? UINavigationController)?.children.first as? QRCodePageViewController)?.reloadCommunities()
+        } else if item.tag == 1 {
+            (viewControllers?[1] as? HistoryViewController)?.viewGotSwitched()
+        } else if item.tag == 2 {
+            (viewControllers?[2] as? UserViewController)?.viewGotSwitched()
         }
     }
     
@@ -35,9 +57,11 @@ class MainTabViewController: UITabBarController {
             break
         case .history:
             selectedIndex = 1
+            (viewControllers?[1] as? HistoryViewController)?.viewGotSwitched()
             break
         case .person:
             selectedIndex = 2
+            (viewControllers?[2] as? UserViewController)?.viewGotSwitched()
             break
         case nil:
             break

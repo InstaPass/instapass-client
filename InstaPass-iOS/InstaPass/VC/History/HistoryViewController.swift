@@ -14,8 +14,21 @@ class HistoryViewController: UINavigationController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        tableContainerVC = children.first as? HistoryTableViewController
+        tableContainerVC?.parentVC = self
     }
     
+    var tableContainerVC: HistoryTableViewController?
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        tableContainerVC?.renderData()
+    }
+
+    func viewGotSwitched() {
+        tableContainerVC?.renderData()
+    }
 
     /*
     // MARK: - Navigation
@@ -26,5 +39,11 @@ class HistoryViewController: UINavigationController {
         // Pass the selected object to the new view controller.
     }
     */
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "HistoryTVSegue" {
+            tableContainerVC = segue.destination as? HistoryTableViewController
+            tableContainerVC?.parentVC = self
+        }
+    }
 
 }

@@ -10,6 +10,8 @@ import UIKit
 
 class HistoryTableViewController: UITableViewController {
 
+    var parentVC: HistoryViewController?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -18,6 +20,10 @@ class HistoryTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    
+    func renderData() {
+        
     }
 
     // MARK: - Table view data source

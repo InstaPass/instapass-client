@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "qrcode_dark.png",
+      "filename" : "qrcode_light-1.png",
       "idiom" : "universal"
     },
     {
@@ -11,7 +11,7 @@
           "value" : "light"
         }
       ],
-      "filename" : "qrcode_dark-1.png",
+      "filename" : "qrcode_light.png",
       "idiom" : "universal"
     },
     {
@@ -21,7 +21,7 @@
           "value" : "dark"
         }
       ],
-      "filename" : "qrcode_light.png",
+      "filename" : "qrcode_dark-2.png",
       "idiom" : "universal"
     }
   ],

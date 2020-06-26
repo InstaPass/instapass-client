@@ -9,6 +9,8 @@
 import UIKit
 import Foundation
 
+let globalTintColor = UIColor(red: 0.34375, green: 0.58203125, blue: 0.671875, alpha: 1.0)
+
 func dateToString(_ date: Date, dateFormat: String = "yyyy-MM-dd HH:mm:ss") -> String {
     let formatter = DateFormatter()
     formatter.locale = Locale(identifier: "zh_CN")
@@ -42,6 +44,15 @@ extension UIAlertController {
     func dismissActivityIndicator() {
         ActivityIndicatorData.activityIndicator.stopAnimating()
         self.dismiss(animated: false)
+    }
+}
+
+extension UIView {    
+    func setTintColor(color: UIColor = globalTintColor) -> Void {
+        for view in subviews {
+            view.tintColor = color
+            view.setTintColor(color: color)
+        }
     }
 }
 #endif

@@ -12,7 +12,10 @@ import SPAlert
 class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var userNameTextField: UITextField!
     @IBOutlet var passWordTextField: UITextField!
-    @IBOutlet var loginButton: UIButton!
+    
+    @IBOutlet weak var loginImageView: UIImageView!
+    
+    var parentVC: UserTableViewController?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,20 +23,34 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 
         userNameTextField.delegate = self
         passWordTextField.delegate = self
+        
+        loginImageView.isUserInteractionEnabled = true
+        let singleTap = UITapGestureRecognizer(target: self, action: #selector(loginButtonTapped))
+        loginImageView.addGestureRecognizer(singleTap)
     }
+    
+//    func textFieldDidBeginEditing(_ textField: UITextField) {
+//        textField.placeholder = nil
+//    }
+//    
+//    let placeHolderString = ["用户名", "密码"]
+//    
+//    func textFieldDidEndEditing(_ textField: UITextField) {
+//        textField.placeholder = placeHolderString[textField.tag]
+//    }
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == userNameTextField {
             passWordTextField.becomeFirstResponder()
         } else if textField == passWordTextField {
             passWordTextField.resignFirstResponder()
-            loginButtonTapped(loginButton)
+            loginButtonTapped()
         }
         return true
     }
 
-    @IBAction func loginButtonTapped(_ sender: UIButton) {
-        displayActivityIndicatorAlert(title: "登录中", message: nil, handler: {
+    @objc func loginButtonTapped() {
+        displayActivityIndicatorAlert(title: "登录中…", message: nil, handler: {
             LoginHelper.login(username: self.userNameTextField.text ?? "",
                               password: self.passWordTextField.text ?? "",
                               handler: { resp in
@@ -42,7 +59,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                                       DispatchQueue.main.async {
                                           self.dismissActivityIndicatorAlert(handler: {
                                               SPAlert.present(title: "登录成功", image: UIImage(systemName: "checkmark.seal.fill")!)
+                                            MainTabViewController.instance?.retrieveNotifications()
                                             self.navigationController?.popViewController(animated: true)
+                                            self.parentVC?.renderData()
                                           })
                                       }
                                   } else {
@@ -52,6 +71,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                                               SPAlert.present(title: "登录失败", image: UIImage(systemName: "multiply")!)
                                           })
                                       }
+                                    self.parentVC?.renderData()
                                   }
             })
         })

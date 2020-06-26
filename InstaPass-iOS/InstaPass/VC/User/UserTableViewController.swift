@@ -7,10 +7,19 @@
 //
 
 import UIKit
+import SPAlert
 
 class UserTableViewController: UITableViewController {
     
+    
+    var parentVC: UserViewController?
+    
     @IBOutlet weak var profileImageView: UIImageView!
+    @IBOutlet weak var userNickNameField: UILabel!
+    @IBOutlet weak var notificationCountLabel: UILabel!
+    @IBOutlet weak var userNameField: UILabel!
+    @IBOutlet weak var contactPhoneField: UILabel!
+    @IBOutlet weak var livingPositionLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +32,35 @@ class UserTableViewController: UITableViewController {
         profileImageView.layer.cornerRadius = 14
     }
     
+    func renderData() {
+        CommunityManager.refreshCommunity(success: {
+            NotificationManager.retrieveNotifications(success: { _ in
+                let unreadCount = NotificationManager.getFreshNotificationCount()
+                let totalCount = NotificationManager.getTotalNotificationCount()
+                if unreadCount != 0 {
+                    self.notificationCountLabel.text = "\(unreadCount) 未读"
+                } else {
+                    self.notificationCountLabel.text = "\(totalCount) 已读"
+                }
+                
+                let communityCount = CommunityManager.communities.count
+                if communityCount == 0 {
+                    self.livingPositionLabel.text = "未知"
+                } else if communityCount == 1 {
+                    self.livingPositionLabel.text = CommunityManager.communities.first!.address
+                } else {
+                    self.livingPositionLabel.text = "\(CommunityManager.communities.first!.address)，和另外 \(communityCount - 1) 处"
+                }
+                
+                self.tableView.reloadData()
+            }, failure: { _ in
+                
+            })
+        }, failure: { _ in
+            
+        })
+    }
+    
     func switchUser() {
         LoginHelper.logout(handler: { _ in
             // handle logout stuff
@@ -30,6 +68,11 @@ class UserTableViewController: UITableViewController {
         performSegue(withIdentifier: "loginSegue", sender: self)
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "loginSegue" {
+            (segue.destination as? LoginViewController)?.parentVC = self
+        }
+    }
     // MARK: - Table view data source
 
     /*
@@ -47,14 +90,21 @@ class UserTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
 
-        if indexPath.section == 2 {
+        if indexPath.section == 0 {
+            
+        } else if (indexPath.section == 1) {
+            
+        } else if (indexPath.section == 2) {
+            
+        } else if indexPath.section == 3 {
             if indexPath.row == 0 {
                 // switch user
                 switchUser()
             } else if indexPath.section == 1 {
                 // quit
-                LoginHelper.logout(handler: {_ in
-                    // flush personal info
+                LoginHelper.logout(handler: { _ in
+                    SPAlert.present(title: "已退出登录", image: UIImage(systemName: "checkmark")!)
+                    self.renderData()
                 })
             }
         }

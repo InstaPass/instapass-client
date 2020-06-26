@@ -23,6 +23,9 @@
 		8A38495E24A239370024BC5A /* MainTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A38495D24A239370024BC5A /* MainTabViewController.swift */; };
 		8A4FAFD92468423600BBB9DA /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4FAFD82468423600BBB9DA /* Utils.swift */; };
 		8A4FAFDC24684DE400BBB9DA /* UserPrefInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4FAFDB24684DE400BBB9DA /* UserPrefInitializer.swift */; };
+		8A5D0AF724A5E2E000F2E19B /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5D0AF624A5E2E000F2E19B /* NotificationManager.swift */; };
+		8A5D0AF924A5E30D00F2E19B /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5D0AF824A5E30D00F2E19B /* Notification.swift */; };
+		8A5D0AFB24A5F6D000F2E19B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5D0AFA24A5F6D000F2E19B /* User.swift */; };
 		8A5F2BF024530381003E636C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5F2BEF24530381003E636C /* AppDelegate.swift */; };
 		8A5F2BF224530381003E636C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5F2BF124530381003E636C /* SceneDelegate.swift */; };
 		8A5F2BF424530381003E636C /* QRCodePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5F2BF324530381003E636C /* QRCodePageViewController.swift */; };
@@ -145,6 +148,9 @@
 		8A38495D24A239370024BC5A /* MainTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabViewController.swift; sourceTree = "<group>"; };
 		8A4FAFD82468423600BBB9DA /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		8A4FAFDB24684DE400BBB9DA /* UserPrefInitializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPrefInitializer.swift; sourceTree = "<group>"; };
+		8A5D0AF624A5E2E000F2E19B /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		8A5D0AF824A5E30D00F2E19B /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		8A5D0AFA24A5F6D000F2E19B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		8A5F2BEC24530381003E636C /* InstaPass (Client).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "InstaPass (Client).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A5F2BEF24530381003E636C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8A5F2BF124530381003E636C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -363,6 +369,14 @@
 			path = Preferences;
 			sourceTree = "<group>";
 		};
+		8A5D0AF524A5E2C400F2E19B /* NotificationManager */ = {
+			isa = PBXGroup;
+			children = (
+				8A5D0AF624A5E2E000F2E19B /* NotificationManager.swift */,
+			);
+			path = NotificationManager;
+			sourceTree = "<group>";
+		};
 		8A5F2BE324530381003E636C = {
 			isa = PBXGroup;
 			children = (
@@ -446,8 +460,8 @@
 		8A69B8A624A38557001713E2 /* History */ = {
 			isa = PBXGroup;
 			children = (
-				8A9F44492454719E0005FD01 /* HistoryTableViewController.swift */,
 				8AA3556724A3857200750684 /* HistoryViewController.swift */,
+				8A9F44492454719E0005FD01 /* HistoryTableViewController.swift */,
 			);
 			path = History;
 			sourceTree = "<group>";
@@ -466,6 +480,7 @@
 		8A8B7D9E24A581F800587F19 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				8A5D0AF524A5E2C400F2E19B /* NotificationManager */,
 				8A8B7D9F24A5822000587F19 /* CommunityManager */,
 				8A240D0B245462E0007ACEF4 /* LoginHelper */,
 				8A3079752468078A00C1E129 /* QRCodeManager */,
@@ -486,6 +501,8 @@
 			isa = PBXGroup;
 			children = (
 				8A8B7DA324A582C100587F19 /* Community.swift */,
+				8A5D0AF824A5E30D00F2E19B /* Notification.swift */,
+				8A5D0AFA24A5F6D000F2E19B /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -838,12 +855,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A5D0AFB24A5F6D000F2E19B /* User.swift in Sources */,
 				8A69B8A224A38451001713E2 /* FadeAnimator.swift in Sources */,
 				8A9F4448245470BE0005FD01 /* UserTableViewController.swift in Sources */,
 				8A9F444624546B0C0005FD01 /* UserViewController.swift in Sources */,
 				8AA3556824A3857200750684 /* HistoryViewController.swift in Sources */,
 				8AA3556B24A385BA00750684 /* PageControlDelegate.swift in Sources */,
 				8A5F2BF624530381003E636C /* LoginViewController.swift in Sources */,
+				8A5D0AF724A5E2E000F2E19B /* NotificationManager.swift in Sources */,
 				8A4FAFD92468423600BBB9DA /* Utils.swift in Sources */,
 				8A69B8A024A38294001713E2 /* TabBarDelegate.swift in Sources */,
 				8A9F444A2454719E0005FD01 /* HistoryTableViewController.swift in Sources */,
@@ -853,6 +872,7 @@
 				8A5F2BF024530381003E636C /* AppDelegate.swift in Sources */,
 				8A9E2A1E2467B6AB00243DE0 /* RequestEnumerates.swift in Sources */,
 				8AF4C7532467B0C4004D2D65 /* RequestManager.swift in Sources */,
+				8A5D0AF924A5E30D00F2E19B /* Notification.swift in Sources */,
 				8A5F2BF224530381003E636C /* SceneDelegate.swift in Sources */,
 				8AF4C7552467B128004D2D65 /* DisgracefulLife.swift in Sources */,
 				8A307978246807AE00C1E129 /* QRCodeManager.swift in Sources */,

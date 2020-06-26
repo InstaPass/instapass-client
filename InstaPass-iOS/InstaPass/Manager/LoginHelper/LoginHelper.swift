@@ -14,6 +14,8 @@ import SwiftyJSON
 class LoginHelper {
     // always assume login until one request gets unauthorized
     static var isLogin: Bool = true
+    
+    static var activeUser: User?
 
     static func login(username: String, password: String, handler: @escaping (RequestResponse) -> Void) {
         let loginParams: Parameters = [

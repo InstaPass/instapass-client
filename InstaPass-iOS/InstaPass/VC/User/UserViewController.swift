@@ -12,7 +12,21 @@ class UserViewController: UINavigationController, UITableViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        tableContainerVC = children.first as? UserTableViewController
+        tableContainerVC?.parentVC = self
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        tableContainerVC?.renderData()
+    }
+    
+    func viewGotSwitched() {
+        tableContainerVC?.renderData()
+    }
+    
+    var tableContainerVC: UserTableViewController?
 
     /*
      // MARK: - Navigation
@@ -24,12 +38,10 @@ class UserViewController: UINavigationController, UITableViewDelegate {
      }
      */
 
-
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "UserTVSegue" {
-//            let tableContainerVC = segue.destination as! UserTableViewController
-//            tableContainerVC.parentVC = self
-//        }
-//    }
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "UserTVSegue" {
+            tableContainerVC = segue.destination as? UserTableViewController
+            tableContainerVC?.parentVC = self
+        }
+    }
 }

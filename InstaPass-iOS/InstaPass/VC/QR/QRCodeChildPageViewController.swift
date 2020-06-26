@@ -39,7 +39,7 @@ class QRCodeChildPageViewController: UIViewController {
         
         let timer = Timer(timeInterval: 10, target: self, selector: #selector(refreshQRCodeWrapped), userInfo: nil, repeats: true)
         RunLoop.main.add(timer, forMode: RunLoop.Mode.default)
-        communityNameLabel.text = communityInfo.name
+        communityNameLabel.text = "「\(communityInfo.name)」出入 QR 码"
     }
     
     func redrawPageShadow() {
@@ -95,6 +95,7 @@ class QRCodeChildPageViewController: UIViewController {
                                                 message: "位于「\(communityInfo.address)」",
                                                 preferredStyle: .actionSheet)
         
+        alertController.view.setTintColor()
         var refreshAction: UIAlertAction!
         if canRefresh {
             refreshAction = UIAlertAction(title: "更新 QR 码",
