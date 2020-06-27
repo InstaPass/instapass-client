@@ -140,11 +140,12 @@ class InitializeViewController: UIViewController, ImagePickerDelegate {
     
     func sendRegisterRequest(image: UIImage) {
         setLoadingLabel()
-        let jpegData = image.compressImageTo(maxMB: 4)
+        let jpegData = image.compressImageTo(maxMB: 1)
         if jpegData == nil {
             SPAlert.present(message: "压缩图片失败。请再试一次。", haptic: .error)
             return
         }
+        
         let parameter = [
             "id_card_snapshot": jpegData!.base64EncodedString()
         ]
