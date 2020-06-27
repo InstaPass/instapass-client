@@ -6,6 +6,9 @@
 //  Copyright © 2020 yuetsin. All rights reserved.
 //
 
+// Login has been deprecated now!
+#if false
+
 import UIKit
 import SPAlert
 
@@ -96,3 +99,5 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         activityIndicatorAlert = nil
     }
 }
+
+#endif

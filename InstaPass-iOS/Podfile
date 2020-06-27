@@ -17,6 +17,7 @@ target 'InstaPass' do
   pod 'IQKeyboardManager'
   pod 'SPAlert'
   pod 'Pageboy', '~> 3.6'
+  pod 'ImagePicker'
 end
 
 target 'InstaPass Watch Extension' do

@@ -15,12 +15,10 @@ class LoginHelper {
     // always assume login until one request gets unauthorized
     static var isLogin: Bool = true
     
-    static var activeUser: User?
-
-    static func login(username: String, password: String, handler: @escaping (RequestResponse) -> Void) {
+    static func login(realname: String, userId: String, handler: @escaping (RequestResponse) -> Void) {
         let loginParams: Parameters = [
-            "username": username,
-            "password": password,
+            "real_name": realname,
+            "id_number": userId,
         ]
         
         NotificationManager.notifications.removeAll()

@@ -9,15 +9,11 @@
 import Foundation
 
 struct User {
-    init(name: String, nickName: String, telePhone: String, emailAddress: String) {
+    init(name: String, uniqueId: String) {
         self.name = name
-        self.nickName = nickName
-        self.telePhone = telePhone
-        self.emailAddress = emailAddress
+        self.uniqueId = uniqueId
     }
 
     var name: String
-    var nickName: String
-    var telePhone: String
-    var emailAddress: String
+    var uniqueId: String
 }

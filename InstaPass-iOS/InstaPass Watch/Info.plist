@@ -20,6 +20,10 @@
 	<string>$(MARKETING_VERSION)</string>
 	<key>CFBundleVersion</key>
 	<string>$(CURRENT_PROJECT_VERSION)</string>
+	<key>NSCameraUsageDescription</key>
+	<string>InstaPass 需要您的允许来拍摄照片。</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>InstaPass 需要您的允许来访问您的图片库。</string>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

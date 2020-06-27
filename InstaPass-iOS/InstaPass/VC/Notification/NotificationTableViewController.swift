@@ -99,8 +99,8 @@ class NotificationTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        var toStaleNotification = notificationDictionary[titles[indexPath.section]]![indexPath.row]
-        toStaleNotification.stale = true
+        notificationDictionary[titles[indexPath.section]]![indexPath.row].stale = true
+        let toStaleNotification = notificationDictionary[titles[indexPath.section]]![indexPath.row]
         NotificationManager.staleNotification(notification: toStaleNotification)
         (tableView.cellForRow(at: indexPath) as? NotificationTableViewCell)?.newMessagePrompt.isHidden = true
         tableView.deselectRow(at: indexPath, animated: true)

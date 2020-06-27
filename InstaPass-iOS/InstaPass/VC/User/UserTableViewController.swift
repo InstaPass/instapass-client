@@ -74,9 +74,7 @@ class UserTableViewController: UITableViewController {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "loginSegue" {
-            (segue.destination as? LoginViewController)?.parentVC = self
-        } else if segue.identifier == "showNotificationsSegue" {
+        if segue.identifier == "showNotificationsSegue" {
             (segue.destination as? NotificationTableViewController)?.parentVC = self
         }
     }

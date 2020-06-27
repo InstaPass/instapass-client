@@ -8,6 +8,7 @@ PODS:
   - EFQRCode/Core (5.1.6)
   - EFQRCode/watchOS (5.1.6):
     - swift_qrcodejs (>= 1.1.1)
+  - ImagePicker (3.2.0)
   - IQKeyboardManager (6.5.5)
   - Pageboy (3.6.1)
   - SPAlert (2.1.4)
@@ -19,6 +20,7 @@ DEPENDENCIES:
   - Alamofire-SwiftyJSON
   - EFQRCode (~> 5.1.6)
   - EFQRCode/watchOS (~> 5.1.6)
+  - ImagePicker
   - IQKeyboardManager
   - Pageboy (~> 3.6)
   - SPAlert
@@ -29,6 +31,7 @@ SPEC REPOS:
     - Alamofire
     - Alamofire-SwiftyJSON
     - EFQRCode
+    - ImagePicker
     - IQKeyboardManager
     - Pageboy
     - SPAlert
@@ -39,12 +42,13 @@ SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   Alamofire-SwiftyJSON: 2b3649d57dc7bb2880fb8b86f8bb969397666916
   EFQRCode: a7ea2e517912f5bf6ba258b631327a83cd8084a5
+  ImagePicker: 1d950bbb2422548ed58791b4ec7f42fe42920511
   IQKeyboardManager: 3a8b9e603f8b0eeaf5f096a1f2b2cfcf121992ef
   Pageboy: 29a2d474ad99404b4d77f325e0ab6d705930a4fb
   SPAlert: 1a8afa1c6ac86a82ab5b2cfdf7f9a51e68cb6c0c
   swift_qrcodejs: 4d024fc98b0778b804ec6a5c810880fd092aec9d
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
 
-PODFILE CHECKSUM: 56d7e05cbe4d889c65f9e925bb492502bc4ee437
+PODFILE CHECKSUM: 1445f64637bc3c3b12221b17054865a92c28301b
 
 COCOAPODS: 1.8.4

@@ -24,6 +24,7 @@ enum FeatureType: String {
     case login = "/resident/login"
     case qrcode = "/resident/qrcode"
     case community = "/resident/community"
+    case certificate = "/resident/certificate"
 //  case logout = "/resident/logout"
 //  no session, needless to logout
     case avatar = "/resident/avatar"
