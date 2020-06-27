@@ -67,10 +67,31 @@ class UserTableViewController: UITableViewController {
     }
     
     func switchUser() {
+        
         LoginHelper.logout(handler: { _ in
             // handle logout stuff
         })
-        performSegue(withIdentifier: "loginSegue", sender: self)
+        
+        let alertController = UIAlertController(title: "真的要注销登录吗？",
+                                                message: "您将需要重新提供身份证明来再次登录。",
+                                                preferredStyle: .actionSheet)
+        
+        alertController.view.setTintColor()
+
+        let logOutAction = UIAlertAction(title: "注销",
+                                         style: .destructive,
+                                                  handler: { _ in
+                                                    self.performSegue(withIdentifier: "LogOutSegue", sender: self)
+                                        })
+        
+        let cancelAction = UIAlertAction(title: "取消",
+                                         style: .cancel,
+                                         handler: nil)
+        
+        alertController.addAction(logOutAction)
+        alertController.addAction(cancelAction)
+        
+        present(alertController, animated: true, completion: nil)
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -107,17 +128,11 @@ class UserTableViewController: UITableViewController {
             
         } else if indexPath.section == 3 {
             if indexPath.row == 0 {
-                
+                // preference
             }
             else if indexPath.row == 1 {
                 // switch user
                 switchUser()
-            } else if indexPath.section == 2 {
-                // quit
-                LoginHelper.logout(handler: { _ in
-                    SPAlert.present(title: "已退出登录", image: UIImage(systemName: "checkmark")!)
-                    self.renderData()
-                })
             }
         }
     }

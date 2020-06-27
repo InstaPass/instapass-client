@@ -28,6 +28,17 @@ class NotificationManager {
         return notifications.count
     }
     
+    
+    static func getTotalNotificationCount(communityId: Int) -> Int {
+        var count = 0
+        for notification in notifications {
+            if notification.from.id == communityId {
+                count += 1
+            }
+        }
+        return count
+    }
+    
     static func staleNotification(notification: Notification) {
         if notifications.contains(notification) {
             let index = notifications.firstIndex(of: notification)!

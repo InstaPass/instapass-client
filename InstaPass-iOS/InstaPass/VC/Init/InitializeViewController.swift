@@ -119,7 +119,7 @@ class InitializeViewController: UIViewController, ImagePickerDelegate {
     }
     
     func wrapperDidPress(_ imagePicker: ImagePickerController, images: [UIImage]) {
-        
+        (imagePicker as? ImagePickerControllerWithAlert)?.alert?.dismiss()
     }
     
     func doneButtonDidPress(_ imagePicker: ImagePickerController, images: [UIImage]) {

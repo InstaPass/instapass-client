@@ -129,13 +129,23 @@ class QRCodeChildPageViewController: UIViewController {
                                             // TODO: add contact feature
                                           })
         
+        let leaveAction = UIAlertAction(title: "离开「\(communityInfo.name)」",
+                                        style: .destructive,
+                                        handler: { _ in
+                                            // TODO: leave community feature
+                                        })
+        
         let cancelAction = UIAlertAction(title: "取消",
                                          style: .cancel,
                                          handler: nil)
         
         alertController.addAction(refreshAction)
-        alertController.addAction(retrieveNotificationsAction)
+        
+        if NotificationManager.getTotalNotificationCount(communityId: communityInfo.id) != 0 {
+            alertController.addAction(retrieveNotificationsAction)
+        }
         alertController.addAction(contactAction)
+        alertController.addAction(leaveAction)
         alertController.addAction(cancelAction)
         
         present(alertController, animated: true, completion: nil)

@@ -44,6 +44,7 @@
 		8A90041E24A73C96004A9206 /* CommunityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A90041D24A73C96004A9206 /* CommunityManager.swift */; };
 		8A90042124A73D16004A9206 /* HistoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A90042024A73D16004A9206 /* HistoryManager.swift */; };
 		8A90042424A75451004A9206 /* InitializeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A90042324A75451004A9206 /* InitializeViewController.swift */; };
+		8A91A2C024A76C0300913EFA /* AttendCommunityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A91A2BF24A76C0300913EFA /* AttendCommunityViewController.swift */; };
 		8A9E2A1E2467B6AB00243DE0 /* RequestEnumerates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9E2A1D2467B6AB00243DE0 /* RequestEnumerates.swift */; };
 		8A9F12D924A0B1FD00EA7D4C /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A9F12D824A0B1FC00EA7D4C /* bg.png */; };
 		8A9F444624546B0C0005FD01 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9F444524546B0C0005FD01 /* UserViewController.swift */; };
@@ -198,6 +199,7 @@
 		8A90041D24A73C96004A9206 /* CommunityManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommunityManager.swift; sourceTree = "<group>"; };
 		8A90042024A73D16004A9206 /* HistoryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryManager.swift; sourceTree = "<group>"; };
 		8A90042324A75451004A9206 /* InitializeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitializeViewController.swift; sourceTree = "<group>"; };
+		8A91A2BF24A76C0300913EFA /* AttendCommunityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendCommunityViewController.swift; sourceTree = "<group>"; };
 		8A9E2A1D2467B6AB00243DE0 /* RequestEnumerates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestEnumerates.swift; sourceTree = "<group>"; };
 		8A9F12D824A0B1FC00EA7D4C /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bg.png; path = ../../../Icons/bg.png; sourceTree = "<group>"; };
 		8A9F444524546B0C0005FD01 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
@@ -334,6 +336,7 @@
 		8A240D0A245462D8007ACEF4 /* VC */ = {
 			isa = PBXGroup;
 			children = (
+				8A91A2BE24A76B2C00913EFA /* Attend */,
 				8A90042224A75440004A9206 /* Init */,
 				8A5D0AFC24A6245B00F2E19B /* Notification */,
 				8AA3556924A3857600750684 /* QR */,
@@ -543,6 +546,14 @@
 				8A90042324A75451004A9206 /* InitializeViewController.swift */,
 			);
 			path = Init;
+			sourceTree = "<group>";
+		};
+		8A91A2BE24A76B2C00913EFA /* Attend */ = {
+			isa = PBXGroup;
+			children = (
+				8A91A2BF24A76C0300913EFA /* AttendCommunityViewController.swift */,
+			);
+			path = Attend;
 			sourceTree = "<group>";
 		};
 		8AA3556924A3857600750684 /* QR */ = {
@@ -893,6 +904,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A91A2C024A76C0300913EFA /* AttendCommunityViewController.swift in Sources */,
 				8ACCA22A24A62ACB001C7B4E /* NotificationTableViewCell.swift in Sources */,
 				8A5D0AFE24A6247B00F2E19B /* NotificationTableViewController.swift in Sources */,
 				8A5D0AFB24A5F6D000F2E19B /* User.swift in Sources */,
