@@ -33,4 +33,3 @@ enum FeatureType: String {
     case upload = "/resident/upload"
     case notify = "/resident/notifications"
 }
-

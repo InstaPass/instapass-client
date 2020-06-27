@@ -17,7 +17,7 @@ class LoginHelper {
     
     static func login(realname: String, userId: String, handler: @escaping (RequestResponse) -> Void) {
         let loginParams: Parameters = [
-            "real_name": realname,
+            "realname": realname,
             "id_number": userId,
         ]
         

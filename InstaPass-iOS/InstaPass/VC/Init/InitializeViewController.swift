@@ -154,9 +154,8 @@ class InitializeViewController: UIViewController, ImagePickerDelegate {
                                subUrl: nil,
                                params: parameter,
                                success: { jsonResponse in
-                                UserPrefInitializer.userName = jsonResponse["realname"].stringValue
-                                UserPrefInitializer.userId = jsonResponse["id_number"].stringValue
-                                self.tryLoading()
+                                
+                                self.promptInfo(jsonResponse["realname"].stringValue, jsonResponse["id_number"].stringValue)
                                 return
                                }, failure: { error in
                                 self.setRetryLabel()
@@ -172,6 +171,38 @@ class InitializeViewController: UIViewController, ImagePickerDelegate {
     
     func completeInit() {
         performSegue(withIdentifier: "sucessfullyInitSegue", sender: nil)
+    }
+    
+    func promptInfo(_ realName: String, _ idNumber: String) {
+        
+        self.tryLoading()
+        
+        
+        let alertController = UIAlertController(title: "确认您的个人信息",
+                                                message: "\(realName)，身份证号码 \(idNumber)",
+                                                preferredStyle: .actionSheet)
+        
+        alertController.view.setTintColor()
+        
+        let correctButton = UIAlertAction(title: "正确",
+                                                  style: .default,
+                                                  handler: { _ in
+                                                    
+                                                    UserPrefInitializer.userName = realName
+                                                    UserPrefInitializer.userId = idNumber
+                                                    self.tryLoading()
+                                                  })
+        
+        let cancelAction = UIAlertAction(title: "不正确",
+                                         style: .cancel,
+                                         handler: { _ in
+                                            self.tryLoading()
+                                         })
+        
+        alertController.addAction(correctButton)
+        alertController.addAction(cancelAction)
+        
+        present(alertController, animated: true, completion: nil)
     }
 }
 
