@@ -39,8 +39,8 @@
 		8A69B8A224A38451001713E2 /* FadeAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A69B8A124A38451001713E2 /* FadeAnimator.swift */; };
 		8A81ACAE24552B61008CF847 /* raw_dark.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A81ACAD24552B61008CF847 /* raw_dark.png */; };
 		8A82E3D1245519E700008610 /* raw.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A82E3D0245519E700008610 /* raw.png */; };
-		8A8B7DA124A5823000587F19 /* CommunityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8B7DA024A5823000587F19 /* CommunityManager.swift */; };
 		8A8B7DA424A582C100587F19 /* Community.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8B7DA324A582C100587F19 /* Community.swift */; };
+		8A90041E24A73C96004A9206 /* CommunityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A90041D24A73C96004A9206 /* CommunityManager.swift */; };
 		8A9E2A1E2467B6AB00243DE0 /* RequestEnumerates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9E2A1D2467B6AB00243DE0 /* RequestEnumerates.swift */; };
 		8A9F12D924A0B1FD00EA7D4C /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A9F12D824A0B1FC00EA7D4C /* bg.png */; };
 		8A9F444624546B0C0005FD01 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9F444524546B0C0005FD01 /* UserViewController.swift */; };
@@ -183,7 +183,6 @@
 		8A70FCE124683CD00053DECF /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A81ACAD24552B61008CF847 /* raw_dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = raw_dark.png; path = ../../../Icons/raw_dark.png; sourceTree = "<group>"; };
 		8A82E3D0245519E700008610 /* raw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = raw.png; path = ../../../Icons/raw.png; sourceTree = "<group>"; };
-		8A8B7DA024A5823000587F19 /* CommunityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CommunityManager.swift; path = ../../../../../../../CommunityManager.swift; sourceTree = "<group>"; };
 		8A8B7DA324A582C100587F19 /* Community.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Community.swift; sourceTree = "<group>"; };
 		8A8CA789246834DB00E87F08 /* EFQRCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = EFQRCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A8CA78C246834DE00E87F08 /* Alamofire_SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire_SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -193,6 +192,7 @@
 		8A8CA7942468358C00E87F08 /* EFQRCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = EFQRCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A8CA7952468358C00E87F08 /* IQKeyboardManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = IQKeyboardManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A8CA7962468358C00E87F08 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A90041D24A73C96004A9206 /* CommunityManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommunityManager.swift; sourceTree = "<group>"; };
 		8A9E2A1D2467B6AB00243DE0 /* RequestEnumerates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestEnumerates.swift; sourceTree = "<group>"; };
 		8A9F12D824A0B1FC00EA7D4C /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bg.png; path = ../../../Icons/bg.png; sourceTree = "<group>"; };
 		8A9F444524546B0C0005FD01 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
@@ -506,7 +506,7 @@
 		8A8B7D9F24A5822000587F19 /* CommunityManager */ = {
 			isa = PBXGroup;
 			children = (
-				8A8B7DA024A5823000587F19 /* CommunityManager.swift */,
+				8A90041D24A73C96004A9206 /* CommunityManager.swift */,
 			);
 			path = CommunityManager;
 			sourceTree = "<group>";
@@ -886,6 +886,7 @@
 				8AA71D0524A0925A00A30DF0 /* QRCodeChildPageViewController.swift in Sources */,
 				8AA71D0324A091D300A30DF0 /* QRCodesViewController.swift in Sources */,
 				8A5F2BF024530381003E636C /* AppDelegate.swift in Sources */,
+				8A90041E24A73C96004A9206 /* CommunityManager.swift in Sources */,
 				8A9E2A1E2467B6AB00243DE0 /* RequestEnumerates.swift in Sources */,
 				8AF4C7532467B0C4004D2D65 /* RequestManager.swift in Sources */,
 				8A5D0AF924A5E30D00F2E19B /* Notification.swift in Sources */,
@@ -896,7 +897,6 @@
 				8AC1A7342453D26D0066CD8D /* LoginHelper.swift in Sources */,
 				8A8B7DA424A582C100587F19 /* Community.swift in Sources */,
 				8A38495E24A239370024BC5A /* MainTabViewController.swift in Sources */,
-				8A8B7DA124A5823000587F19 /* CommunityManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
