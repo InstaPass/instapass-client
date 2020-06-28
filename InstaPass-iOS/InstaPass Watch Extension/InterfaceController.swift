@@ -44,6 +44,8 @@ class InterfaceController: WKInterfaceController {
         }
         return communityIds[currentCommunityIndex]
     }
+    
+    var secret: String?
 
     @IBAction func refreshImmediately() {
         if isLoading {
@@ -53,8 +55,9 @@ class InterfaceController: WKInterfaceController {
         isLoading = true
 
         refreshButton.setEnabled(false)
-        QRCodeManager.refreshQrCode(id: getCommunityId(), success: { _, time in
+        QRCodeManager.refreshQrCode(id: getCommunityId(), success: { secret, time in
             self.flushQRCode()
+            self.secret = secret
             self.lastRefreshTime.setText("最後更新 \(dateToString(time, dateFormat: "HH:mm"))")
             self.refreshButton.setEnabled(true)
             self.scroll(to: self.imageField, at: WKInterfaceScrollPosition.top, animated: true)
@@ -69,7 +72,7 @@ class InterfaceController: WKInterfaceController {
     }
 
     func flushQRCode() {
-        let image = QRCodeManager.getQRCodeImage()
+        let image = QRCodeManager.getQRCodeImage(secret: secret)
         
         if image == nil {
             imageField.setImage(UIImage(systemName: "questionmark.square.fill"))

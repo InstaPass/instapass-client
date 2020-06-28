@@ -33,6 +33,7 @@ class QRCodesViewController: PageboyViewController, PageboyViewControllerDataSou
             let viewController = self.storyboard?.instantiateViewController(withIdentifier: "QrCodeChildVC") as! QRCodeChildPageViewController
             
             viewController.initCommunityInfo(community: comm)
+            viewController.parentVC = parentVC
             self.viewControllers.append(viewController)
         }
         

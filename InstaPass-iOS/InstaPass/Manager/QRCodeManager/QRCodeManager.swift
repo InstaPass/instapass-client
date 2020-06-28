@@ -17,10 +17,25 @@ class QRCodeManager {
 
     static let qrCodeColor = globalTintColor
 
-    static func getQRCodeImage() -> UIImage? {
-        if qrCodeSecret != nil && qrCodeSecret! != "" {
+//    static func getQRCodeImage() -> UIImage? {
+//        if qrCodeSecret != nil && qrCodeSecret! != "" {
+//            if let cgImage = EFQRCode.generate(
+//                content: qrCodeSecret!,
+//                backgroundColor: UIColor.clear.cgColor,
+//                foregroundColor: qrCodeColor.cgColor
+//            ) {
+//                return UIImage(cgImage: cgImage)
+//            } else {
+//                return nil
+//            }
+//        }
+//        return nil
+//    }
+    
+    static func getQRCodeImage(secret: String?) -> UIImage? {
+        if secret != nil && secret! != "" {
             if let cgImage = EFQRCode.generate(
-                content: qrCodeSecret!,
+                content: secret!,
                 backgroundColor: UIColor.clear.cgColor,
                 foregroundColor: qrCodeColor.cgColor
             ) {

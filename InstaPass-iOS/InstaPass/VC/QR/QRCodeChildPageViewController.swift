@@ -21,6 +21,8 @@ class QRCodeChildPageViewController: UIViewController {
     
     var communityInfo: Community!
     
+    var secret: String?
+    
     func initCommunityInfo(community: Community) {
         communityInfo = community
     }
@@ -83,7 +85,7 @@ class QRCodeChildPageViewController: UIViewController {
     func flushQRCode() {
         //        let style = traitCollection.userInterfaceStyle
 
-        QRCodeView.image = QRCodeManager.getQRCodeImage()
+        QRCodeView.image = QRCodeManager.getQRCodeImage(secret: secret)
 
         if QRCodeView.image == nil {
             QRCodeView.image = UIImage(systemName: "multiply")
@@ -218,7 +220,8 @@ class QRCodeChildPageViewController: UIViewController {
         appDelegate?.sendJwtToken(token: UserPrefInitializer.jwtToken)
 
         canRefresh = false
-        QRCodeManager.refreshQrCode(id: communityInfo.id, success: { _, time in
+        QRCodeManager.refreshQrCode(id: communityInfo.id, success: { secret, time in
+            self.secret = secret
             self.flushQRCode()
             self.lastUpdateTextField.text = "已于 \(dateToString(time, dateFormat: "HH:mm")) 更新"
             self.canRefresh = true
