@@ -54,23 +54,20 @@ class UserTableViewController: UITableViewController {
             self.notificationCountLabel.text = "无"
         }
         
-        let communityCount = CommunityManager.communities.count
+        let constantCommunities = CommunityManager.constantCommunities()
+        let communityCount = constantCommunities.count
         if communityCount == 0 {
             self.livingPositionLabel.text = "未知"
         } else if communityCount == 1 {
-            self.livingPositionLabel.text = CommunityManager.communities.first!.address
+            self.livingPositionLabel.text = constantCommunities.first!.address
         } else {
-            self.livingPositionLabel.text = "\(CommunityManager.communities.first!.address)，和另外 \(communityCount - 1) 处"
+            self.livingPositionLabel.text = "\(constantCommunities.first!.address)，和另外 \(communityCount - 1) 处"
         }
         
         self.tableView.reloadData()
     }
     
     func switchUser() {
-        
-        LoginHelper.logout(handler: { _ in
-            // handle logout stuff
-        })
         
         let alertController = UIAlertController(title: "真的要注销登录吗？",
                                                 message: "您将需要重新提供身份证明来再次登录。",
@@ -81,7 +78,9 @@ class UserTableViewController: UITableViewController {
         let logOutAction = UIAlertAction(title: "注销",
                                          style: .destructive,
                                                   handler: { _ in
-                                                    self.performSegue(withIdentifier: "LogOutSegue", sender: self)
+                                                    LoginHelper.logout(handler: { _ in
+                                                        self.performSegue(withIdentifier: "LogOutSegue", sender: self)
+                                                    })
                                         })
         
         let cancelAction = UIAlertAction(title: "取消",
@@ -119,11 +118,16 @@ class UserTableViewController: UITableViewController {
         if indexPath.section == 0 {
             
         } else if (indexPath.section == 1) {
-            if NotificationManager.notifications.isEmpty {
-                SPAlert.present(title: "没有任何通知", image: UIImage(systemName: "ellipsis.bubble.fill")!)
-            } else {
-                performSegue(withIdentifier: "showNotificationsSegue", sender: self)
-            }
+            NotificationManager.retrieveNotifications(success: { _ in
+                if NotificationManager.notifications.isEmpty {
+                    SPAlert.present(title: "没有任何通知", image: UIImage(systemName: "ellipsis.bubble.fill")!)
+                } else {
+                    self.performSegue(withIdentifier: "showNotificationsSegue", sender: nil)
+                }
+            }, failure: { _ in
+                SPAlert.present(title: "拉取通知失败", image: UIImage(systemName: "multiply")!)
+            })
+            
         } else if (indexPath.section == 2) {
             
         } else if indexPath.section == 3 {

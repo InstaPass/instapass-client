@@ -13,6 +13,8 @@ import SPAlert
 class QRCodesViewController: PageboyViewController, PageboyViewControllerDataSource, PageboyViewControllerDelegate {
     
     var pgDelegate: PageControlDelegate?
+    
+    var parentVC: QRCodePageViewController?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +37,7 @@ class QRCodesViewController: PageboyViewController, PageboyViewControllerDataSou
         }
         
         let viewController = self.storyboard?.instantiateViewController(withIdentifier: "QrAttendVC") as! AttendCommunityViewController
+        viewController.parentVC = parentVC
         self.viewControllers.append(viewController)
         self.reloadData()
 //        }, failure: { error in

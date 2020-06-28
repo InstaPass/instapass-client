@@ -17,6 +17,8 @@ class QRCodeChildPageViewController: UIViewController {
     @IBOutlet var lastUpdateTextField: UILabel!
     @IBOutlet weak var communityNameLabel: UILabel!
     
+    var parentVC: QRCodePageViewController?
+    
     var communityInfo: Community!
     
     func initCommunityInfo(community: Community) {
@@ -127,10 +129,14 @@ class QRCodeChildPageViewController: UIViewController {
                                             // TODO: add contact feature
                                           })
         
-        let leaveAction = UIAlertAction(title: "离开「\(communityInfo.name)」",
+        var removeTitle: String = "移除「\(communityInfo.name)」住户 QR 码"
+        if communityInfo.temporary {
+            removeTitle = "移除「\(communityInfo.name)」临时 QR 码"
+        }
+        let leaveAction = UIAlertAction(title: removeTitle,
                                         style: .destructive,
                                         handler: { _ in
-                                            // TODO: leave community feature
+                                            self.confirmLeavingCommunity(community: self.communityInfo)
                                         })
         
         let cancelAction = UIAlertAction(title: "取消",
@@ -157,6 +163,42 @@ class QRCodeChildPageViewController: UIViewController {
     }
     
     var canRefresh: Bool = true
+    
+    func confirmLeavingCommunity(community: Community) {
+        if community.temporary {
+            CommunityManager.leaveCommunity(id: community.id,
+                                            success: {
+                                                SPAlert.present(message: "已成功移除该 QR 码。", haptic: .success)
+                                                self.parentVC?.reloadCommunities()
+                                            }, failure: { error in
+                                                SPAlert.present(message: "未能移除该 QR 码，因为一个「\(error)」错误。", haptic: .error)
+                                            })
+        } else {
+            let alertController = UIAlertController(title: "您确认要移除「\(community.name)」发放的通行 QR 码吗？",
+                                                    message: "如要进入该小区，您将需要再次申领 QR 码。",
+                                                    preferredStyle: .actionSheet)
+            
+            alertController.view.setTintColor()
+            
+            let leaveAction = UIAlertAction(title: "确认移除",
+                                            style: .destructive,
+                                            handler: { _ in 
+                                                CommunityManager.leaveCommunity(id: community.id,
+                                                                                success: {
+                                                                                    SPAlert.present(message: "已成功移除该 QR 码。", haptic: .success)
+                                                                                    self.parentVC?.reloadCommunities()
+                                                                                }, failure: { error in
+                                                                                    SPAlert.present(message: "未能移除该 QR 码，因为一个「\(error)」错误。", haptic: .error)
+                                                                                })
+                                             })
+            let cancelAction = UIAlertAction(title: "取消",
+                                             style: .cancel,
+                                             handler: nil)
+            
+            alertController.addAction(leaveAction)
+            alertController.addAction(cancelAction)
+        }
+    }
 
     func refreshQRCode() {
         if !canRefresh {

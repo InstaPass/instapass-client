@@ -42,6 +42,8 @@ class LoginHelper {
     static func logout(handler: (RequestResponse) -> Void) {
         isLogin = false
         UserPrefInitializer.jwtToken = ""
+        UserPrefInitializer.userName = ""
+        UserPrefInitializer.userId = ""
         
         let appDelegate = UIApplication.shared.delegate as? AppDelegate
         appDelegate?.sendJwtToken(token: "")

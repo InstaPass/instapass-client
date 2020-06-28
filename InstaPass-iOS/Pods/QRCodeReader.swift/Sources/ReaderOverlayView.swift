@@ -105,14 +105,14 @@ public final class ReaderOverlayView: UIView {
   }
 
   public override func draw(_ rect: CGRect) {
-    let innerRect = CGRect(
-      x: rect.width * rectOfInterest.minX,
-      y: rect.height * rectOfInterest.minY,
-      width: rect.width * rectOfInterest.width,
-      height: rect.height * rectOfInterest.height
-    )
-
-    overlay.path = UIBezierPath(roundedRect: innerRect, cornerRadius: 5).cgPath
+//    let innerRect = CGRect(
+//      x: rect.width * rectOfInterest.minX,
+//      y: rect.height * rectOfInterest.minY,
+//      width: rect.width * rectOfInterest.width,
+//      height: rect.height * rectOfInterest.height
+//    )
+//
+//    overlay.path = UIBezierPath(roundedRect: innerRect, cornerRadius: 5).cgPath
   }
 }
 

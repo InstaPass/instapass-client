@@ -57,16 +57,6 @@
 		</dict>
 		<dict>
 			<key>UIApplicationShortcutItemIconType</key>
-			<string>UIApplicationShortcutIconTypeBookmark</string>
-			<key>UIApplicationShortcutItemSubtitle</key>
-			<string></string>
-			<key>UIApplicationShortcutItemTitle</key>
-			<string>出入日志</string>
-			<key>UIApplicationShortcutItemType</key>
-			<string>history</string>
-		</dict>
-		<dict>
-			<key>UIApplicationShortcutItemIconType</key>
 			<string>UIApplicationShortcutIconTypeLove</string>
 			<key>UIApplicationShortcutItemSubtitle</key>
 			<string></string>

@@ -116,7 +116,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="QR 码" image="qrcode" catalog="system" id="acW-dT-cKf"/>
                     <navigationItem key="navigationItem" title="出行认证 QR 码" id="uDN-hd-bud">
-                        <barButtonItem key="rightBarButtonItem" title="遇到问题？" image="questionmark.circle.fill" catalog="system" id="9qg-V1-5Fn">
+                        <barButtonItem key="rightBarButtonItem" title="遇到问题？" image="checkmark.seal" catalog="system" id="9qg-V1-5Fn">
                             <color key="tintColor" systemColor="secondaryLabelColor"/>
                         </barButtonItem>
                     </navigationItem>
@@ -336,7 +336,7 @@
         <scene sceneID="wiY-lM-DCY">
             <objects>
                 <navigationController id="fwN-RU-gbo" customClass="UserViewController" customModule="InstaPass__Client_" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" tag="2" title="我的" image="person" catalog="system" id="Q0r-UP-BL6">
+                    <tabBarItem key="tabBarItem" tag="1" title="我的" image="person" catalog="system" id="Q0r-UP-BL6">
                         <color key="badgeColor" red="0.40000000000000002" green="0.57647058819999997" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBarItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -355,6 +355,7 @@
         <!--出行记录-->
         <scene sceneID="hgJ-sa-qa6">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Td0-I4-4I2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController id="Wfp-5D-TOS" customClass="HistoryViewController" customModule="InstaPass__Client_" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" tag="1" title="出行记录" image="tag" catalog="system" id="kJb-BC-WCs"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -366,7 +367,6 @@
                         <segue destination="z4b-7P-vhu" kind="relationship" relationship="rootViewController" destinationCreationSelector="HistoryTVSegue" id="iWn-C2-FwZ"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Td0-I4-4I2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1" y="777"/>
         </scene>
@@ -734,7 +734,6 @@
                     </tabBar>
                     <connections>
                         <segue destination="tf3-Sn-9WO" kind="relationship" relationship="viewControllers" id="UWQ-EG-E35"/>
-                        <segue destination="Wfp-5D-TOS" kind="relationship" relationship="viewControllers" id="A6d-yr-W1z"/>
                         <segue destination="fwN-RU-gbo" kind="relationship" relationship="viewControllers" id="b2c-ix-hUy"/>
                     </connections>
                 </tabBarController>
@@ -1068,6 +1067,7 @@
         <image name="ProfileBg" width="2000" height="2000"/>
         <image name="TitleBar" width="1000" height="666.66668701171875"/>
         <image name="arrow.counterclockwise.icloud.fill" catalog="system" width="128" height="88"/>
+        <image name="checkmark.seal" catalog="system" width="128" height="125"/>
         <image name="circle.fill" catalog="system" width="128" height="121"/>
         <image name="ellipsis" catalog="system" width="128" height="37"/>
         <image name="lock.icloud.fill" catalog="system" width="128" height="88"/>
@@ -1076,7 +1076,6 @@
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="printer.fill" catalog="system" width="128" height="111"/>
         <image name="qrcode" catalog="system" width="128" height="114"/>
-        <image name="questionmark.circle.fill" catalog="system" width="128" height="121"/>
         <image name="rectangle.stack.person.crop.fill" catalog="system" width="128" height="122"/>
         <image name="square.and.arrow.down.on.square.fill" catalog="system" width="122" height="128"/>
         <image name="tag" catalog="system" width="128" height="119"/>

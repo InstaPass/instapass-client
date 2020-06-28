@@ -29,14 +29,14 @@ class MainTabViewController: UITabBarController {
     }
     
     func refreshBadge() {
-        if self.tabBar.items!.count < 3 {
+        if self.tabBar.items!.count < 2 {
             return
         }
         let freshNotificationCount = NotificationManager.getFreshNotificationCount()
         if freshNotificationCount == 0 {
-            self.tabBar.items![2].badgeValue = nil
+            self.tabBar.items![1].badgeValue = nil
         } else {
-            self.tabBar.items![2].badgeValue = "\(freshNotificationCount)"
+            self.tabBar.items![1].badgeValue = "\(freshNotificationCount)"
         }
     }
     
@@ -44,9 +44,7 @@ class MainTabViewController: UITabBarController {
         if item.tag == 0 {
             ((viewControllers?.first as? UINavigationController)?.children.first as? QRCodePageViewController)?.reloadCommunities()
         } else if item.tag == 1 {
-            (viewControllers?[1] as? HistoryViewController)?.viewGotSwitched()
-        } else if item.tag == 2 {
-            (viewControllers?[2] as? UserViewController)?.viewGotSwitched()
+            (viewControllers?[1] as? UserViewController)?.viewGotSwitched()
         }
     }
     
@@ -57,12 +55,12 @@ class MainTabViewController: UITabBarController {
             ((viewControllers?.first as? UINavigationController)?.children.first as? QRCodePageViewController)?.reloadCommunities()
             break
         case .history:
-            selectedIndex = 1
-            (viewControllers?[1] as? HistoryViewController)?.viewGotSwitched()
+//            selectedIndex = 1
+//            (viewControllers?[1] as? HistoryViewController)?.viewGotSwitched()
             break
         case .person:
-            selectedIndex = 2
-            (viewControllers?[2] as? UserViewController)?.viewGotSwitched()
+            selectedIndex = 1
+            (viewControllers?[1] as? UserViewController)?.viewGotSwitched()
             break
         case nil:
             break

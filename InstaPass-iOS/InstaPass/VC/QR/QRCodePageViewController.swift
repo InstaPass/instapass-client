@@ -55,6 +55,7 @@ class QRCodePageViewController: UIViewController, PageControlDelegate {
         if segue.identifier == "QRCodeSegue" {
             containerVC = segue.destination as? QRCodesViewController
             containerVC?.pgDelegate = self
+            containerVC?.parentVC = self
         }
     }
     

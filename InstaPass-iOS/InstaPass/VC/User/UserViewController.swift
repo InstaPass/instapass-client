@@ -23,8 +23,6 @@ class UserViewController: UINavigationController, UITableViewDelegate {
     }
     
     func viewGotSwitched() {
-        tableContainerVC?.renderData()
-        
         NotificationManager.retrieveNotifications(success: { _ in
             self.tableContainerVC?.renderData()
         }, failure: { _ in
