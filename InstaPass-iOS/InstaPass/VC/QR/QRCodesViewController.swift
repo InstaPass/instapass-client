@@ -12,10 +12,6 @@ import SPAlert
 
 class QRCodesViewController: PageboyViewController, PageboyViewControllerDataSource, PageboyViewControllerDelegate {
     
-//    override func scrollToPage(_ page: PageboyViewController.Page, animated: Bool, completion: PageboyViewController.PageScrollCompletion? = nil) -> Bool {
-//        <#code#>
-//    }
-    
     var pgDelegate: PageControlDelegate?
 
     override func viewDidLoad() {
@@ -37,6 +33,9 @@ class QRCodesViewController: PageboyViewController, PageboyViewControllerDataSou
             viewController.initCommunityInfo(community: comm)
             self.viewControllers.append(viewController)
         }
+        
+        let viewController = self.storyboard?.instantiateViewController(withIdentifier: "QrAttendVC") as! AttendCommunityViewController
+        self.viewControllers.append(viewController)
         self.reloadData()
 //        }, failure: { error in
 //            SPAlert.present(title: "装载数据失败", message: error, image: UIImage(systemName: "wifi.exclamationmark")!)

@@ -11,6 +11,7 @@ PODS:
   - ImagePicker (3.2.0)
   - IQKeyboardManager (6.5.5)
   - Pageboy (3.6.1)
+  - QRCodeReader.swift (10.1.0)
   - SPAlert (2.1.4)
   - swift_qrcodejs (1.1.2)
   - SwiftyJSON (4.0.0)
@@ -23,6 +24,7 @@ DEPENDENCIES:
   - ImagePicker
   - IQKeyboardManager
   - Pageboy (~> 3.6)
+  - QRCodeReader.swift
   - SPAlert
   - SwiftyJSON
 
@@ -34,6 +36,7 @@ SPEC REPOS:
     - ImagePicker
     - IQKeyboardManager
     - Pageboy
+    - QRCodeReader.swift
     - SPAlert
     - swift_qrcodejs
     - SwiftyJSON
@@ -45,10 +48,11 @@ SPEC CHECKSUMS:
   ImagePicker: 1d950bbb2422548ed58791b4ec7f42fe42920511
   IQKeyboardManager: 3a8b9e603f8b0eeaf5f096a1f2b2cfcf121992ef
   Pageboy: 29a2d474ad99404b4d77f325e0ab6d705930a4fb
+  QRCodeReader.swift: 373a389fe9a22d513c879a32a6f647c58f4ef572
   SPAlert: 1a8afa1c6ac86a82ab5b2cfdf7f9a51e68cb6c0c
   swift_qrcodejs: 4d024fc98b0778b804ec6a5c810880fd092aec9d
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
 
-PODFILE CHECKSUM: 1445f64637bc3c3b12221b17054865a92c28301b
+PODFILE CHECKSUM: e1e9112ce7930534f74e44e9ba8f796c2e99c05a
 
 COCOAPODS: 1.8.4

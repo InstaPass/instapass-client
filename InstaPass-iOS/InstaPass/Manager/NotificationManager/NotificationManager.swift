@@ -59,7 +59,7 @@ class NotificationManager {
                                params: nil,
                                success: { jsonObject in
                                 for notiObject in jsonObject["notifications"].arrayValue {
-                                    let newNotification = Notification(from: Community(id: notiObject["community_id"].intValue, name: notiObject["community"].stringValue, address: notiObject["address"].stringValue),
+                                    let newNotification = Notification(from: Community(id: notiObject["community_id"].intValue, name: notiObject["community"].stringValue, address: notiObject["address"].stringValue, temporary: false),
                                                                       author: notiObject["author"].stringValue,
                                                                       releaseTime: Date(timeIntervalSince1970: notiObject["release_time"].doubleValue), content: notiObject["content"].stringValue, stale: false)
                                     if !notifications.contains(newNotification) {
@@ -73,7 +73,7 @@ class NotificationManager {
                                                        params: ["all": 1],
                                                        success: { jsonObject in
                                                         for notiObject in jsonObject["notifications"].arrayValue {
-                                                            let staleNotification = Notification(from: Community(id: notiObject["community_id"].intValue, name: notiObject["community"].stringValue, address: notiObject["address"].stringValue),
+                                                            let staleNotification = Notification(from: Community(id: notiObject["community_id"].intValue, name: notiObject["community"].stringValue, address: notiObject["address"].stringValue, temporary: false),
                                                                                                  author: notiObject["author"].stringValue,
                                                                                                  releaseTime: Date(timeIntervalSince1970: notiObject["release_time"].doubleValue), content: notiObject["content"].stringValue, stale: true)
                                                             

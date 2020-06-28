@@ -29,7 +29,8 @@ class CommunityManager {
                                     CommunityManager.communities.append(
                                         Community(id: commObject["community_id"].intValue,
                                                   name: commObject["community"].stringValue,
-                                                  address: commObject["address"].stringValue))
+                                                  address: commObject["address"].stringValue,
+                                                  temporary: commObject["temporary"].boolValue))
                                 }
                                 success()
                                 CommunityManager.mutex.signal()

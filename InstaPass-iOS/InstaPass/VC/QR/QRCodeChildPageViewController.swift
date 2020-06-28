@@ -28,8 +28,6 @@ class QRCodeChildPageViewController: UIViewController {
 //        communityName = name
 //        communityAddress = address
 //    }
-
-    
     
     var timer: Timer?
     
@@ -86,7 +84,7 @@ class QRCodeChildPageViewController: UIViewController {
         QRCodeView.image = QRCodeManager.getQRCodeImage()
 
         if QRCodeView.image == nil {
-            QRCodeView.image = UIImage(systemName: "questionmark.square.fill")
+            QRCodeView.image = UIImage(systemName: "multiply")
         }
     }
 
@@ -177,7 +175,7 @@ class QRCodeChildPageViewController: UIViewController {
         }, failure: { error in
             // show ${error} message
             self.flushQRCode()
-            self.lastUpdateTextField.text = "请求失败"
+            self.lastUpdateTextField.text = "错误：\(error)"
 //            SPAlert.present(title: "请求 QR 码失败", message: error, image: UIImage(systemName: "wifi.exclamationmark")!)
             self.canRefresh = true
             LoginHelper.isLogin = false
