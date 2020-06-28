@@ -152,6 +152,9 @@ class QRCodeChildPageViewController: UIViewController {
         alertController.addAction(leaveAction)
         alertController.addAction(cancelAction)
         
+        alertController.popoverPresentationController?.sourceView = refreshButton
+        alertController.popoverPresentationController?.sourceRect = refreshButton.bounds
+        
         present(alertController, animated: true, completion: nil)
     }
 
@@ -197,6 +200,10 @@ class QRCodeChildPageViewController: UIViewController {
             
             alertController.addAction(leaveAction)
             alertController.addAction(cancelAction)
+            
+            alertController.popoverPresentationController?.sourceView = refreshButton
+            alertController.popoverPresentationController?.sourceRect = refreshButton.bounds
+            
             
             present(alertController, animated: true, completion: nil)
         }

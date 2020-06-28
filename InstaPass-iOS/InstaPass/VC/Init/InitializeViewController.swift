@@ -202,6 +202,9 @@ class InitializeViewController: UIViewController, ImagePickerDelegate {
         alertController.addAction(correctButton)
         alertController.addAction(cancelAction)
         
+        alertController.popoverPresentationController?.sourceView = requireRegister
+        alertController.popoverPresentationController?.sourceRect = requireRegister.bounds
+        
         present(alertController, animated: true, completion: nil)
     }
 }

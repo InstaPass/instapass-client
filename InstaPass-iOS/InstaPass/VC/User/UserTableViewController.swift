@@ -90,6 +90,11 @@ class UserTableViewController: UITableViewController {
         alertController.addAction(logOutAction)
         alertController.addAction(cancelAction)
         
+        let targetCell = tableView.cellForRow(at: IndexPath(row: 1, section: 3))!
+        alertController.popoverPresentationController?.sourceView = targetCell
+        alertController.popoverPresentationController?.sourceRect = targetCell.bounds
+        
+        
         present(alertController, animated: true, completion: nil)
     }
 

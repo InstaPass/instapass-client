@@ -115,11 +115,7 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="QR 码" image="qrcode" catalog="system" id="acW-dT-cKf"/>
-                    <navigationItem key="navigationItem" title="出行认证 QR 码" id="uDN-hd-bud">
-                        <barButtonItem key="rightBarButtonItem" title="遇到问题？" image="checkmark.seal" catalog="system" id="9qg-V1-5Fn">
-                            <color key="tintColor" systemColor="secondaryLabelColor"/>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="出行认证 QR 码" id="uDN-hd-bud"/>
                     <connections>
                         <outlet property="blurButton" destination="XBu-NF-Qur" id="tQJ-UN-Oqv"/>
                         <outlet property="blurLabel" destination="JvC-GM-dXg" id="LbM-5F-gpd"/>
@@ -1067,7 +1063,6 @@
         <image name="ProfileBg" width="2000" height="2000"/>
         <image name="TitleBar" width="1000" height="666.66668701171875"/>
         <image name="arrow.counterclockwise.icloud.fill" catalog="system" width="128" height="88"/>
-        <image name="checkmark.seal" catalog="system" width="128" height="125"/>
         <image name="circle.fill" catalog="system" width="128" height="121"/>
         <image name="ellipsis" catalog="system" width="128" height="37"/>
         <image name="lock.icloud.fill" catalog="system" width="128" height="88"/>
