@@ -355,7 +355,6 @@
         <!--出行记录-->
         <scene sceneID="hgJ-sa-qa6">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Td0-I4-4I2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController id="Wfp-5D-TOS" customClass="HistoryViewController" customModule="InstaPass__Client_" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" tag="1" title="出行记录" image="tag" catalog="system" id="kJb-BC-WCs"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -367,6 +366,7 @@
                         <segue destination="z4b-7P-vhu" kind="relationship" relationship="rootViewController" destinationCreationSelector="HistoryTVSegue" id="iWn-C2-FwZ"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Td0-I4-4I2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1" y="777"/>
         </scene>

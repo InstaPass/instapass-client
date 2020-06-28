@@ -197,6 +197,8 @@ class QRCodeChildPageViewController: UIViewController {
             
             alertController.addAction(leaveAction)
             alertController.addAction(cancelAction)
+            
+            present(alertController, animated: true, completion: nil)
         }
     }
 
