@@ -86,7 +86,10 @@ class QRCodeChildPageViewController: UIViewController {
 
     func flushQRCode() {
         //        let style = traitCollection.userInterfaceStyle
-
+        
+        previousQRCodeView.alpha = 1
+        QRCodeView.alpha = 0
+        
         previousQRCodeView.image = QRCodeView.image
         QRCodeView.image = QRCodeManager.getQRCodeImage(secret: secret)
         
@@ -94,8 +97,6 @@ class QRCodeChildPageViewController: UIViewController {
             QRCodeView.image = UIImage(systemName: "qrcode")
         }
         
-        previousQRCodeView.alpha = 1
-        QRCodeView.alpha = 0
 
         UIView.animate(withDuration: 0.1, animations: {
             self.previousQRCodeView.alpha = 0

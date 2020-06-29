@@ -25,8 +25,17 @@ class UserTableViewController: UITableViewController {
         let userName = UserPrefInitializer.userName
         let userId = UserPrefInitializer.userId
         if hiddenPersonalInfo {
-            userNameField.text = userName.prefix(1) + String(repeating: "◼︎", count: userName.count - 1)
-            userIdField.text = String(userId.prefix(3)) + String(repeating: "*", count: userId.count - 4) + String(userId.suffix(1))
+            if userName.count > 2 {
+                userNameField.text = userName.prefix(1) + String(repeating: "◼︎", count: userName.count - 1)
+            } else {
+                userNameField.text = String(repeating: "◼︎", count: userName.count)
+            }
+            
+            if userId.count > 5 {
+                userIdField.text = String(userId.prefix(3)) + String(repeating: "*", count: userId.count - 4) + String(userId.suffix(1))
+            } else {
+                userIdField.text = String(repeating: "*", count: userId.count)
+            }
         } else {
             userNameField.text = userName
             userIdField.text = userId
