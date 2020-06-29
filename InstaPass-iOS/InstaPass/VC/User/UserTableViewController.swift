@@ -13,12 +13,25 @@ class UserTableViewController: UITableViewController {
     
     var parentVC: UserViewController?
     
-    @IBOutlet weak var profileImageView: UIImageView!
-    @IBOutlet weak var userNickNameField: UILabel!
     @IBOutlet weak var notificationCountLabel: UILabel!
     @IBOutlet weak var userNameField: UILabel!
-    @IBOutlet weak var contactPhoneField: UILabel!
+    @IBOutlet weak var userIdField: UILabel!
     @IBOutlet weak var livingPositionLabel: UILabel!
+    
+    
+    var hiddenPersonalInfo = true
+    
+    func writePersonalInfo() {
+        let userName = UserPrefInitializer.userName
+        let userId = UserPrefInitializer.userId
+        if hiddenPersonalInfo {
+            userNameField.text = userName.prefix(1) + String(repeating: "◼︎", count: userName.count - 1)
+            userIdField.text = String(userId.prefix(3)) + String(repeating: "*", count: userId.count - 4) + String(userId.suffix(1))
+        } else {
+            userNameField.text = userName
+            userIdField.text = userId
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +41,7 @@ class UserTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
-        profileImageView.layer.cornerRadius = 14
+        writePersonalInfo()
     }
     
     func reloadData(success: @escaping () -> Void, failure: @escaping () -> Void) {
@@ -90,7 +103,7 @@ class UserTableViewController: UITableViewController {
         alertController.addAction(logOutAction)
         alertController.addAction(cancelAction)
         
-        let targetCell = tableView.cellForRow(at: IndexPath(row: 1, section: 3))!
+        let targetCell = tableView.cellForRow(at: IndexPath(row: 1, section: 2))!
         alertController.popoverPresentationController?.sourceView = targetCell
         alertController.popoverPresentationController?.sourceRect = targetCell.bounds
         
@@ -120,9 +133,7 @@ class UserTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
 
-        if indexPath.section == 0 {
-            
-        } else if (indexPath.section == 1) {
+        if (indexPath.section == 0) {
             NotificationManager.retrieveNotifications(success: { _ in
                 if NotificationManager.notifications.isEmpty {
                     SPAlert.present(title: "没有任何通知", image: UIImage(systemName: "ellipsis.bubble.fill")!)
@@ -133,9 +144,12 @@ class UserTableViewController: UITableViewController {
                 SPAlert.present(title: "拉取通知失败", image: UIImage(systemName: "multiply")!)
             })
             
-        } else if (indexPath.section == 2) {
-            
-        } else if indexPath.section == 3 {
+        } else if (indexPath.section == 1) {
+            if (indexPath.row == 0 || indexPath.row == 1) {
+                hiddenPersonalInfo = !hiddenPersonalInfo
+                writePersonalInfo()
+            }
+        } else if indexPath.section == 2 {
             if indexPath.row == 0 {
                 // preference
             }

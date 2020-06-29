@@ -1011,7 +1011,7 @@
 					"@loader_path/../Frameworks",
 				);
 				MARKETING_VERSION = 0.2;
-				PRODUCT_BUNDLE_IDENTIFIER = io.github.instapass.client.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.instapass.resident.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1040,7 +1040,7 @@
 					"@loader_path/../Frameworks",
 				);
 				MARKETING_VERSION = 0.2;
-				PRODUCT_BUNDLE_IDENTIFIER = io.github.instapass.client.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.instapass.resident.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1066,7 +1066,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 0.2;
-				PRODUCT_BUNDLE_IDENTIFIER = io.github.instapass.client.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.instapass.resident.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1091,7 +1091,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 0.2;
-				PRODUCT_BUNDLE_IDENTIFIER = io.github.instapass.client.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.instapass.resident.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1232,7 +1232,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 0.2;
-				PRODUCT_BUNDLE_IDENTIFIER = io.github.instapass.client;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.instapass.resident;
 				PRODUCT_NAME = "InstaPass (Client)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1254,7 +1254,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 0.2;
-				PRODUCT_BUNDLE_IDENTIFIER = io.github.instapass.client;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.instapass.resident;
 				PRODUCT_NAME = "InstaPass (Client)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

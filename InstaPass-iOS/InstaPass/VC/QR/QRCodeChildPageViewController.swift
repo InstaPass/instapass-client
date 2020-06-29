@@ -12,6 +12,7 @@ import SPAlert
 class QRCodeChildPageViewController: UIViewController {
     
     @IBOutlet var cardView: UIVisualEffectView!
+    @IBOutlet weak var previousQRCodeView: UIImageView!
     @IBOutlet var QRCodeView: UIImageView!
     @IBOutlet var refreshButton: UIButton!
     @IBOutlet var lastUpdateTextField: UILabel!
@@ -40,6 +41,7 @@ class QRCodeChildPageViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         redrawPageShadow()
+        QRCodeView.image = UIImage(systemName: "qrcode")
         
         timer = Timer(timeInterval: 10, target: self, selector: #selector(refreshQRCodeWrapped), userInfo: nil, repeats: true)
         RunLoop.main.add(timer!, forMode: RunLoop.Mode.default)
@@ -85,11 +87,20 @@ class QRCodeChildPageViewController: UIViewController {
     func flushQRCode() {
         //        let style = traitCollection.userInterfaceStyle
 
+        previousQRCodeView.image = QRCodeView.image
         QRCodeView.image = QRCodeManager.getQRCodeImage(secret: secret)
-
+        
         if QRCodeView.image == nil {
-            QRCodeView.image = UIImage(systemName: "multiply")
+            QRCodeView.image = UIImage(systemName: "qrcode")
         }
+        
+        previousQRCodeView.alpha = 1
+        QRCodeView.alpha = 0
+
+        UIView.animate(withDuration: 0.1, animations: {
+            self.previousQRCodeView.alpha = 0
+            self.QRCodeView.alpha = 1
+        })
     }
 
     //
@@ -228,9 +239,11 @@ class QRCodeChildPageViewController: UIViewController {
             LoginHelper.isLogin = true
         }, failure: { error in
             // show ${error} message
+            self.secret = nil
             self.flushQRCode()
             self.lastUpdateTextField.text = "错误：\(error)"
 //            SPAlert.present(title: "请求 QR 码失败", message: error, image: UIImage(systemName: "wifi.exclamationmark")!)
+            
             self.canRefresh = true
             LoginHelper.isLogin = false
         })

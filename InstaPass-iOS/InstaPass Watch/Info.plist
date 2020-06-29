@@ -30,7 +30,7 @@
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 	</array>
 	<key>WKCompanionAppBundleIdentifier</key>
-	<string>io.github.instapass.client</string>
+	<string>io.github.instapass.resident</string>
 	<key>WKWatchKitApp</key>
 	<true/>
 </dict>

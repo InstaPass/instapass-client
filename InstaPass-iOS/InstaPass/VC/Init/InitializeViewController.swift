@@ -7,17 +7,20 @@
 //
 
 import UIKit
+import Photos
 import SPAlert
-import ImagePicker
+import AssetsLibrary
 
-class InitializeViewController: UIViewController, ImagePickerDelegate {
+//import ImagePicker
+
+class InitializeViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     override func viewDidLoad() {
 
         requireRegister.isUserInteractionEnabled = true
         let registerSingleTap = UITapGestureRecognizer(target: self, action: #selector(registerButtonTapped))
         requireRegister.addGestureRecognizer(registerSingleTap)
         
-        requireRegister.accessibilityLabel = "以新身份登入"
+        requireRegister.accessibilityLabel = "以新身份注册"
         requireRegister.accessibilityRespondsToUserInteraction = true
         
         retryLoading.isUserInteractionEnabled = true
@@ -27,9 +30,31 @@ class InitializeViewController: UIViewController, ImagePickerDelegate {
         retryLoading.accessibilityLabel = "再试一次"
         retryLoading.accessibilityRespondsToUserInteraction = true
         
+        loginButton.isUserInteractionEnabled = true
+        let loginSingleTap = UITapGestureRecognizer(target: self, action: #selector(loginButtonTapped))
+        loginButton.addGestureRecognizer(loginSingleTap)
+        
+        loginButton.accessibilityLabel = "登录"
+        loginButton.accessibilityRespondsToUserInteraction = true
+        
         tryLoading()
 
         super.viewDidLoad()
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        let resultImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
+        picker.dismiss(animated: true, completion: {
+            if resultImage != nil {
+                self.sendRegisterRequest(image: resultImage!)
+            } else {
+                SPAlert.present(message: "未能取得图片。", haptic: .error)
+            }
+        })
     }
     
     func setLoadingLabel() {
@@ -37,6 +62,7 @@ class InitializeViewController: UIViewController, ImagePickerDelegate {
         minorTitleLabel.text = "请稍等片刻"
         loadingIndicator.isHidden = false
         requireRegister.isHidden = true
+        loginButton.isHidden = true
         retryLoading.isHidden = true
     }
     
@@ -45,6 +71,7 @@ class InitializeViewController: UIViewController, ImagePickerDelegate {
         minorTitleLabel.text = "请稍等片刻"
         loadingIndicator.isHidden = false
         requireRegister.isHidden = true
+        loginButton.isHidden = true
         retryLoading.isHidden = true
     }
     
@@ -52,6 +79,7 @@ class InitializeViewController: UIViewController, ImagePickerDelegate {
         majorTitleLabel.text = "无记录"
         minorTitleLabel.text = "请登入 InstaPass 账户"
         loadingIndicator.isHidden = true
+        loginButton.isHidden = false
         requireRegister.isHidden = false
         retryLoading.isHidden = true
     }
@@ -61,7 +89,7 @@ class InitializeViewController: UIViewController, ImagePickerDelegate {
         minorTitleLabel.text = "未能同服务器取得联系"
         loadingIndicator.isHidden = true
         requireRegister.isHidden = false
-        
+        loginButton.isHidden = false
         if UserPrefInitializer.userName != "" && UserPrefInitializer.userId != "" {
             retryLoading.isHidden = false
         } else {
@@ -92,50 +120,58 @@ class InitializeViewController: UIViewController, ImagePickerDelegate {
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     @IBOutlet weak var requireRegister: UIStackView!
     @IBOutlet weak var retryLoading: UIStackView!
+    @IBOutlet weak var loginButton: UIStackView!
     
     @objc func registerButtonTapped() {
-        let configuration = Configuration()
-        configuration.doneButtonTitle = "完成"
-        configuration.noImagesTitle = "读入照片库中"
-        configuration.OKButtonTitle = "好"
-        configuration.allowMultiplePhotoSelection = false
-        configuration.allowVideoSelection = false
-        configuration.cancelButtonTitle = "取消"
-        configuration.mainColor = globalTintColor
-        configuration.recordLocation = false
-        configuration.noCameraTitle = "无法连接到相机"
-        configuration.requestPermissionMessage = "InstaPass 需要您的许可来访问您的相片。"
-        configuration.requestPermissionTitle = "请求许可"
-
-        let imagePickerController = ImagePickerControllerWithAlert(configuration: configuration)
-        imagePickerController.delegate = self
-    
-        present(imagePickerController, animated: true, completion: {
-            imagePickerController.alert = SPAlertView(title: "请提供一张由政府颁发的身份证正面相片。", message: nil, image: UIImage(systemName: "exclamationmark.shield")!)
-            imagePickerController.alert?.haptic = .warning
-            imagePickerController.alert?.duration = TimeInterval(5)
-            imagePickerController.alert?.present()
-        })
+        
+        let alertController = UIAlertController(title: "提供身份证明",
+                                                message: "请提供一张由政府颁发的有效身份证件的正面照片。",
+                                                preferredStyle: .actionSheet)
+        
+        alertController.view.setTintColor()
+        
+        let cameraAction = UIAlertAction(title: "拍照",
+                                                  style: .default,
+                                                  handler: { _ in
+                                                    self.loadImage(type: .camera)
+                                                  })
+        
+        let albumAction = UIAlertAction(title: "从图库选择",
+                                                  style: .default,
+                                                  handler: { _ in
+                                                    self.loadImage(type: .photoLibrary)
+                                                  })
+        
+        let cancelAction = UIAlertAction(title: "取消",
+                                         style: .cancel,
+                                         handler: { _ in
+                                            self.tryLoading()
+                                         })
+        
+        alertController.addAction(cameraAction)
+        alertController.addAction(albumAction)
+        alertController.addAction(cancelAction)
+        
+        alertController.popoverPresentationController?.sourceView = requireRegister
+        alertController.popoverPresentationController?.sourceRect = requireRegister.bounds
+        
+        present(alertController, animated: true, completion: nil)
     }
     
-    func wrapperDidPress(_ imagePicker: ImagePickerController, images: [UIImage]) {
-        (imagePicker as? ImagePickerControllerWithAlert)?.alert?.dismiss()
-    }
-    
-    func doneButtonDidPress(_ imagePicker: ImagePickerController, images: [UIImage]) {
-        if images.count == 1 {
-            imagePicker.dismiss(animated: true, completion: {
-                self.sendRegisterRequest(image: images[0])
-            })
-        } else {
-            imagePicker.dismiss(animated: true, completion: nil)
+    func loadImage(type: UIImagePickerController.SourceType) {
+        if UIImagePickerController.isSourceTypeAvailable(type)
+        {
+            let photosPicker = UIImagePickerController()
+            photosPicker.sourceType = type
+            photosPicker.delegate = self
+            photosPicker.allowsEditing = true
+            photosPicker.navigationBar.barTintColor = globalTintColor
+            present(photosPicker, animated: true, completion: nil)
         }
-        (imagePicker as? ImagePickerControllerWithAlert)?.alert?.dismiss()
-    }
-    
-    func cancelButtonDidPress(_ imagePicker: ImagePickerController) {
-        imagePicker.dismiss(animated: true, completion: nil)
-        (imagePicker as? ImagePickerControllerWithAlert)?.alert?.dismiss()
+        else
+        {
+            SPAlert.present(message: "未获得访问授权。", haptic: .error)
+        }
     }
     
     func sendRegisterRequest(image: UIImage) {
@@ -167,6 +203,36 @@ class InitializeViewController: UIViewController, ImagePickerDelegate {
     
     @objc func retryButtonTapped() {
         tryLoading()
+    }
+    
+    @objc func loginButtonTapped() {
+        var userIdField: UITextField?
+        var userNameTextField: UITextField?
+        
+        let alertController = UIAlertController.init(title: "既有用户登入", message: "请提供注册时使用的身份信息。", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "确认",
+                                       style: .default,
+                                       handler: {_ in
+                                        UserPrefInitializer.userId = userIdField?.text ?? ""
+                                        UserPrefInitializer.userName = userNameTextField?.text ?? ""
+                                        self.tryLoading()
+                                       })
+        let cancelAction = UIAlertAction(title: "取消",
+                                         style: .cancel,
+                                         handler: nil)
+        alertController.addAction(okAction)
+        alertController.addAction(cancelAction)
+        alertController.addTextField { (textField) in
+            userIdField = textField
+            userIdField?.placeholder = "身份证件 ID"
+        }
+        
+        alertController.addTextField { (textField) in
+            userNameTextField = textField
+            userNameTextField?.placeholder = "真实姓名"
+        }
+        
+        present(alertController, animated: true, completion: nil)
     }
     
     func completeInit() {
@@ -207,8 +273,4 @@ class InitializeViewController: UIViewController, ImagePickerDelegate {
         
         present(alertController, animated: true, completion: nil)
     }
-}
-
-class ImagePickerControllerWithAlert: ImagePickerController {
-    var alert: SPAlertView?
 }

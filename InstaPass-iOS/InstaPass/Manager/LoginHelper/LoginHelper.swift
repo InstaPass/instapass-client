@@ -49,5 +49,7 @@ class LoginHelper {
         appDelegate?.sendJwtToken(token: "")
         
         NotificationManager.notifications.removeAll()
+        
+        handler(.ok)
     }
 }

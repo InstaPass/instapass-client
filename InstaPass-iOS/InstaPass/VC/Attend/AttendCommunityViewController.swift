@@ -95,7 +95,7 @@ class AttendCommunityViewController: UIViewController, QRCodeReaderViewControlle
                     }
                     self.parentVC?.reloadCommunities()
                 }, failure: { errorMsg in
-                    SPAlert.present(title: "请求失败", message: "加入失败。服务器报告了一个「 \(errorMsg)」错误。", image: UIImage(systemName: "multiply")!)
+                    SPAlert.present(title: "请求失败", message: "加入失败。服务器报告了一个「\(errorMsg)」错误。", image: UIImage(systemName: "multiply")!)
                 })
             } else {
                 SPAlert.present(title: "扫描 QR 码失败", message: "这不是一个合法的 InstaPass QR 码。", image: UIImage(systemName: "multiply")!)
