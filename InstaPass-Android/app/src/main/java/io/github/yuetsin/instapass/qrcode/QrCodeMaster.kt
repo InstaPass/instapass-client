@@ -20,8 +20,7 @@ class QrCodeMaster {
         fun getQrCodeImage(qrCodeSecret: String, width: Int, height: Int): Bitmap? {
             return try {
                 val result = MultiFormatWriter().encode(
-                    qrCodeSecret
-                        ?: "instapass{None}", BarcodeFormat.QR_CODE, width, height)
+                    qrCodeSecret, BarcodeFormat.QR_CODE, width, height)
                 BarcodeEncoder().createBitmap(result)
             } catch (e: WriterException){
                 e.printStackTrace()
@@ -35,7 +34,7 @@ class QrCodeMaster {
             RequestsManager.request(
                 RequestTypeEnum.Get,
                 FeatureTypeEnum.QrCode,
-                "",
+                id.toString(),
                 null,
                 {
                     val secret = it["secret"].toString()

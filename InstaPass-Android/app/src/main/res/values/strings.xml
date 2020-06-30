@@ -12,4 +12,11 @@
     <string name="menu_slideshow">个人信息</string>
 
     <string name="home_second">Home Second</string>
+
+    <string-array name="list_entries">
+        <item >社区通知</item>
+        <item >个人信息</item>
+        <item >偏好设定</item>
+        <item >退出登录</item>
+    </string-array>
 </resources>

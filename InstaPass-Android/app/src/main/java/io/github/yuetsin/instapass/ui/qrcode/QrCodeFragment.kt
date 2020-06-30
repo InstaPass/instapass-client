@@ -16,10 +16,6 @@ class QrCodeFragment : Fragment() {
 
     private lateinit var qrCodeViewModel: QrCodeViewModel
 
-    private fun refreshQrCode() {
-        QrCodeMaster.refreshQrCode()
-    }
-
     override fun onCreateView(
             inflater: LayoutInflater,
             container: ViewGroup?,
@@ -27,7 +23,6 @@ class QrCodeFragment : Fragment() {
     ): View? {
         qrCodeViewModel =
                 ViewModelProviders.of(this).get(QrCodeViewModel::class.java)
-        refreshButton.setOnClickListener { refreshQrCode() }
         return inflater.inflate(R.layout.fragment_qrcode, container, false)
     }
 }

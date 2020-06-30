@@ -50,7 +50,7 @@ class AttendCommunityViewController: UIViewController, QRCodeReaderViewControlle
         addTapView.layer.shadowColor = globalTintColor.cgColor
         addTapView.layer.shadowOffset = CGSize(width: 0, height: 3)
         addTapView.layer.shadowRadius = 20
-        addTapView.layer.shadowOpacity = 0.8
+        addTapView.layer.shadowOpacity = 0.3
 //        cardView.clipsToBounds = true
     }
     

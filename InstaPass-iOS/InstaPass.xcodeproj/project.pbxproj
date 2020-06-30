@@ -66,6 +66,8 @@
 		8ACCA22A24A62ACB001C7B4E /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACCA22924A62ACB001C7B4E /* NotificationTableViewCell.swift */; };
 		8AF4C7532467B0C4004D2D65 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF4C7522467B0C4004D2D65 /* RequestManager.swift */; };
 		8AF4C7552467B128004D2D65 /* DisgracefulLife.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF4C7542467B128004D2D65 /* DisgracefulLife.swift */; };
+		8AFC78BD24AB31A500769735 /* CommunityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A90041D24A73C96004A9206 /* CommunityManager.swift */; };
+		8AFC78BE24AB31B000769735 /* Community.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8B7DA324A582C100587F19 /* Community.swift */; };
 		C7F8D187C023B718DE084E09 /* Pods_InstaPassTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A70FCDF24683CD00053DECF /* Pods_InstaPassTests.framework */; };
 		D39206D961BC394CBD4A029C /* Pods_InstaPass_Watch_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13AA98E9B9AE1826B041D79A /* Pods_InstaPass_Watch_Extension.framework */; };
 /* End PBXBuildFile section */
@@ -898,6 +900,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AFC78BE24AB31B000769735 /* Community.swift in Sources */,
+				8AFC78BD24AB31A500769735 /* CommunityManager.swift in Sources */,
 				8AA3556F24A386F800750684 /* Utils.swift in Sources */,
 				8AA5DD0F2468DDF0002A7817 /* UserPrefInitializer.swift in Sources */,
 				8A13C6CE2468DAE5006CA98B /* RequestManager.swift in Sources */,

@@ -13,14 +13,20 @@
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="InstaPass_Watch" customModuleProvider="target">
                     <items>
                         <imageView alignment="center" contentMode="scaleAspectFit" id="adh-KE-u3x"/>
-                        <label alignment="center" text="正在刷新…" textAlignment="center" id="J34-9x-RZN"/>
-                        <button width="1" alignment="left" title="现在刷新" id="7G5-5f-ycc">
+                        <label alignment="center" text="正在刷新…" textAlignment="center" numberOfLines="2" id="J34-9x-RZN"/>
+                        <button width="1" alignment="left" title="刷新" id="7G5-5f-ycc">
                             <connections>
                                 <action selector="refreshImmediately" destination="AgC-eL-Hgc" id="cqz-Y7-afE"/>
                             </connections>
                         </button>
+                        <picker width="1" height="48" alignment="center" verticalAlignment="center" focusStyle="sequence" indicatorMode="shownWhileFocused" id="FlF-fZ-JYQ">
+                            <connections>
+                                <action selector="onCommunityPicked:" destination="AgC-eL-Hgc" id="yqe-8V-NhS"/>
+                            </connections>
+                        </picker>
                     </items>
                     <connections>
+                        <outlet property="communityPicker" destination="FlF-fZ-JYQ" id="WTL-Ak-Kdl"/>
                         <outlet property="imageField" destination="adh-KE-u3x" id="FfI-RC-ikz"/>
                         <outlet property="lastRefreshTime" destination="J34-9x-RZN" id="kKE-pN-Mf0"/>
                         <outlet property="refreshButton" destination="7G5-5f-ycc" id="eef-b2-XQ7"/>
