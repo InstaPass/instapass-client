@@ -699,7 +699,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="waQ-JP-K3W">
-                                            <rect key="frame" x="16" y="8" width="672" height="64"/>
+                                            <rect key="frame" x="20" y="8" width="668" height="64"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="l3x-5G-18m">
                                                     <rect key="frame" x="0.0" y="0.0" width="219.5" height="32"/>
@@ -746,7 +746,7 @@
                                         </stackView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="waQ-JP-K3W" firstAttribute="leading" secondItem="VQD-w6-KAv" secondAttribute="leading" constant="16" id="ION-SB-Dk2"/>
+                                        <constraint firstItem="waQ-JP-K3W" firstAttribute="leading" secondItem="VQD-w6-KAv" secondAttribute="leading" constant="20" id="ION-SB-Dk2"/>
                                         <constraint firstAttribute="trailing" secondItem="waQ-JP-K3W" secondAttribute="trailing" constant="16" id="MmY-rH-mS5"/>
                                         <constraint firstItem="waQ-JP-K3W" firstAttribute="top" secondItem="VQD-w6-KAv" secondAttribute="top" constant="8" id="S4x-Io-VwW"/>
                                         <constraint firstAttribute="bottom" secondItem="waQ-JP-K3W" secondAttribute="bottom" constant="8" id="YHn-DU-2qG"/>

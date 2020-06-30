@@ -81,6 +81,10 @@ class NotificationTableViewController: UITableViewController {
         return  "来自「\(titles[section].name)」的通知"
     }
     
+    override func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
+        return "共 \(notificationDictionary[titles[section]]?.count ?? 0) 条"
+    }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "notificationCell", for: indexPath) as! NotificationTableViewCell
 
