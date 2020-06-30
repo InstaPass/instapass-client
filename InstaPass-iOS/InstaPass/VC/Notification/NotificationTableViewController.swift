@@ -30,7 +30,8 @@ class NotificationTableViewController: UITableViewController {
         tableView.delegate = self
         
         if defaultCommunity != nil && titles.contains(defaultCommunity!) {
-            tableView.scrollToRow(at: IndexPath(row: 0, section: titles.firstIndex(of: defaultCommunity!)!), at: .top, animated: true)
+            tableView.scrollToRow(at: IndexPath(row: 0, section: titles.firstIndex(of: defaultCommunity!)!), at: .bottom, animated: true)
+            defaultCommunity = nil
         }
     }
     
