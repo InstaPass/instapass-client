@@ -87,7 +87,7 @@ class InterfaceController: WKInterfaceController {
         let image = QRCodeManager.getQRCodeImage(secret: secret)
         
         if image == nil {
-            imageField.setImage(UIImage(systemName: "questionmark.square.fill"))
+            imageField.setImage(UIImage(systemName: "multiply"))
         } else {
             imageField.setImage(image)
         }
@@ -96,6 +96,7 @@ class InterfaceController: WKInterfaceController {
     func refreshCommunity() {
         CommunityManager.refreshCommunity(success: {
             if CommunityManager.communities.count > 0 {
+                self.communityPicker.setHidden(false)
                 if self.targetCommunity == nil || !CommunityManager.communities.contains(self.targetCommunity!) {
                     self.targetCommunity = CommunityManager.communities[0]
                 }
@@ -108,6 +109,8 @@ class InterfaceController: WKInterfaceController {
                 self.communityPicker.setItems(items)
                 self.communityPicker.focus()
                 self.refreshImmediately()
+            } else {
+                self.communityPicker.setHidden(true)
             }
         }, failure: { error in
             self.lastRefreshTime.setText(error)

@@ -41,7 +41,7 @@ class HistoryManager {
                             
                                 for hisObject in jsonObject["history"].arrayValue {
                                     history.append(History(time: Date(timeIntervalSince1970: hisObject["time"].doubleValue),
-                                                          reason: hisObject["reason"].stringValue))
+                                                           reason: hisObject["reason"].stringValue, inside: hisObject["where"].stringValue == "inside"))
                                 }
                                 success(history, latestOutTime, isOutside)
                                 NotificationManager.mutex.signal()

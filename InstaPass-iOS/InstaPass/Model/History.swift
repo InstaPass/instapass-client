@@ -9,11 +9,13 @@
 import Foundation
 
 struct History {
-    init(time: Date, reason: String) {
+    init(time: Date, reason: String, inside: Bool) {
         self.time = time
         self.reason = reason
+        self.inside = inside
     }
     
     var time: Date
     var reason: String
+    var inside: Bool
 }

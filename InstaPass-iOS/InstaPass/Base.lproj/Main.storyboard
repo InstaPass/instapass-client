@@ -205,7 +205,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="704" height="60"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="理由" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dBy-4U-YoN">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="事由" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dBy-4U-YoN">
                                             <rect key="frame" x="20" y="11" width="35" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" systemColor="secondaryLabelColor"/>
@@ -223,15 +223,25 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eject.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="atB-Jc-cjj">
+                                            <rect key="frame" x="660" y="17" width="28" height="25.5"/>
+                                            <color key="tintColor" red="0.48738288880000002" green="0.6804187894" blue="0.75866490600000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="28" id="8L4-3J-8kb"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="dBy-4U-YoN" firstAttribute="top" secondItem="JIP-OA-FmA" secondAttribute="topMargin" id="1h2-ne-r3b"/>
                                         <constraint firstItem="hSo-a1-94s" firstAttribute="centerY" secondItem="dBy-4U-YoN" secondAttribute="centerY" id="32u-uf-irB"/>
+                                        <constraint firstAttribute="trailing" secondItem="atB-Jc-cjj" secondAttribute="trailing" constant="16" id="9xu-ra-xcf"/>
                                         <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="hSo-a1-94s" secondAttribute="trailing" constant="8" id="EWF-JI-WxX"/>
                                         <constraint firstItem="dBy-4U-YoN" firstAttribute="leading" secondItem="JIP-OA-FmA" secondAttribute="leadingMargin" id="M3Q-Vq-FGt"/>
                                         <constraint firstItem="myU-EL-KOh" firstAttribute="top" secondItem="hSo-a1-94s" secondAttribute="bottom" constant="2" id="QQV-BU-LZk"/>
                                         <constraint firstItem="myU-EL-KOh" firstAttribute="bottom" secondItem="JIP-OA-FmA" secondAttribute="bottomMargin" id="Tqh-DN-AuK"/>
+                                        <constraint firstAttribute="bottom" secondItem="atB-Jc-cjj" secondAttribute="bottom" constant="16" id="gWe-0l-ssH"/>
                                         <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="myU-EL-KOh" secondAttribute="trailing" constant="8" id="qeL-Gi-fZ6"/>
+                                        <constraint firstItem="atB-Jc-cjj" firstAttribute="top" secondItem="JIP-OA-FmA" secondAttribute="top" constant="16" id="sHM-S8-Ktl"/>
                                         <constraint firstItem="myU-EL-KOh" firstAttribute="leading" secondItem="hSo-a1-94s" secondAttribute="leading" id="uNG-rM-Rtq"/>
                                         <constraint firstItem="hSo-a1-94s" firstAttribute="leading" secondItem="dBy-4U-YoN" secondAttribute="trailing" constant="8" id="yTL-F9-na6"/>
                                     </constraints>
@@ -240,6 +250,7 @@
                                 <connections>
                                     <outlet property="outingReasonLabel" destination="hSo-a1-94s" id="KcZ-kB-6l1"/>
                                     <outlet property="outingTimeLabel" destination="myU-EL-KOh" id="vpp-BQ-08r"/>
+                                    <outlet property="titleImageView" destination="atB-Jc-cjj" id="qOh-Wy-VOI"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="noDataCell" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="noDataCell" textLabel="iy8-9J-ps2" style="IBUITableViewCellStyleDefault" id="ffE-JM-Bb1">
@@ -950,7 +961,6 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
-                                                <color key="backgroundColor" red="0.48738288880000002" green="0.6804187894" blue="0.75866490600000003" alpha="0.50651662857806101" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstItem="aOb-af-eaL" firstAttribute="centerY" secondItem="1rH-Jh-Rrs" secondAttribute="centerY" id="HkS-O5-EAW"/>
                                                     <constraint firstItem="aOb-af-eaL" firstAttribute="centerX" secondItem="1rH-Jh-Rrs" secondAttribute="centerX" id="PAN-eM-0Zy"/>
@@ -958,7 +968,9 @@
                                                     <constraint firstAttribute="bottom" secondItem="nCj-Be-OXn" secondAttribute="bottom" constant="8" id="ha7-Sa-SL4"/>
                                                 </constraints>
                                             </view>
-                                            <blurEffect style="regular"/>
+                                            <vibrancyEffect>
+                                                <blurEffect style="extraLight"/>
+                                            </vibrancyEffect>
                                         </visualEffectView>
                                     </subviews>
                                     <constraints>
@@ -968,6 +980,7 @@
                                         <constraint firstAttribute="trailing" secondItem="KbF-7k-Tod" secondAttribute="trailing" id="qgV-Jb-fLX"/>
                                     </constraints>
                                 </view>
+                                <color key="backgroundColor" red="0.48738288880000002" green="0.6804187894" blue="0.75866490600000003" alpha="0.50651662860000002" colorSpace="custom" customColorSpace="sRGB"/>
                                 <blurEffect style="prominent"/>
                             </visualEffectView>
                         </subviews>
@@ -1012,6 +1025,7 @@
         <image name="TitleBar" width="1500" height="1000"/>
         <image name="arrow.counterclockwise.icloud.fill" catalog="system" width="128" height="88"/>
         <image name="circle.fill" catalog="system" width="128" height="121"/>
+        <image name="eject.fill" catalog="system" width="128" height="112"/>
         <image name="ellipsis" catalog="system" width="128" height="37"/>
         <image name="lock.icloud.fill" catalog="system" width="128" height="88"/>
         <image name="person" catalog="system" width="128" height="117"/>

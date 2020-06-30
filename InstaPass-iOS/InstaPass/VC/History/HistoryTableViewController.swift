@@ -114,9 +114,16 @@ class HistoryTableViewController: UITableViewController {
     func generateItemCell(at indexPath: IndexPath) -> HistoryTableViewItemCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "outingItemCell", for: indexPath) as! HistoryTableViewItemCell
 
-        let historyObject = histories[indexPath.row]
+        var historyObject = histories[indexPath.row]
         cell.outingTimeLabel.text = dateToString(historyObject.time, dateFormat: "MM 月 dd 日 HH:mm")
+        if historyObject.reason == "" {
+            historyObject.reason = "无"
+        }
+        if historyObject.inside {
+            historyObject.reason = "返回小区"
+        }
         cell.outingReasonLabel.text = historyObject.reason
+        cell.setState(inside: historyObject.inside)
         return cell
 
     }

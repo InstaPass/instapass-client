@@ -24,6 +24,8 @@ class QRCodeChildPageViewController: UIViewController {
     
     var secret: String?
     
+    var isOkay: Bool = true
+    
     func initCommunityInfo(community: Community) {
         communityInfo = community
     }
@@ -194,7 +196,7 @@ class QRCodeChildPageViewController: UIViewController {
 
     @objc func refreshQRCodeWrapped() {
         canRefresh = true
-        if LoginHelper.isLogin {
+        if isOkay {
             refreshQRCode()
         }
     }
@@ -257,7 +259,7 @@ class QRCodeChildPageViewController: UIViewController {
             self.flushQRCode()
             self.lastUpdateTextField.text = "已于 \(dateToString(time, dateFormat: "HH:mm")) 更新"
             self.canRefresh = true
-            LoginHelper.isLogin = true
+            self.isOkay = true
         }, failure: { error in
             // show ${error} message
             self.secret = nil
@@ -266,7 +268,7 @@ class QRCodeChildPageViewController: UIViewController {
 //            SPAlert.present(title: "请求 QR 码失败", message: error, image: UIImage(systemName: "wifi.exclamationmark")!)
             
             self.canRefresh = true
-            LoginHelper.isLogin = false
+            self.isOkay = false
         })
     }
     

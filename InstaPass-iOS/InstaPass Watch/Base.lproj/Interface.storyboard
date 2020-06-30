@@ -12,18 +12,22 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="InstaPass_Watch" customModuleProvider="target">
                     <items>
-                        <imageView alignment="center" contentMode="scaleAspectFit" id="adh-KE-u3x"/>
-                        <label alignment="center" text="正在刷新…" textAlignment="center" numberOfLines="2" id="J34-9x-RZN"/>
+                        <imageView alignment="center" contentMode="scaleAspectFit" id="adh-KE-u3x">
+                            <color key="tintColor" red="0.48738288880000002" green="0.6804187894" blue="0.75866490600000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </imageView>
+                        <picker width="1" height="48" alignment="center" focusStyle="sequence" indicatorMode="shownWhileFocused" id="FlF-fZ-JYQ">
+                            <connections>
+                                <action selector="onCommunityPicked:" destination="AgC-eL-Hgc" id="yqe-8V-NhS"/>
+                            </connections>
+                        </picker>
+                        <label alignment="center" text="正在刷新…" textAlignment="center" numberOfLines="2" id="J34-9x-RZN">
+                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </label>
                         <button width="1" alignment="left" title="刷新" id="7G5-5f-ycc">
                             <connections>
                                 <action selector="refreshImmediately" destination="AgC-eL-Hgc" id="cqz-Y7-afE"/>
                             </connections>
                         </button>
-                        <picker width="1" height="48" alignment="center" verticalAlignment="center" focusStyle="sequence" indicatorMode="shownWhileFocused" id="FlF-fZ-JYQ">
-                            <connections>
-                                <action selector="onCommunityPicked:" destination="AgC-eL-Hgc" id="yqe-8V-NhS"/>
-                            </connections>
-                        </picker>
                     </items>
                     <connections>
                         <outlet property="communityPicker" destination="FlF-fZ-JYQ" id="WTL-Ak-Kdl"/>
