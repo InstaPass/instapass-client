@@ -17,13 +17,39 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="160px" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/communitySelector"
+            android:layout_width="match_parent"
+            android:layout_height="90px"
+            android:layout_weight="0.2">
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="汤臣一品" />
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="小区 10" />
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="小区 11" />
+        </com.google.android.material.tabs.TabLayout>
+
         <ImageView
             android:id="@+id/qrCodeImageView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="8"
+            android:layout_weight="7.5"
             android:contentDescription="出入证明 QR 码"
-            android:scaleType="fitEnd"
+            android:scaleType="fitCenter"
             android:scrollbars="none"
             android:src="@android:drawable/btn_dialog" />
 
@@ -31,7 +57,7 @@
             android:id="@+id/lastUpdateTimeTextField"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="2.5"
+            android:layout_weight="1.5"
             android:contentDescription="最後更新 QR 码的时间"
             android:text="最後更新时间"
             android:textAlignment="center" />

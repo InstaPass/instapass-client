@@ -17,7 +17,7 @@ class LoginHelper {
             success: () -> Void,
             failure: (String) -> Void
         ) {
-            RequestsManager.request(RequestTypeEnum.Post, FeatureTypeEnum.Login, JSONObject().put("username", username).put("password", password),
+            RequestsManager.request(RequestTypeEnum.Post, FeatureTypeEnum.Login, "", JSONObject().put("username", username).put("password", password),
                 {
                     isLogin = true
                     jwtToken = it["jwt_token"].toString()
@@ -32,7 +32,6 @@ class LoginHelper {
             isLogin = false
             jwtToken = ""
 
-            // do some logout requests
             success()
         }
     }

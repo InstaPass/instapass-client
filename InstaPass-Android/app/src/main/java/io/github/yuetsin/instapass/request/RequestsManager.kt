@@ -10,23 +10,19 @@ class RequestsManager {
     companion object {
         private var baseUrl = "http://47.100.50.175:8288"
 
-        fun request(type: RequestTypeEnum = RequestTypeEnum.Get, feature: FeatureTypeEnum, params: JSONObject?, success: (JSONObject) -> Void, failure: (String) -> Void) {
+        fun request(type: RequestTypeEnum = RequestTypeEnum.Get, feature: FeatureTypeEnum, subUrl: String, params: JSONObject?, success: (JSONObject) -> Void, failure: (String) -> Void) {
             if (type == RequestTypeEnum.Get) {
-
                 if (params != null) {
                     println("warning: get operation shouldn't carry param values")
                 }
-
-                Fuel.get(baseUrl + feature.url)
+                Fuel.get(baseUrl + feature.url + if (subUrl.startsWith("/")) subUrl else "/$subUrl")
                     .header(Pair<String, String>("Jwt-Token", UserPrefInitializer.jwtToken ?: ""))
                     .responseJson { _, _, result ->
-
                         result.fold({
                             val responseJson = it.obj()
                             if (responseJson["status"] == "ok") {
                                 success(responseJson)
                             } else {
-                                // TODO: fix status msg
                                 failure(responseJson["msg"].toString())
                             }
                         }, {
@@ -44,7 +40,6 @@ class RequestsManager {
                             if (responseJson["status"] == "ok" || responseJson["jwt_token"].toString().isNotEmpty()) {
                                 success(responseJson)
                             } else {
-                                // TODO: fix status msg
                                 failure(responseJson["msg"].toString())
                             }
                         }, {

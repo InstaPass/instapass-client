@@ -182,5 +182,14 @@ class HistoryTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if histories.count == 0 {
+            return nil
+        } else if isOutside && section == 1 {
+            return "全部出入记录"
+        } else if !isOutside && section == 0 {
+            return "全部出入记录"
+        }
+        return nil
+    }
 }
