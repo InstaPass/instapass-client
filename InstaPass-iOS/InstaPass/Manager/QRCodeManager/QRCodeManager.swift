@@ -32,12 +32,12 @@ class QRCodeManager {
 //        return nil
 //    }
     
-    static func getQRCodeImage(secret: String?) -> UIImage? {
+    static func getQRCodeImage(secret: String?, color: CGColor = qrCodeColor.cgColor) -> UIImage? {
         if secret != nil && secret! != "" {
             if let cgImage = EFQRCode.generate(
                 content: secret!,
                 backgroundColor: UIColor.clear.cgColor,
-                foregroundColor: qrCodeColor.cgColor
+                foregroundColor: color
             ) {
                 return UIImage(cgImage: cgImage)
             } else {

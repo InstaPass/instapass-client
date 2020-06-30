@@ -48,6 +48,8 @@ class QRCodeChildPageViewController: UIViewController {
         
         if communityInfo.temporary {
             communityNameLabel.text = "「\(communityInfo.name)」临时出入凭证"
+            QRCodeView.tintColor = UIColor.secondaryLabel
+            previousQRCodeView.tintColor = UIColor.secondaryLabel
         } else {
             communityNameLabel.text = "「\(communityInfo.name)」出入凭证"
         }
@@ -70,6 +72,7 @@ class QRCodeChildPageViewController: UIViewController {
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         super.traitCollectionDidChange(previousTraitCollection)
         redrawPageShadow()
+        flushQRCode()
     }
 
     /*
@@ -96,7 +99,12 @@ class QRCodeChildPageViewController: UIViewController {
         QRCodeView.alpha = 0
         
         previousQRCodeView.image = QRCodeView.image
-        QRCodeView.image = QRCodeManager.getQRCodeImage(secret: secret)
+        
+        if communityInfo.temporary {
+            QRCodeView.image = QRCodeManager.getQRCodeImage(secret: secret, color: UIColor.secondaryLabel.cgColor)
+        } else {
+            QRCodeView.image = QRCodeManager.getQRCodeImage(secret: secret)
+        }
         
         if QRCodeView.image == nil {
             QRCodeView.image = UIImage(systemName: "qrcode")

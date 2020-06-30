@@ -17,7 +17,7 @@ class HistoryManager {
     static func receiveHistory(id: Int, success: @escaping ([History], Date?, Bool) -> Void,
                                       failure: @escaping (String) -> Void) {
         if NotificationManager.mutex.wait(timeout: DispatchTime(uptimeNanoseconds: 1000)) == DispatchTimeoutResult.timedOut {
-            failure("操作频率过快，请稍后再试。")
+            failure("操作频率过快")
             return
         }
 //        notifications.removeAll()

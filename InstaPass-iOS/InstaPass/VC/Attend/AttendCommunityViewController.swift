@@ -47,10 +47,10 @@ class AttendCommunityViewController: UIViewController, QRCodeReaderViewControlle
     
     func redrawPageShadow() {
         addTapView.layer.cornerRadius = 20
-        addTapView.layer.shadowColor = UIColor.label.cgColor
+        addTapView.layer.shadowColor = globalTintColor.cgColor
         addTapView.layer.shadowOffset = CGSize(width: 0, height: 3)
         addTapView.layer.shadowRadius = 20
-        addTapView.layer.shadowOpacity = 0.22
+        addTapView.layer.shadowOpacity = 0.8
 //        cardView.clipsToBounds = true
     }
     

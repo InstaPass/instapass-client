@@ -49,7 +49,7 @@ class NotificationManager {
     static func retrieveNotifications(success: @escaping ([Notification]) -> Void,
                                       failure: @escaping (String) -> Void) {
         if NotificationManager.mutex.wait(timeout: DispatchTime(uptimeNanoseconds: 1000)) == DispatchTimeoutResult.timedOut {
-            failure("操作频率过快，请稍后再试。")
+            failure("操作频率过快")
             return
         }
 //        notifications.removeAll()

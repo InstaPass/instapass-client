@@ -933,6 +933,7 @@
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aOb-af-eaL">
                                                         <rect key="frame" x="100" y="247.33333333333337" width="150" height="145.66666666666663"/>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="aOb-af-eaL" secondAttribute="height" multiplier="1:1" id="d4J-96-vv3"/>
                                                         </constraints>
@@ -944,10 +945,11 @@
                                                             <constraint firstAttribute="height" constant="17" id="MCW-TS-0Im"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
+                                                <color key="backgroundColor" red="0.40034550429999999" green="0.57838445900000002" blue="0.66668128969999996" alpha="0.74403756563780743" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstItem="aOb-af-eaL" firstAttribute="centerY" secondItem="1rH-Jh-Rrs" secondAttribute="centerY" id="HkS-O5-EAW"/>
                                                     <constraint firstItem="aOb-af-eaL" firstAttribute="leading" secondItem="1rH-Jh-Rrs" secondAttribute="leading" constant="100" id="M1O-F9-egZ"/>
