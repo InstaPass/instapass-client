@@ -9,4 +9,5 @@ enum class FeatureTypeEnum(val url: String) {
     Info("/resident/info"),
     Upload("/resident/upload"),
     Notify("/resident/notifications"),
+    Community("/resident/community")
 }
