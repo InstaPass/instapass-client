@@ -50,7 +50,6 @@
 		8A9F444624546B0C0005FD01 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9F444524546B0C0005FD01 /* UserViewController.swift */; };
 		8A9F4448245470BE0005FD01 /* UserTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9F4447245470BE0005FD01 /* UserTableViewController.swift */; };
 		8A9F444A2454719E0005FD01 /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9F44492454719E0005FD01 /* HistoryTableViewController.swift */; };
-		8AA3556824A3857200750684 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA3556724A3857200750684 /* HistoryViewController.swift */; };
 		8AA3556B24A385BA00750684 /* PageControlDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA3556A24A385BA00750684 /* PageControlDelegate.swift */; };
 		8AA3556F24A386F800750684 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4FAFD82468423600BBB9DA /* Utils.swift */; };
 		8AA5DD0E2468DD3D002A7817 /* WatchExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA5DD0D2468DD3D002A7817 /* WatchExtension.swift */; };
@@ -59,6 +58,10 @@
 		8AA71D0124A08EF100A30DF0 /* 62457185.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 8AA71CFF24A08EF100A30DF0 /* 62457185.PNG */; };
 		8AA71D0324A091D300A30DF0 /* QRCodesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA71D0224A091D300A30DF0 /* QRCodesViewController.swift */; };
 		8AA71D0524A0925A00A30DF0 /* QRCodeChildPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA71D0424A0925A00A30DF0 /* QRCodeChildPageViewController.swift */; };
+		8AACBE5124AAE3470051E754 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AACBE5024AAE3470051E754 /* History.swift */; };
+		8AACBE5324AAECB10051E754 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AACBE5224AAECB10051E754 /* HistoryViewController.swift */; };
+		8AB5ADF124AADB310001B76C /* HistoryTableViewStatusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB5ADF024AADB310001B76C /* HistoryTableViewStatusCell.swift */; };
+		8AB5ADF324AADC7C0001B76C /* HistoryTableViewItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB5ADF224AADC7C0001B76C /* HistoryTableViewItemCell.swift */; };
 		8AC1A7342453D26D0066CD8D /* LoginHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC1A7332453D26D0066CD8D /* LoginHelper.swift */; };
 		8ACCA22A24A62ACB001C7B4E /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACCA22924A62ACB001C7B4E /* NotificationTableViewCell.swift */; };
 		8AF4C7532467B0C4004D2D65 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF4C7522467B0C4004D2D65 /* RequestManager.swift */; };
@@ -205,13 +208,16 @@
 		8A9F444524546B0C0005FD01 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		8A9F4447245470BE0005FD01 /* UserTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewController.swift; sourceTree = "<group>"; };
 		8A9F44492454719E0005FD01 /* HistoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewController.swift; sourceTree = "<group>"; };
-		8AA3556724A3857200750684 /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		8AA3556A24A385BA00750684 /* PageControlDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControlDelegate.swift; sourceTree = "<group>"; };
 		8AA5DD0C2468DD3D002A7817 /* InstaPass Watch-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "InstaPass Watch-Bridging-Header.h"; sourceTree = "<group>"; };
 		8AA5DD0D2468DD3D002A7817 /* WatchExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchExtension.swift; sourceTree = "<group>"; };
 		8AA71CFF24A08EF100A30DF0 /* 62457185.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 62457185.PNG; sourceTree = "<group>"; };
 		8AA71D0224A091D300A30DF0 /* QRCodesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodesViewController.swift; sourceTree = "<group>"; };
 		8AA71D0424A0925A00A30DF0 /* QRCodeChildPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeChildPageViewController.swift; sourceTree = "<group>"; };
+		8AACBE5024AAE3470051E754 /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
+		8AACBE5224AAECB10051E754 /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		8AB5ADF024AADB310001B76C /* HistoryTableViewStatusCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewStatusCell.swift; sourceTree = "<group>"; };
+		8AB5ADF224AADC7C0001B76C /* HistoryTableViewItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewItemCell.swift; sourceTree = "<group>"; };
 		8AC01D5424683ACB00EFD45E /* EFQRCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = EFQRCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AC01D5824683AEC00EFD45E /* EFQRCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = EFQRCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AC1A7332453D26D0066CD8D /* LoginHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginHelper.swift; sourceTree = "<group>"; };
@@ -484,8 +490,10 @@
 		8A69B8A624A38557001713E2 /* History */ = {
 			isa = PBXGroup;
 			children = (
-				8AA3556724A3857200750684 /* HistoryViewController.swift */,
+				8AACBE5224AAECB10051E754 /* HistoryViewController.swift */,
 				8A9F44492454719E0005FD01 /* HistoryTableViewController.swift */,
+				8AB5ADF024AADB310001B76C /* HistoryTableViewStatusCell.swift */,
+				8AB5ADF224AADC7C0001B76C /* HistoryTableViewItemCell.swift */,
 			);
 			path = History;
 			sourceTree = "<group>";
@@ -528,6 +536,7 @@
 				8A8B7DA324A582C100587F19 /* Community.swift */,
 				8A5D0AF824A5E30D00F2E19B /* Notification.swift */,
 				8A5D0AFA24A5F6D000F2E19B /* User.swift */,
+				8AACBE5024AAE3470051E754 /* History.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -907,20 +916,23 @@
 				8A91A2C024A76C0300913EFA /* AttendCommunityViewController.swift in Sources */,
 				8ACCA22A24A62ACB001C7B4E /* NotificationTableViewCell.swift in Sources */,
 				8A5D0AFE24A6247B00F2E19B /* NotificationTableViewController.swift in Sources */,
+				8AACBE5124AAE3470051E754 /* History.swift in Sources */,
 				8A5D0AFB24A5F6D000F2E19B /* User.swift in Sources */,
 				8A69B8A224A38451001713E2 /* FadeAnimator.swift in Sources */,
 				8A90042124A73D16004A9206 /* HistoryManager.swift in Sources */,
 				8A9F4448245470BE0005FD01 /* UserTableViewController.swift in Sources */,
 				8A9F444624546B0C0005FD01 /* UserViewController.swift in Sources */,
-				8AA3556824A3857200750684 /* HistoryViewController.swift in Sources */,
 				8AA3556B24A385BA00750684 /* PageControlDelegate.swift in Sources */,
 				8A5F2BF624530381003E636C /* LoginViewController.swift in Sources */,
 				8A5D0AF724A5E2E000F2E19B /* NotificationManager.swift in Sources */,
 				8A4FAFD92468423600BBB9DA /* Utils.swift in Sources */,
 				8A69B8A024A38294001713E2 /* TabBarDelegate.swift in Sources */,
 				8A9F444A2454719E0005FD01 /* HistoryTableViewController.swift in Sources */,
+				8AACBE5324AAECB10051E754 /* HistoryViewController.swift in Sources */,
+				8AB5ADF124AADB310001B76C /* HistoryTableViewStatusCell.swift in Sources */,
 				8A5F2BF424530381003E636C /* QRCodePageViewController.swift in Sources */,
 				8AA71D0524A0925A00A30DF0 /* QRCodeChildPageViewController.swift in Sources */,
+				8AB5ADF324AADC7C0001B76C /* HistoryTableViewItemCell.swift in Sources */,
 				8AA71D0324A091D300A30DF0 /* QRCodesViewController.swift in Sources */,
 				8A5F2BF024530381003E636C /* AppDelegate.swift in Sources */,
 				8A90041E24A73C96004A9206 /* CommunityManager.swift in Sources */,

@@ -162,6 +162,7 @@ class InitializeViewController: UIViewController, UIImagePickerControllerDelegat
         if UIImagePickerController.isSourceTypeAvailable(type)
         {
             let photosPicker = UIImagePickerController()
+            photosPicker.view.setTintColor()
             photosPicker.sourceType = type
             photosPicker.delegate = self
             photosPicker.allowsEditing = true
@@ -210,6 +211,7 @@ class InitializeViewController: UIViewController, UIImagePickerControllerDelegat
         var userNameTextField: UITextField?
         
         let alertController = UIAlertController.init(title: "既有用户登入", message: "请提供注册时使用的身份信息。", preferredStyle: .alert)
+        alertController.view.setTintColor()
         let okAction = UIAlertAction(title: "确认",
                                        style: .default,
                                        handler: {_ in

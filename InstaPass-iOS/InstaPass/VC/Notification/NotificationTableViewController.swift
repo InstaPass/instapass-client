@@ -30,7 +30,7 @@ class NotificationTableViewController: UITableViewController {
         tableView.delegate = self
         
         if defaultCommunity != nil && titles.contains(defaultCommunity!) {
-            tableView.scrollToRow(at: IndexPath(row: titles.firstIndex(of: defaultCommunity!)!, section: 0), at: .top, animated: true)
+            tableView.scrollToRow(at: IndexPath(row: 0, section: titles.firstIndex(of: defaultCommunity!)!), at: .top, animated: true)
         }
     }
     
@@ -92,10 +92,10 @@ class NotificationTableViewController: UITableViewController {
     }
 
     // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
+//    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+//        // Return false if you do not want the specified item to be editable.
+//        return true
+//    }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
@@ -103,6 +103,11 @@ class NotificationTableViewController: UITableViewController {
         let toStaleNotification = notificationDictionary[titles[indexPath.section]]![indexPath.row]
         NotificationManager.staleNotification(notification: toStaleNotification)
         (tableView.cellForRow(at: indexPath) as? NotificationTableViewCell)?.newMessagePrompt.isHidden = true
+        
+        let alertController = UIAlertController(title: "「\(toStaleNotification.author)」说：", message: toStaleNotification.content, preferredStyle: .alert)
+        alertController.view.setTintColor()
+        alertController.addAction(UIAlertAction(title: "嗯", style: .cancel, handler: nil))
+        present(alertController, animated: true, completion: nil)
         tableView.deselectRow(at: indexPath, animated: true)
     }
     

@@ -45,7 +45,12 @@ class QRCodeChildPageViewController: UIViewController {
         
         timer = Timer(timeInterval: 10, target: self, selector: #selector(refreshQRCodeWrapped), userInfo: nil, repeats: true)
         RunLoop.main.add(timer!, forMode: RunLoop.Mode.default)
-        communityNameLabel.text = "「\(communityInfo.name)」出入 QR 码"
+        
+        if communityInfo.temporary {
+            communityNameLabel.text = "「\(communityInfo.name)」临时出入凭证"
+        } else {
+            communityNameLabel.text = "「\(communityInfo.name)」出入凭证"
+        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -112,7 +117,11 @@ class QRCodeChildPageViewController: UIViewController {
 
     @IBAction func onRefreshButtonTapped(_ sender: UIButton) {
 //        refreshQRCode()
-        let alertController = UIAlertController(title: "「\(communityInfo.name)」小区",
+        var titleString = "「\(communityInfo.name)」出入凭证"
+        if communityInfo.temporary {
+            titleString = "「\(communityInfo.name)」临时出入凭证"
+        }
+        let alertController = UIAlertController(title: titleString,
                                                 message: "位于「\(communityInfo.address)」",
                                                 preferredStyle: .actionSheet)
         
@@ -137,15 +146,15 @@ class QRCodeChildPageViewController: UIViewController {
                                                     self.performSegue(withIdentifier: "showNotificationsSegue", sender: self)
                                                   })
         
-        let contactAction = UIAlertAction(title: "联系「\(communityInfo.name)」的管理员",
+        let historyAction = UIAlertAction(title: "查看出入「\(communityInfo.name)」记录",
                                           style: .default,
                                           handler: { _ in
-                                            // TODO: add contact feature
+                                            self.performSegue(withIdentifier: "showHistorySegue", sender: self)
                                           })
         
-        var removeTitle: String = "移除「\(communityInfo.name)」住户 QR 码"
+        var removeTitle: String = "移除「\(communityInfo.name)」出入凭证"
         if communityInfo.temporary {
-            removeTitle = "移除「\(communityInfo.name)」临时 QR 码"
+            removeTitle = "移除「\(communityInfo.name)」临时出入凭证"
         }
         let leaveAction = UIAlertAction(title: removeTitle,
                                         style: .destructive,
@@ -162,7 +171,10 @@ class QRCodeChildPageViewController: UIViewController {
         if NotificationManager.getTotalNotificationCount(communityId: communityInfo.id) != 0 {
             alertController.addAction(retrieveNotificationsAction)
         }
-        alertController.addAction(contactAction)
+        
+        if !communityInfo.temporary {
+            alertController.addAction(historyAction)
+        }
         alertController.addAction(leaveAction)
         alertController.addAction(cancelAction)
         
@@ -253,6 +265,8 @@ class QRCodeChildPageViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showNotificationsSegue" {
             (segue.destination as? NotificationTableViewController)?.defaultCommunity = communityInfo
+        } else if segue.identifier == "showHistorySegue" {
+            (segue.destination as? HistoryViewController)?.targetCommunity = communityInfo
         }
     }
 }

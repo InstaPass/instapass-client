@@ -149,8 +149,8 @@ class UserTableViewController: UITableViewController {
                 } else {
                     self.performSegue(withIdentifier: "showNotificationsSegue", sender: nil)
                 }
-            }, failure: { _ in
-                SPAlert.present(title: "拉取通知失败", image: UIImage(systemName: "multiply")!)
+            }, failure: { error in
+                SPAlert.present(title: "拉取通知失败", message: "服务器说「\(error)」。", image: UIImage(systemName: "multiply")!)
             })
             
         } else if (indexPath.section == 1) {

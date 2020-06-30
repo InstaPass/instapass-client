@@ -8,27 +8,25 @@
 
 import UIKit
 
-class HistoryViewController: UINavigationController {
+class HistoryViewController: UIViewController {
 
+    var targetCommunity: Community?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         
-        tableContainerVC = children.first as? HistoryTableViewController
-        tableContainerVC?.parentVC = self
+        if targetCommunity != nil {
+            navigationItem.title = "出入「\(targetCommunity!.name)」记录"
+        } else {
+            navigationItem.title = "出入记录"
+        }
+        navigationItem.largeTitleDisplayMode = .never
+        navigationItem.backBarButtonItem?.title = "出行认证 QR 码"
     }
     
     var tableContainerVC: HistoryTableViewController?
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        tableContainerVC?.renderData()
-    }
-
-    func viewGotSwitched() {
-        tableContainerVC?.renderData()
-    }
 
     /*
     // MARK: - Navigation
@@ -42,8 +40,7 @@ class HistoryViewController: UINavigationController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "HistoryTVSegue" {
             tableContainerVC = segue.destination as? HistoryTableViewController
-            tableContainerVC?.parentVC = self
+            tableContainerVC?.targetCommunity = targetCommunity
         }
     }
-
 }

@@ -1,0 +1,19 @@
+//
+//  History.swift
+//  InstaPass
+//
+//  Created by 法好 on 2020/6/30.
+//  Copyright © 2020 yuetsin. All rights reserved.
+//
+
+import Foundation
+
+struct History {
+    init(time: Date, reason: String) {
+        self.time = time
+        self.reason = reason
+    }
+    
+    var time: Date
+    var reason: String
+}
