@@ -24,18 +24,16 @@
             android:layout_width="match_parent"
             android:layout_height="90px"
             android:layout_weight="0.2">
+
             <com.google.android.material.tabs.TabItem
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="汤臣一品" />
+                android:text="临时出入凭证" />
+
             <com.google.android.material.tabs.TabItem
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="小区 10" />
-            <com.google.android.material.tabs.TabItem
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="小区 11" />
+                android:text="常住凭证" />
         </com.google.android.material.tabs.TabLayout>
         <ImageView
             android:id="@+id/qrCodeImageView"
@@ -49,13 +47,22 @@
             android:src="@mipmap/qrcode"/>
 
         <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="用于「走亲访友」"
+            android:textAlignment="center"
+            android:textColor="#478299" />
+
+        <TextView
             android:id="@+id/lastUpdateTimeTextField"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1.5"
             android:contentDescription="最後更新 QR 码的时间"
-            android:text="已于 15:46 更新"
-            android:textAlignment="center" />
+            android:text="已于 19:30 更新"
+            android:textAlignment="center"
+            android:textColor="#774D4D4D" />
     </LinearLayout>
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/refreshButton"

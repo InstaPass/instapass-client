@@ -54,8 +54,10 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <RemoteRunnable
+         runnableDebuggingMode = "2"
+         BundleIdentifier = "com.apple.Carousel"
+         RemotePath = "/InstaPass (Client)">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8A13C6AA2468D9EF006CA98B"
@@ -63,7 +65,7 @@
             BlueprintName = "InstaPass Watch"
             ReferencedContainer = "container:InstaPass.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </RemoteRunnable>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -71,8 +73,10 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <RemoteRunnable
+         runnableDebuggingMode = "2"
+         BundleIdentifier = "com.apple.Carousel"
+         RemotePath = "/InstaPass (Client)">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8A13C6AA2468D9EF006CA98B"
@@ -80,7 +84,16 @@
             BlueprintName = "InstaPass Watch"
             ReferencedContainer = "container:InstaPass.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </RemoteRunnable>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "8A13C6AA2468D9EF006CA98B"
+            BuildableName = "InstaPass Watch.app"
+            BlueprintName = "InstaPass Watch"
+            ReferencedContainer = "container:InstaPass.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

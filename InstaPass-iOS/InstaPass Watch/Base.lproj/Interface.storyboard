@@ -25,7 +25,7 @@
                         </label>
                         <button width="1" alignment="left" title="刷新" id="7G5-5f-ycc">
                             <connections>
-                                <action selector="refreshImmediately" destination="AgC-eL-Hgc" id="cqz-Y7-afE"/>
+                                <action selector="onRefreshButtonTapped:" destination="AgC-eL-Hgc" id="ioU-qM-bgr"/>
                             </connections>
                         </button>
                     </items>

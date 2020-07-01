@@ -27,6 +27,7 @@ class CommunityManager {
     static func refreshCommunity(success: @escaping () -> Void, failure: @escaping (String) -> Void) {
         if CommunityManager.mutex.wait(timeout: DispatchTime(uptimeNanoseconds: 1000)) == DispatchTimeoutResult.timedOut {
 //            failure("操作频率过快")
+            success()
             return
         }
         CommunityManager.communities.removeAll()

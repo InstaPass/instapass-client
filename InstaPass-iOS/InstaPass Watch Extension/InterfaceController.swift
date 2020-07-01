@@ -14,7 +14,7 @@ class InterfaceController: WKInterfaceController {
         super.awake(withContext: context)
 
         // Configure interface objects here.
-        
+        communityPicker.setHidden(true)
         refreshCommunity()
     }
 
@@ -50,7 +50,12 @@ class InterfaceController: WKInterfaceController {
         refreshImmediately()
     }
     
-    @IBAction func refreshImmediately() {
+    @IBAction func onRefreshButtonTapped(_ sender: WKInterfaceButton) {
+        sender.setEnabled(false)
+        refreshCommunity()
+    }
+    
+    func refreshImmediately() {
         if UserPrefInitializer.jwtToken == "" {
             self.lastRefreshTime.setText("请先在手机端登录")
             return
@@ -107,13 +112,19 @@ class InterfaceController: WKInterfaceController {
                     items.append(newItem)
                 }
                 self.communityPicker.setItems(items)
-                self.communityPicker.focus()
-                self.refreshImmediately()
+//                self.communityPicker.focus()
             } else {
                 self.communityPicker.setHidden(true)
             }
+            self.refreshImmediately()
         }, failure: { error in
             self.lastRefreshTime.setText(error)
+            if CommunityManager.communities.count > 0 {
+                self.communityPicker.setHidden(false)
+            } else {
+                self.communityPicker.setHidden(true)
+            }
+            self.refreshImmediately()
         })
     }
 }
